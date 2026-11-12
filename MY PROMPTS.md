@@ -1,3 +1,19 @@
+STATIC RULE - APPLIES TO ALL TOPICS, ALL UNITS, NO EXCEPTIONS - DO NOT CHANGE PER TOPIC
+
+1. NO VISIBLE ANSWERS ON THE PAGE. EVER. Answers owned by AI for marking only.
+2. NO NUMBER PLACEHOLDERS. EVER. Every box: placeholder="Type your answer"
+3. CHECKBOXES LOCKED. EVER. <input type="checkbox" disabled> - auto-tick only.
+4. TWO EXERCISES BEFORE CHECKLIST. EVER. Second a little harder + one sentence meaning.
+5. ONLY REDO FAILED ONE. EVER.
+6. 2 WRONG ON SAME QUESTION = MARKING CHATBOX. EVER. (Maths) / Chatbox IS marking (Theory)
+7. PARTIAL CREDIT. EVER.
+8. SATISFACTION NEVER CHANGES MATHS / TRUTH. EVER.
+9. FRACTIONS. EVER. Numerator on top, denominator below. No slash for division.
+10. EXPLAIN BEFORE EXERCISES. EVER. Yellow box, same 5-point wording.
+11. NO COMMIT UNTIL USER SATISFIED. EVER.
+12. CREATE vs EDIT. EVER. New file = Create. File exists = Edit. Code always with Copy button.
+
+For every new page, start from the Template, only fill in the [ ] parts. Never rewrite the rules.
 # My Prompts - SPAS MUST Notes
 # Built by frank-4Mrr111
 
