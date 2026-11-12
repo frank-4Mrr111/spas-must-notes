@@ -12,6 +12,7 @@ STATIC RULE - APPLIES TO ALL TOPICS, ALL UNITS, NO EXCEPTIONS - DO NOT CHANGE PE
 10. EXPLAIN BEFORE EXERCISES. EVER. Yellow box, same 5-point wording.
 11. NO COMMIT UNTIL USER SATISFIED. EVER.
 12. CREATE vs EDIT. EVER. New file = Create. File exists = Edit. Code always with Copy button.
+13. 15. COVERING EXERCISES RULE. The 2 exercises per topic are not 2 random questions. They are selected with deep consideration so that if a student can successfully pass those 2, they have successfully got the objectives of the whole topic. Each exercise must therefore have parts (a), (b), (c) so together the 2 cover the whole topic. Marking is by part, with partial credit. If the 2 do not cover the topic, they are wrong exercises — reselect them.
 
 For every new page, start from the Template, only fill in the [ ] parts. Never rewrite the rules.
 # My Prompts - SPAS MUST Notes
