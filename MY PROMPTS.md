@@ -3,6 +3,57 @@ STATIC RULE - APPLIES TO ALL TOPICS, ALL UNITS, NO EXCEPTIONS - DO NOT CHANGE PE
 1. NO VISIBLE ANSWERS ON THE PAGE. EVER. Answers owned by AI for marking only.
 2. NO NUMBER PLACEHOLDERS. EVER. Every box: placeholder="Type your answer"
 3. CHECKBOXES LOCKED. EVER. <input type="checkbox" disabled> - auto-tick only.
+3B. NOTES QUALITY — THE STUDENT HAS NO PDF, NO LECTURE
+
+The student comes here because he lacks a PDF. He never attended a single lecture.
+He has nothing else. Our notes must BE his lecture + his PDF + his textbook, under one roof.
+
+1. NO RUMOURS. Never invent a topic, a formula, a definition, or an exam pattern.
+   Only teach what is in MUST exam papers for that unit, and what is in trusted sources.
+   If a fact is not verified, do not write it. If a topic is not in MUST papers for that unit, do not teach it.
+
+2. NOT TOO SHALLOW. A 2-line definition is not notes. It is a heading.
+   Shallow notes force the student to go to Google, YouTube, or another book.
+   That is failure. Our notes must be deep enough that the student never needs to leave the page.
+
+3. IMPRESSIVE NOTES. The student should open a topic and think: "This is complete. I can study from this."
+   Impressive means: clear, organised, full, with examples, with worked steps, with exam traps explained.
+   Not long for the sake of long. Long because the topic needs it.
+
+4. RELIABLE FOR HE WHO NEVER ATTENDED. Start from zero. Define every term before you use it.
+   Explain WHY, not just WHAT. Show HOW, step by step. Then show a worked example.
+   Then show a common exam mistake and how to avoid it.
+   Never assume the student already knows something from a lecture. He does not.
+
+5. STRUCTURE FOR EVERY TOPIC — ALWAYS:
+   (a) Objectives — what you will be able to do by the end of this topic.
+   (b) Definition — in simple words, then in exam words.
+   (c) Why it matters — in real actuarial / SPAS work, with an example.
+   (d) Key words / formulas — every term defined, every symbol explained.
+   (e) How it works — step by step, in order.
+   (f) Worked Example(s) — fully worked, every step shown, same kind as the exercises.
+   (g) Common exam mistake — what students get wrong, and how to avoid it.
+   (h) 2 Covering Exercises — parts (a), (b), (c), together covering the whole topic.
+
+6. ONE ROOF. Everything the student needs to pass the exercises AND to sit the exam
+   must be in the notes for that topic. No "go and check elsewhere". No "you should know this".
+   If the student must search elsewhere, the notes are too shallow — expand them.
+
+7. NO SHOUTING. Never write "this answers Exercise X", "Hint: see box above".
+   Never tell the student the notes answer the questions. The notes answer them by being complete.
+   The student must read and understand. Our job is to make the notes worth reading.
+
+8. COVERING EXERCISES. The 2 exercises are not 2 random questions.
+   They are selected with deep consideration so that if a student passes those 2,
+   they have got the objectives of the whole topic. Each has parts (a), (b), (c).
+   Marking is by part, with partial credit.
+
+9. SELF-CHECK BEFORE YOU GIVE NOTES. Before you give any unit, ask:
+   - Could a student who never attended a lecture study ONLY from these notes and sit the exam?
+   - Is every term defined? Is every formula explained? Is every exercise covered by the notes?
+   - Is there any rumour, any guess, any shallow part?
+   If the answer to the first is No, or Yes to the last, the notes are not ready — expand them.
+
 4. TWO EXERCISES BEFORE CHECKLIST. EVER. Second a little harder + one sentence meaning.
 5. ONLY REDO FAILED ONE. EVER.
 6. 2 WRONG ON SAME QUESTION = MARKING CHATBOX. EVER. (Maths) / Chatbox IS marking (Theory)
