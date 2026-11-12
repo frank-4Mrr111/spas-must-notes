@@ -154,6 +154,7 @@
 </div>
 <script>
   let tries = {};
+  document.querySelectorAll('.answer').forEach(el=>el.placeholder='Type your answer');
 function num(v){ v=v.trim().replace(',','.'); let n=parseFloat(v); return isNaN(n)?null:n; }
 function tick(id){ let el=document.getElementById(id); if(el){ el.checked=true; document.getElementById('li-'+id).classList.add('done'); } checkAll(); }
 function checkAll(){ if(['c1','c2','c3','c4','c5','c6'].every(i=>document.getElementById(i).checked)){ document.getElementById('congrats').style.display='block'; } }
