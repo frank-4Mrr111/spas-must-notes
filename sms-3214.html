@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SMS 3214 Actuarial Mathematics I - SPAS MUST Notes</title>
+<style>
+  body{font-family:Arial,sans-serif;background:#F2F6F0;color:#1A1A1A;margin:0;padding:20px;line-height:1.7}
+  .wrap{max-width:800px;margin:0 auto;background:#fff;padding:24px;border-radius:12px;border-top:8px solid #2E6B4A}
+  h1,h2{color:#2E6B4A} h2{border-bottom:2px solid #D9E8DD;padding-bottom:6px}
+  .tag{background:#E8F2EB;padding:6px 12px;border-radius:20px;display:inline-block;margin:4px 4px 0 0}
+  .box{background:#F2F6F0;padding:16px;border-radius:10px;margin:16px 0}
+  .formula{background:#FFF8E1;padding:12px;border-left:4px solid #2E6B4A;font-weight:bold}
+  .frac{display:inline-block;text-align:center;vertical-align:middle;margin:0 4px}
+  .frac span{display:block;padding:0 6px}
+  .frac span:first-child{border-bottom:2px solid #1A1A1A}
+  .frac-wrap{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .exbox{background:#E8F2EB;padding:16px;border-radius:10px;margin:16px 0;border:1px solid #2E6B4A}
+  .howbox{background:#FFF8E1;padding:16px;border-radius:10px;border:2px solid #2E6B4A;margin:16px 0}
+  .check{list-style:none;padding:0} .check li{padding:8px 0;display:flex;gap:10px;align-items:flex-start}
+  .check input{width:22px;height:22px;margin-top:2px;accent-color:#2E6B4A}
+  .check input:disabled{cursor:not-allowed}
+  .check li.done{color:#2E6B4A;font-weight:bold}
+  input.answer{padding:10px;font-size:16px;width:140px;margin:4px}
+  button{padding:10px 16px;font-size:16px;background:#2E6B4A;color:#fff;border:none;border-radius:8px;cursor:pointer;margin:4px 4px 4px 0}
+  button:disabled{background:#999;cursor:not-allowed}
+  .msg{font-weight:bold;margin:8px 0}
+  .ok{color:#2E6B4A} .bad{color:#B00020}
+  .chatbox{display:none;background:#E3F2FD;padding:16px;border-radius:10px;border:2px solid #1565C0;margin:16px 0}
+  a{color:#2E6B4A} footer{margin-top:24px;font-size:14px;color:#555}
+</style>
+</head>
+<body>
+<div class="wrap">
+<p><a href="index.html">&larr; Back to Home</a></p>
+<h1>SMS 3214 - Actuarial Mathematics I</h1>
+<p><strong>Unit Name:</strong> Actuarial Mathematics I &nbsp;|&nbsp; <strong>Code:</strong> SMS 3214</p>
+<p><span class="tag">#Spas.must</span> <span class="tag">#ActuarialScienceMUST</span></p>
+
+<h2>What Is This Unit About?</h2>
+<p>Actuarial Mathematics I is about <strong>how long people live, and how much money that means for insurance and pensions.</strong> If an insurance company does not know how long people live, it cannot know how much to charge. This unit teaches you the maths behind that.</p>
+<p>You do not need to have attended a lecture. We start from zero.</p>
+
+<h2>Top Topics That Appear Most in MUST Exams</h2>
+<ol><li>Life Tables</li><li>Survival and Death Probabilities</li><li>Life Expectancy</li><li>Life Annuities</li><li>Life Assurances</li><li>Premiums</li></ol>
+
+<h2>Topic 1: Life Tables - Start From Zero</h2>
+<h3>a) What is it?</h3>
+<p>A life table tells you: out of 100,000 babies born, how many are still alive at each age.</p>
+<h3>b) Why does it matter?</h3>
+<p>In Kenya, NHIF / an insurance company uses a life table to decide how much premium a 30-year-old should pay.</p>
+<h3>c) Formula - every symbol named</h3>
+<div class="formula"><div class="frac-wrap"><span>q<sub>x</sub> =</span><span class="frac"><span>d<sub>x</sub></span><span>l<sub>x</sub></span></span><span>and</span><span>p<sub>x</sub> = 1 - q<sub>x</sub></span></div>
+<p style="font-weight:normal">l<sub>x</sub> = number alive at age x | d<sub>x</sub> = deaths between age x and x+1 | q<sub>x</sub> = probability of dying at age x | p<sub>x</sub> = probability of surviving age x</p></div>
+<h3>d) Worked Example - MUST style, every step</h3>
+<div class="box"><p><strong>Question:</strong> l<sub>30</sub> = 90,000 and d<sub>30</sub> = 900. Find q<sub>30</sub> and p<sub>30</sub>.</p>
+<p><strong>Step 1:</strong> q<sub>x</sub> = <span class="frac"><span>d<sub>x</sub></span><span>l<sub>x</sub></span></span></p>
+<p><strong>Step 2:</strong> q<sub>30</sub> = <span class="frac"><span>900</span><span>90,000</span></span></p>
+<p><strong>Step 3:</strong> = 0.01 &nbsp; <strong>Step 4:</strong> p<sub>30</sub> = 1 - 0.01 = 0.99</p>
+<p><strong>Answer:</strong> q<sub>30</sub> = 0.01, p<sub>30</sub> = 0.99</p></div>
+<h3>e) Try It Yourself</h3>
+<p>Common mistake: swapping q and p, or swapping l and d. Remember: d is deaths (small), l is alive (big). q = small / big.</p>
+
+<div class="howbox">
+<h3 style="margin-top:0">⚠️ Read This BEFORE You Start The Exercises - How This Page Marks You</h3>
+<ol>
+<li><strong>You CANNOT tick the boxes yourself.</strong> The checkboxes below are locked. They tick <em>automatically</em> only when you prove you understood. When a box ticks, it means the website is assuring you: <strong>"Yes, you understood this lesson."</strong></li>
+<li><strong>You only redo the question you failed - not both.</strong> Exercise 1 and Exercise 2 are marked separately. If you fail Exercise 1, you redo Exercise 1 only. Exercise 2 stays as it is.</li>
+<li><strong>2 wrong submissions on the SAME question = Marking Chatbox.</strong> If you get the same exercise wrong twice, this page will open the Marking Chatbox for that question. Upload a photo of your working <strong>in chat (Option 1, chat-only)</strong> and AI will mark your working step-by-step.</li>
+<li><strong>Partial credit is real.</strong> If you paste your working for marking, and your working shows you got some steps right even though your final answer was wrong, those boxes <strong>will tick</strong>. Example: your formula was right but your division was wrong - the "I can write the formula" box ticks, the "I can get the final answer" box stays empty until you fix the division. You are not punished for a small slip when the thinking was right.</li>
+<li><strong>Satisfaction never changes the maths.</strong> AI will be friendly and will stay with you until you understand, but it will never say a wrong answer is right just to make you happy, and it will never spread rumours.</li>
+</ol>
+</div>
+
+<h2>Exercises - Do These Before The Checklist Ticks</h2>
+<div class="exbox" id="ex1box">
+<p><strong>Exercise 1:</strong> l<sub>40</sub> = 85,000 and d<sub>40</sub> = 1,700. Find q<sub>40</sub> and p<sub>40</sub>.</p>
+<label>q<sub>40</sub> = <input class="answer" id="q1" type="text" placeholder="e.g. 0.02"></label>
+<label>p<sub>40</sub> = <input class="answer" id="p1" type="text" placeholder="e.g. 0.98"></label><br>
+<button onclick="checkEx(1)">Check Exercise 1</button>
+<p class="msg" id="msg1"></p>
+<div class="chatbox" id="chat1"><strong>📩 Marking Chatbox - Exercise 1</strong><p>You got Exercise 1 wrong twice. That is normal - let us mark your working together.</p><p><strong>What to do:</strong> Take a photo of your working for Exercise 1 and paste it <strong>in chat (Option 1, chat-only)</strong> with the message: <em>"Mark my working for SMS 3214 Topic 1 Exercise 1. Mark step-by-step. If any step is right, tell me which checkbox I earned."</em></p><p>AI will mark your <strong>working</strong>, not just the final answer. If your formula was right, that box will tick even if the final answer was wrong. If your substitution was right, that box will tick too. You only need to fix the step you got wrong, then redo <strong>Exercise 1 only</strong>.</p><p>AI will stay friendly and stay with you until you understand - but it will never say a wrong answer is right, and it will never spread rumours.</p></div>
+</div>
+
+<div class="exbox" id="ex2box">
+<p><strong>Exercise 2 - a little harder:</strong> l<sub>50</sub> = 78,000 and d<sub>50</sub> = 3,900. Find q<sub>50</sub> and p<sub>50</sub>. Then explain in one sentence what q<sub>50</sub> means.</p>
+<label>q<sub>50</sub> = <input class="answer" id="q2" type="text" placeholder="e.g. 0.05"></label>
+<label>p<sub>50</sub> = <input class="answer" id="p2" type="text" placeholder="e.g. 0.95"></label><br>
+<button onclick="checkEx(2)">Check Exercise 2</button>
+<p class="msg" id="msg2"></p>
+<div class="chatbox" id="chat2"><strong>📩 Marking Chatbox - Exercise 2</strong><p>You got Exercise 2 wrong twice. Let us mark your working together.</p><p><strong>What to do:</strong> Take a photo of your working for Exercise 2 and paste it <strong>in chat (Option 1, chat-only)</strong> with: <em>"Mark my working for SMS 3214 Topic 1 Exercise 2. Mark step-by-step. If any step is right, tell me which checkbox I earned."</em></p><p>Partial credit applies: formula right = formula box ticks. Substitution right = substitution box ticks. You only redo <strong>Exercise 2 only</strong>.</p></div>
+</div>
+
+<h2>Revision Checklist - The Website Ticks These For You</h2>
+<p><em>These boxes are locked. You cannot tick them. They tick automatically when you prove understanding. When a box ticks, the website is telling you: "Yes, you understood this lesson."</em></p>
+<ul class="check">
+<li id="li-c1"><input type="checkbox" id="c1" disabled> <span>I can write the formula q<sub>x</sub> = d<sub>x</sub> / l<sub>x</sub> and p<sub>x</sub> = 1 - q<sub>x</sub>.</span></li>
+<li id="li-c2"><input type="checkbox" id="c2" disabled> <span>I can explain what a life table is in one sentence.</span></li>
+<li id="li-c3"><input type="checkbox" id="c3" disabled> <span>I can explain why insurance needs life tables.</span></li>
+<li id="li-c4"><input type="checkbox" id="c4" disabled> <span>I can solve a life table question with every step shown (Exercise 1 correct).</span></li>
+<li id="li-c5"><input type="checkbox" id="c5" disabled> <span>I can solve a harder life table question and explain what q means in real life (Exercise 2 correct).</span></li>
+<li id="li-c6"><input type="checkbox" id="c6" disabled> <span>I did Exercise 1 AND Exercise 2 - both correct, or corrected through marking.</span></li>
+</ul>
+<p id="congrats" style="display:none;font-weight:bold;color:#2E6B4A;font-size:18px">✅ All boxes ticked - Yes, you understood this lesson. You are ready for Topic 2.</p>
+
+<h2>Exercises - Answers (Check After You Try)</h2>
+<p><strong>Exercise 1:</strong> q<sub>40</sub> = <span class="frac"><span>1,700</span><span>85,000</span></span> = 0.02. p<sub>40</sub> = 0.98.</p>
+<p><strong>Exercise 2:</strong> q<sub>50</sub> = <span class="frac"><span>3,900</span><span>78,000</span></span> = 0.05. p<sub>50</sub> = 0.95. Meaning: a 50-year-old has a 5% chance of dying before 51.</p>
+
+<h2>Exam Strategy for SMS 3214</h2>
+<ul><li>Attempt Life Table first - easiest marks.</li><li>Show every step - MUST gives marks for method.</li><li>Never leave blank - write the formula.</li></ul>
+
+<footer><p>#Spas.must &nbsp; #ActuarialScienceMUST</p><p>Notes from MUST past papers. Built by frank-4Mrr111. Trusted Sources V3.4 Final.</p><p><a href="TRUSTED-SOURCES-V3.4-FINAL.md">Trusted Sources V3.4 Final</a></p></footer>
+</div>
+<script>
+let tries = {1:0, 2:0};
+function num(v){ v=v.trim().replace(',','.'); let n=parseFloat(v); return isNaN(n)?null:n; }
+function tick(id){ let el=document.getElementById(id); if(el){ el.checked=true; document.getElementById('li-'+id).classList.add('done'); } checkAll(); }
+function checkAll(){ if(['c1','c2','c3','c4','c5','c6'].every(i=>document.getElementById(i).checked)){ document.getElementById('congrats').style.display='block'; } }
+function checkEx(n){
+  let q = num(document.getElementById('q'+n).value);
+  let p = num(document.getElementById('p'+n).value);
+  let msg = document.getElementById('msg'+n);
+  let correct = (n===1) ? (q===0.02 && p===0.98) : (q===0.05 && p===0.95);
+  if(correct){
+    msg.textContent = n===1 ? "✅ Correct! Exercise 1 done. Your boxes ticked automatically." : "✅ Correct! Exercise 2 done. Your boxes ticked automatically.";
+    msg.className = "msg ok";
+    if(n===1){ tick('c1'); tick('c4'); }
+    if(n===2){ tick('c1'); tick('c5'); }
+    tick('c2'); tick('c3');
+    if(document.getElementById('c4').checked && document.getElementById('c5').checked){ tick('c6'); }
+    document.getElementById('chat'+n).style.display='none';
+  } else {
+    tries[n]++;
+    if(tries[n]>=2){
+      msg.textContent = "You got this question wrong twice. That is okay - the Marking Chatbox below is now open for THIS question only. You do NOT need to redo the other question.";
+      msg.className = "msg bad";
+      document.getElementById('chat'+n).style.display='block';
+    } else {
+      msg.textContent = "Not yet - try again. Hint: q = d on top, l at bottom. You only redo THIS question, not both. You have 1 try left before the Marking Chatbox opens.";
+      msg.className = "msg bad";
+    }
+  }
+}
+</script>
+</body>
+</html>
