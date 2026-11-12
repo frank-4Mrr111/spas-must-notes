@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SMS 3240 - Actuarial Science Information Systems - SPAS MUST Notes</title>
+<style>
+  body{font-family:Arial,sans-serif;background:#F2F6F0;color:#1A1A1A;margin:0;padding:20px;line-height:1.7}
+  .wrap{max-width:800px;margin:0 auto;background:#fff;padding:24px;border-radius:12px;border-top:8px solid #2E6B4A}
+  h1,h2{color:#2E6B4A}
+  .formula{background:#FFF8E1;padding:12px;border-left:4px solid #2E6B4A;font-weight:bold}
+  .frac{display:inline-block;text-align:center;vertical-align:middle;margin:0 4px}
+  .frac span{display:block;padding:0 6px}
+  .frac span:first-child{border-bottom:2px solid #1A1A1A}
+  .exbox{background:#E8F2EB;padding:16px;border-radius:10px;margin:16px 0;border:1px solid #2E6B4A}
+  .howbox{background:#FFF8E1;padding:16px;border-radius:10px;border:2px solid #2E6B4A;margin:16px 0}
+  .check input{width:22px;height:22px;accent-color:#2E6B4A}
+  .check input:disabled{cursor:not-allowed}
+  input.answer,textarea.answer{padding:10px;font-size:16px;width:90%;margin:4px}
+  button{padding:10px 16px;font-size:16px;background:#2E6B4A;color:#fff;border:none;border-radius:8px;cursor:pointer;margin:4px 4px 4px 0}
+  .chatbox{display:none;background:#E3F2FD;padding:16px;border-radius:10px;border:2px solid #1565C0;margin:16px 0}
+</style>
+</head>
+<body>
+<div class="wrap">
+<p><a href="index.html">&larr; Back to Home</a></p>
+<h1>SMS 3240 - Actuarial Science Information Systems</h1>
+<p><strong>Unit Name:</strong> Actuarial Science Information Systems &nbsp;|&nbsp; <strong>Code:</strong> SMS 3240</p>
+<p><span>#Spas.must</span> <span>#ActuarialScienceMUST</span></p>
+<p>You do not need to have attended a lecture. We start from zero.</p>
+<p>This unit is about <strong>how actuaries use computers, data, and systems to do their work</strong> — not just maths on paper, but real systems that store policy data, calculate premiums, and pay claims.</p>
+
+<h2>Top Topics That Appear Most in MUST Exams</h2>
+<ol><li>Introduction to Information Systems</li><li>Data, Databases and Data Management</li><li>Spreadsheets for Actuaries</li><li>Actuarial Software and Programming Basics</li><li>Data Security, Ethics and Privacy</li><li>Management Information Systems and Decision Support</li></ol>
+
+<div class="howbox"><p><strong>⚠️ Static Rule - For All Topics:</strong> Boxes locked, auto-tick only. Only redo failed one. For THEORY, Chatbox IS the marking. For NUMBERS, 2 wrong = Marking Chatbox. Partial credit. Satisfaction never changes truth. No visible answers on this page.</p></div>
+
+<h2>Topic 1: Introduction to Information Systems - Start From Zero</h2>
+<p><strong>What:</strong> An Information System is people + data + software + hardware + procedures working together to turn data into information for decisions.</p>
+<p><strong>Why:</strong> An insurer without a system cannot know who is insured, who paid, who claimed. It would guess. Systems stop guessing.</p>
+<div class="formula"><p>Data → Processing → Information → Decision</p><p>Example: Policy data (age, sum assured) → System calculates premium → Manager sees report → Decides premium rate</p></div>
+<div class="box"><p><strong>Worked Example:</strong> A company has 1,000 policies on paper. Finding one policy takes 30 minutes. After a system, it takes 10 seconds. The system did not change the data — it changed how fast you can use it.</p></div>
+<div class="exbox"><p><strong>Exercise 1 (Theory):</strong> In your own words, explain the difference between Data and Information. Give one actuarial example of each.</p><textarea class="answer" rows="3" placeholder="Type your answer"></textarea><br><button onclick="showChat(1)">Send For Marking</button><p id="msg1"></p><div class="chatbox" id="chat1">Paste your answer in chat (Option 1): "Mark my answer for SMS 3240 Topic 1 Exercise 1. Mark against key points. If any point is right, tell me which checkbox I earned." Redo Exercise 1 only.</div></div>
+<div class="exbox"><p><strong>Exercise 2 (Theory):</strong> List 3 components of an Information System and explain one job each does in an insurance company.</p><textarea class="answer" rows="3" placeholder="Type your answer"></textarea><br><button onclick="showChat(2)">Send For Marking</button><p id="msg2"></p><div class="chatbox" id="chat2">Paste your answer in chat (Option 1): "Mark my answer for SMS 3240 Topic 1 Exercise 2." Redo Exercise 2 only.</div></div>
+<ul class="check"><li id="li-c1"><input type="checkbox" id="c1" disabled> <span>I can explain Data vs Information with an example.</span></li><li id="li-c2"><input type="checkbox" id="c2" disabled> <span>I can list components of an IS and their jobs.</span></li></ul>
+<p><strong>No answers on this page.</strong> Find out by sending for marking.</p>
+
+<h2>Topic 2: Data, Databases and Data Management - Start From Zero</h2>
+<p><strong>What:</strong> A Database is organised data you can search, update, and protect. A table = rows (records) + columns (fields). Key = unique ID for each record, e.g. Policy Number.</p>
+<p><strong>Why:</strong> If two people have the same name, name cannot be the key. Policy Number can. Without a key, you pay the wrong person.</p>
+<div class="formula"><p>Table: Policies | Columns: PolicyNo (Key), Name, Age, SumAssured, Premium | Row = one policy</p></div>
+<div class="box"><p><strong>Worked Example:</strong> Table has 500 rows. You search PolicyNo = P-102. System returns 1 row in seconds. That is a database — not a list in a notebook.</p></div>
+<div class="exbox"><p><strong>Exercise 3 (Theory):</strong> Why can't Name be the Primary Key in a Policies table? Give 2 reasons.</p><textarea class="answer" rows="3" placeholder="Type your answer"></textarea><br><button onclick="showChat(3)">Send For Marking</button><p id="msg3"></p><div class="chatbox" id="chat3">Paste in chat: "Mark my answer for SMS 3240 Topic 2 Exercise 3." Redo Exercise 3 only.</div></div>
+<div class="exbox"><p><strong>Exercise 4 (Practical):</strong> A Policies table has PolicyNo, Name, Age. You need to find all policies where Age &gt; 60. Write in words what query / filter you would use.</p><textarea class="answer" rows="3" placeholder="Type your answer"></textarea><br><button onclick="showChat(4)">Send For Marking</button><p id="msg4"></p><div class="chatbox" id="chat4">Paste in chat: "Mark my answer for SMS 3240 Topic 2 Exercise 4." Redo Exercise 4 only.</div></div>
+<ul class="check"><li id="li-c3"><input type="checkbox" id="c3" disabled> <span>I can explain Primary Key and why Name fails.</span></li><li id="li-c4"><input type="checkbox" id="c4" disabled> <span>I can describe a filter / query to find records.</span></li></ul>
+<p><strong>No answers on this page.</strong></p>
+
+<h2>Topic 3: Spreadsheets for Actuaries - Start From Zero</h2>
+<p><strong>What:</strong> Spreadsheets (Excel / Google Sheets) are the actuary's daily tool for calculations, tables, and checks.</p>
+<p><strong>Why:</strong> Before expensive software, actuaries test ideas in a spreadsheet. If the spreadsheet is wrong, the premium is wrong.</p>
+<div class="formula"><p>Key formulas: =SUM, =AVERAGE, =IF, =VLOOKUP, =PMT. Always use cell references, never type numbers inside a formula.</p></div>
+<div class="box"><p><strong>Worked Example:</strong> Premiums in B2:B5 are 2500, 5000, 3000, 4000. Total = =SUM(B2:B5) = 14,500. If you type =2500+5000+3000+4000, and one premium changes, your answer stays wrong. With =SUM, it updates.</p></div>
+<div class="exbox"><p><strong>Exercise 5 (Number):</strong> In a sheet, claims are in C2:C4 = 12000, 18000, 15000. What formula gives total claims? Type the formula, not just the answer.</p><input class="answer" id="q5" type="text" placeholder="Type your answer"><br><button onclick="checkEx(5)">Check Exercise 5</button><p id="msg5"></p><div class="chatbox" id="chat5">Wrong twice. Paste working in chat: "Mark my answer for SMS 3240 Topic 3 Exercise 5." Redo Exercise 5 only.</div></div>
+<div class="exbox"><p><strong>Exercise 6 (Number):</strong> Premiums: 2000, 3000, 5000. Average = ? Type the average as a number.</p><input class="answer" id="q6" type="text" placeholder="Type your answer"><br><button onclick="checkEx(6)">Check Exercise 6</button><p id="msg6"></p><div class="chatbox" id="chat6">Wrong twice. Paste working in chat: "Mark my answer for SMS 3240 Topic 3 Exercise 6." Redo Exercise 6 only.</div></div>
+<ul class="check"><li id="li-c5"><input type="checkbox" id="c5" disabled> <span>I can write a SUM formula with cell references.</span></li><li id="li-c6"><input type="checkbox" id="c6" disabled> <span>I can find average and explain it.</span></li></ul>
+<p><strong>No answers on this page.</strong></p>
+
+<h2>Topic 4: Actuarial Software and Programming Basics - Start From Zero</h2>
+<p><strong>What:</strong> Actuaries use software like Excel, R, Python, and actuarial systems (e.g. Prophet, MoSes) to model many policies at once. Programming = giving the computer clear steps.</p>
+<p><strong>Why:</strong> You cannot calculate 100,000 policies by hand. A program does it in seconds, the same way every time.</p>
+<div class="formula"><p>Program logic: Input → Process → Output. Example: Input age, sum assured → Process: premium = sum × rate → Output: premium.</p></div>
+<div class="box"><p><strong>Worked Example:</strong> In Python: premium = 100000 * 0.02 → premium = 2000. The computer did not decide 0.02 — the actuary did. The computer just followed the step.</p></div>
+<div class="exbox"><p><strong>Exercise 7 (Theory):</strong> Why is a program better than hand calculation for 100,000 policies? Give 2 reasons.</p><textarea class="answer" rows="3" placeholder="Type your answer"></textarea><br><button onclick="showChat(7)">Send For Marking</button><p id="msg7"></p><div class="chatbox" id="chat7">Paste in chat: "Mark my answer for SMS 3240 Topic 4 Exercise 7." Redo Exercise 7 only.</div></div>
+<div class="exbox"><p><strong>Exercise 8 (Practical):</strong> Write the steps (not code) to calculate premium for one policy: inputs age and sum assured, rate 0.02. List steps 1-3.</p><textarea class="answer" rows="3" placeholder="Type your answer"></textarea><br><button onclick="showChat(8)">Send For Marking</button><p id="msg8"></p><div class="chatbox" id="chat8">Paste in chat: "Mark my answer for SMS 3240 Topic 4 Exercise 8." Redo Exercise 8 only.</div></div>
+<ul class="check"><li id="li-c7"><input type="checkbox" id="c7" disabled> <span>I can explain why software beats hand calculation.</span></li><li id="li-c8"><input type="checkbox" id="c8" disabled> <span>I can write steps to calculate premium.</span></li></ul>
+<p><strong>No answers on this page.</strong></p>
+
+<h2>Topic 5: Data Security, Ethics and Privacy - Start From Zero</h2>
+<p><strong>What:</strong> Actuarial data is sensitive: names, ages, health, money. Security = protect it. Ethics = use it fairly. Privacy = only use what you need, only who needs it.</p>
+<p><strong>Why:</strong> If policy data leaks, people lose money and trust. If you use health data to refuse someone unfairly, that is unethical, even if the computer allowed it.</p>
+<div class="formula"><p>Rules: Passwords + Access control + Backup + Do not share + Do not use data for a purpose the person did not agree to.</p></div>
+<div class="box"><p><strong>Worked Example:</strong> A clerk shares a client list on 【entity-WhatsApp¦canonical_name=WhatsApp】 to "work from home". That is a breach — even if nothing bad happens yet. The right way: access the system with a password, no download, no sharing.</p></div>
+<div class="exbox"><p><strong>Exercise 9 (Theory):</strong> Give 2 ways to protect actuarial data and explain one.</p><textarea class="answer" rows="3" placeholder="Type your answer"></textarea><br><button onclick="showChat(9)">Send For Marking</button><p id="msg9"></p><div class="chatbox" id="chat9">Paste in chat: "Mark my answer for SMS 3240 Topic 5 Exercise 9." Redo Exercise 9 only.</div></div>
+<div class="exbox"><p><strong>Exercise 10 (Theory):</strong> A colleague asks for a client's health data "just to check". Should you give it? Why / why not? Give 2 reasons.</p><textarea class="answer" rows="3" placeholder="Type your answer"></textarea><br><button onclick="showChat(10)">Send For Marking</button><p id="msg10"></p><div class="chatbox" id="chat10">Paste in chat: "Mark my answer for SMS 3240 Topic 5 Exercise 10." Redo Exercise 10 only.</div></div>
+<ul class="check"><li id="li-c9"><input type="checkbox" id="c9" disabled> <span>I can list ways to protect data.</span></li><li id="li-c10"><input type="checkbox" id="c10" disabled> <span>I can explain privacy / ethics with reasons.</span></li></ul>
+<p><strong>No answers on this page.</strong></p>
+
+<h2>Topic 6: Management Information Systems and Decision Support - Start From Zero</h2>
+<p><strong>What:</strong> MIS = reports from the system that help managers decide. Decision Support = what-if: "What if claims rise 10%? What happens to profit?"</p>
+<p><strong>Why:</strong> A manager does not read 100,000 rows. They read one report: total premiums, total claims, profit. That report must be correct.</p>
+<div class="formula"><p>Report example: Total Premiums - Total Claims = Profit. If premiums 14,500,000 and claims 10,000,000, profit = 4,500,000.</p></div>
+<div class="box"><p><strong>Worked Example:</strong> Report shows claims rising. Manager asks: "What if claims rise 10% next year?" System recalculates: new claims = 11,000,000, new profit = 3,500,000. Manager decides to review premiums. That is decision support.</p></div>
+<div class="exbox"><p><strong>Exercise 11 (Number):</strong> Premiums = 20,000,000, Claims = 12,000,000. Profit = ? Type profit as a number.</p><input class="answer" id="q11" type="text" placeholder="Type your answer"><br><button onclick="checkEx(11)">Check Exercise 11</button><p id="msg11"></p><div class="chatbox" id="chat11">Wrong twice. Paste working in chat: "Mark my answer for SMS 3240 Topic 6 Exercise 11." Redo Exercise 11 only.</div></div>
+<div class="exbox"><p><strong>Exercise 12 (Theory):</strong> In one sentence, what is the difference between a raw data table and an MIS report? Give one example.</p><textarea class="answer" rows="3" placeholder="Type your answer"></textarea><br><button onclick="showChat(12)">Send For Marking</button><p id="msg12"></p><div class="chatbox" id="chat12">Paste in chat: "Mark my answer for SMS 3240 Topic 6 Exercise 12." Redo Exercise 12 only.</div></div>
+<ul class="check"><li id="li-c11"><input type="checkbox" id="c11" disabled> <span>I can calculate profit from a report.</span></li><li id="li-c12"><input type="checkbox" id="c12" disabled> <span>I can explain MIS report vs raw data.</span></li></ul>
+<p><strong>No answers on this page.</strong></p>
+<p id="congratsAll" style="display:none;font-weight:bold;color:#2E6B4A;font-size:18px">✅ SMS 3240 Complete - You understood all 6 topics.</p>
+
+<h2>Exam Strategy for SMS 3240</h2>
+<ul><li>Attempt definitions first - easiest marks.</li><li>Always give an actuarial example, not just a definition.</li><li>Show every step - MUST gives marks for method.</li><li>Never leave blank - write the key points.</li></ul>
+<footer><p>#Spas.must &nbsp; #ActuarialScienceMUST</p><p>Notes from MUST past papers. Built by frank-4Mrr111. Trusted Sources V3.4 Final.</p></footer>
+</div>
+<script>
+let tries = {};
+document.querySelectorAll('.answer').forEach(el=>el.placeholder='Type your answer');
+function num(v){ v=v.trim().replace(',','.'); let n=parseFloat(v); return isNaN(n)?null:n; }
+function tick(id){ let el=document.getElementById(id); if(el){ el.checked=true; document.getElementById('li-'+id).classList.add('done'); } }
+function showChat(n){ document.getElementById('chat'+n).style.display='block'; document.getElementById('msg'+n).textContent="Chatbox open. Paste your answer in chat for marking. After marking, AI will tell you which checkbox you earned."; }
+function checkEx(n){
+  let q = num(document.getElementById('q'+n).value);
+  let msg = document.getElementById('msg'+n);
+  let answers = {5:[0], 6:[3333.33], 11:[8000000]};
+  let want = answers[n];
+  let correct = false;
+  if(n===5){ let txt=document.getElementById('q5').value.toLowerCase(); correct = txt.includes('sum') && txt.includes('c2'); }
+  if(n===6){ correct = (Math.abs(q-3333.33)<1); }
+  if(n===11){ correct = (q===8000000); }
+  if(correct){ msg.textContent="✅ Correct! Exercise "+n+" done."; document.getElementById('chat'+n).style.display='none'; if(n===5) tick('c5'); if(n===6) tick('c6'); if(n===11) tick('c11'); }
+  else { tries[n]=(tries[n]||0)+1; if(tries[n]>=2){ msg.textContent="Wrong twice. Marking Chatbox below is open for THIS question only."; document.getElementById('chat'+n).style.display='block'; } else { msg.textContent="Not yet - try again. You only redo THIS question."; } }
+}
+</script>
+</body>
+</html>
