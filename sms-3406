@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SMS 3406 - Survival Data Analysis - SPAS MUST Notes</title>
+<style>
+  body{font-family:Arial,sans-serif;background:#F2F6F0;color:#1A1A1A;margin:0;padding:20px;line-height:1.7}
+  body.dark{background:#121212;color:#EDEDED} body.dark .wrap{background:#1E1E1E;color:#EDEDED}
+  .wrap{max-width:820px;margin:0 auto;background:#fff;padding:24px;border-radius:12px;border-top:8px solid #2E6B4A}
+  h1,h2{color:#2E6B4A} body.dark h1,body.dark h2{color:#7BC9A0}
+  .keybox{background:#E8F2EB;padding:14px;border-radius:10px;margin:12px 0} body.dark .keybox{background:#223528}
+  .exbox{background:#E8F2EB;padding:16px;border-radius:10px;margin:16px 0;border:1px solid #2E6B4A} body.dark .exbox{background:#223528}
+  .howbox{background:#FFF8E1;padding:16px;border-radius:10px;border:2px solid #2E6B4A;margin:16px 0} body.dark .howbox{background:#2A2A1A}
+  .check input{width:22px;height:22px;accent-color:#2E6B4A} .check input:disabled{cursor:not-allowed}
+  input.answer,textarea.answer{padding:10px;font-size:16px;width:90%;margin:4px}
+  button{padding:10px 16px;font-size:16px;background:#2E6B4A;color:#fff;border:none;border-radius:8px;cursor:pointer;margin:4px 4px 4px 0}
+  .topic{display:none} .topic.active{display:block}
+  .frac{display:inline-block;text-align:center;vertical-align:middle}.frac>span{display:block}.frac>span:first-child{border-bottom:1px solid currentColor}
+  .popup{display:none;position:fixed;inset:10% 5%;background:#fff;color:#111;padding:20px;overflow:auto;border-radius:12px;border:3px solid #2E6B4A;z-index:99} body.dark .popup{background:#1E1E1E;color:#EDEDED}
+  #progressBar{height:14px;background:#DDD;border-radius:8px;overflow:hidden}#progressFill{height:100%;width:0;background:#2E6B4A}
+  .topbar{display:flex;flex-wrap:wrap;gap:6px}
+  #ownChat{display:none;position:fixed;bottom:0;left:0;right:0;max-width:820px;margin:0 auto;background:#fff;color:#111;border-top:3px solid #2E6B4A;padding:16px;z-index:100;max-height:70vh;overflow:auto} body.dark #ownChat{background:#1E1E1E;color:#EDEDED}
+  .msg{background:#E3F2FD;padding:10px;border-radius:10px;margin:6px 0} body.dark .msg{background:#1A2A44}
+  #photoPreview{max-width:100%;display:none;margin:8px 0;border-radius:8px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<p><a href="index.html">&larr; Back to Home</a></p>
+<h1>SMS 3406 - Survival Data Analysis</h1>
+<p><strong>Unit Name:</strong> Survival Data Analysis | <strong>Code:</strong> SMS 3406</p>
+<p><span>#Spas.must</span> <span>#ActuarialScienceMUST</span></p>
+<div class="topbar">
+<button onclick="openPop('formulaPop')">Formula Sheet</button>
+<button onclick="openPop('glossPop')">Glossary</button>
+<button onclick="toggleDark()">Dark / Light</button>
+<span style="display:inline-flex;align-items:center;gap:6px;background:#E8F2EB;padding:4px 8px;border-radius:8px;">
+  <span style="font-weight:bold;">Text Size:</span>
+  <button onclick="changeFont(-1)" title="Make text smaller" style="padding:6px 12px;font-size:18px;font-weight:bold;">-</button>
+  <span id="fontLabel" style="min-width:38px;text-align:center;font-weight:bold;">100%</span>
+  <button onclick="changeFont(1)" title="Make text bigger" style="padding:6px 12px;font-size:18px;font-weight:bold;">+</button>
+</span>
+<input id="searchBox" placeholder="Search in this unit..." style="padding:10px;width:200px" oninput="doSearch(this.value)">
+</div><p id="searchResult"></p>
+<p><strong>Prerequisites:</strong> Probability, Statistics, SMS 3214 Actuarial Mathematics I. Calculator allowed.</p>
+<p id="progressText">Topic 1 of 6 - 0% done</p><div id="progressBar"><div id="progressFill"></div></div>
+<p>This unit is how actuaries study time until an event - death, failure, recovery, default. You will learn censoring, survival and hazard functions, Kaplan-Meier, life tables and Cox models. You do not need to have attended a lecture.</p>
+<h2>Top Topics That Appear Most in MUST Exams</h2>
+<ol><li>Introduction to Survival Data - Censoring and Truncation</li><li>Survival, Hazard and Cumulative Hazard Functions</li><li>Kaplan-Meier and Nelson-Aalen Estimators</li><li>Life Tables and Actuarial Estimator</li><li>Parametric Models - Exponential, Weibull, Lognormal</li><li>Cox Proportional Hazards and Comparing Groups</li></ol>
+<div class="howbox">
+<p><strong>How this page works:</strong></p>
+<p>1. <b>One topic at a time.</b> Finish it, click <b>Next</b>. <b>Back</b> to revise.</p>
+<p>2. <b>2 exercises per topic.</b> Each has parts <b>(a)(b)(c)</b>, sometimes <b>(d)</b>. Together they cover the whole topic.</p>
+<p>3. <b>First 2 tries = final answer only.</b> Even if it says show your working, type just the answer here.</p>
+<p>4. <b>Our Own Chatbox.</b> Wrong twice? Our Chatbox opens for <b>that question only</b> and guides you step by step.</p>
+<p>5. <b>Upload your working.</b> Do it <b>manually on paper</b>, take a clear photo of <b>your working</b>, upload it in the Chatbox. You will see a preview.</p>
+<p>6. <b>Theory vs Numbers.</b> Numbers are checked here. Theory cannot be checked here, so click <b>Send For Marking</b> to open the Chatbox.</p>
+<p>7. <b>Send to Meta AI.</b> Chatbox has a button to copy your question + answers for real AI marking in Meta AI chat. Our Chatbox is the experience, Meta AI is the backup brain.</p>
+<p>8. <b>Boxes are locked.</b> They tick only when you prove it. Theory ticks after Meta AI says Pass, then click <b>AI Marked Me Correct - Tick</b> in the Chatbox.</p>
+<p>9. <b>Marking is by part.</b> Get (a) right = credit for (a). Only redo the part / question you failed.</p>
+<p>10. <b>Boxes = parts.</b> (a)(b)(c) = 3 boxes. If one part asks for 2 numbers, it gets 2 boxes. Each part has its own box. No answers are shown on this page.</p>
+</div>
+<div id="formulaPop" class="popup"><button onclick="closePop('formulaPop')">Close</button><h3>Formula Sheet - SMS 3406</h3><p><b>Survival:</b> S(t) = P(T &gt; t) | <b>Hazard:</b> h(t) = f(t) / S(t) | <b>Cumulative hazard:</b> H(t) = -ln S(t), S(t) = exp(-H(t)) | <b>Kaplan-Meier:</b> S-hat(t) = Product (1 - d_i / n_i) | <b>Nelson-Aalen:</b> H-hat(t) = Sum d_i / n_i | <b>Exponential:</b> S(t)=exp(-lambda t), h(t)=lambda | <b>Weibull:</b> S(t)=exp(-(lambda t)^p) | <b>Cox:</b> h(t|x)=h0(t) exp(beta x) | <b>Median:</b> S(t)=0.5</p></div>
+<div id="glossPop" class="popup"><button onclick="closePop('glossPop')">Close</button><h3>Glossary - SMS 3406</h3><p><b>Survival time:</b> time until event. <b>Event:</b> death, failure, recovery. <b>Censoring:</b> event not seen by end of study. <b>Right censoring:</b> still alive at end. <b>Truncation:</b> only some people enter study. <b>Survival function:</b> probability of surviving past t. <b>Hazard:</b> instant risk at t, given survived to t. <b>Kaplan-Meier:</b> non-parametric survival estimate. <b>Life table:</b> grouped survival estimate. <b>Cox model:</b> hazard depends on covariates. <b>Proportional hazards:</b> hazard ratio stays constant.</p></div>
+<div class="topic active" id="topic1">
+<h2>Topic 1: Introduction to Survival Data - Censoring and Truncation</h2><p><b>Estimated time:</b> ~30 minutes | <b>Objectives:</b> Define survival time, explain censoring, distinguish right, left, interval censoring and truncation.</p>
+<p>Survival data measures time until an event. The problem: we do not always see the event.</p><div class='keybox'><p><b>Censoring:</b> Event not observed. <strong>Right censoring:</strong> patient still alive at end of study, or lost to follow-up. <strong>Left censoring:</strong> event happened before study started. <strong>Interval censoring:</strong> event happened between two visits, we only know the interval.</p><p><b>Truncation:</b> Person never enters study unless they survive to a date. Example: only people alive at age 60 are studied.</p><p><b>Why it matters:</b> If you ignore censoring and treat censored times as deaths, you underestimate survival. If you drop them, you waste data and bias results.</p></div>
+<div class="exbox"><p><strong>Exercise 1 - Covers: survival data + censoring</strong><br>(a) Define survival time and event, with 2 examples.<br>(b) Define censoring and give 2 reasons it happens.<br>(c) Distinguish right vs interval censoring.</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(1,'c1')">Send For Marking - Open My Chatbox</button><p id="msg1"></p></div>
+<div class="exbox"><p><strong>Exercise 2 - Covers: truncation + bias</strong><br>(a) Define truncation, with example.<br>(b) Distinguish censoring vs truncation.<br>(c) Explain what happens if censored patients are treated as deaths.</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(2,'c2')">Send For Marking - Open My Chatbox</button><p id="msg2"></p></div>
+<ul class="check"><li><input type="checkbox" id="c1" disabled> <span>I have got Topic 1 - first exercise.</span></li><li><input type="checkbox" id="c2" disabled> <span>I have got Topic 1 - second exercise.</span></li></ul>
+<p><b>Appears in MUST papers:</b> Appears in MUST past papers for this unit.</p><p>Was this topic clear? <button onclick="feedback(1,'clear')">Clear</button> <button onclick="feedback(1,'not')">Not Clear</button> <span id="fb1"></span></p>
+<p><button onclick="showTopic(2)">Next - Topic 2: Survival, Hazard and Cumulative Hazard Functions</button></p>
+</div>
+<div class="topic" id="topic2">
+<h2>Topic 2: Survival, Hazard and Cumulative Hazard Functions</h2><p><b>Estimated time:</b> ~35 minutes | <b>Objectives:</b> Define S(t), f(t), h(t), H(t), derive relationships, calculate values.</p>
+<p>Four functions describe the same story.</p><div class='keybox'><p><b>Survival:</b> S(t) = P(T &gt; t). Starts at 1, falls to 0.</p><p><b>Density:</b> f(t) = -S'(t).</p><p><b>Hazard:</b> h(t) = f(t) / S(t). Instant risk at t, given survived to t.</p><p><b>Cumulative hazard:</b> H(t) = -ln S(t). So S(t) = exp(-H(t)).</p><p><b>Example:</b> S(5) = 0.8. H(5) = -ln 0.8 = 0.2231. If h is constant 0.1, S(10) = exp(-0.1 x 10) = exp(-1) = 0.3679.</p></div>
+<div class="exbox"><p><strong>Exercise 3 - Covers: S, h, H</strong><br>(a) Define S(t), h(t), H(t).<br>(b) Explain the difference between hazard and probability of death.<br>(c) If S(10) = 0.5, what is H(10)? What does it mean?</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(3,'c3')">Send For Marking - Open My Chatbox</button><p id="msg3"></p></div>
+<div class="exbox"><p><strong>Exercise 4 - Covers: relationships</strong><br>(a) Derive S(t) = exp(-H(t)) in words.<br>(b) If h(t) = 0.2 constant, S(5) = ? Show working.<br>(c) Give 2 reasons hazard is more useful than density for actuaries.</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(4,'c4')">Send For Marking - Open My Chatbox</button><p id="msg4"></p></div>
+<ul class="check"><li><input type="checkbox" id="c3" disabled> <span>I have got Topic 2 - first exercise.</span></li><li><input type="checkbox" id="c4" disabled> <span>I have got Topic 2 - second exercise.</span></li></ul>
+<p><b>Appears in MUST papers:</b> Appears in MUST past papers for this unit.</p><p>Was this topic clear? <button onclick="feedback(2,'clear')">Clear</button> <button onclick="feedback(2,'not')">Not Clear</button> <span id="fb2"></span></p>
+<p><button onclick="showTopic(1)">Back to Topic 1</button> <button onclick="showTopic(3)">Next - Topic 3: Kaplan-Meier and Nelson-Aalen Estimators</button></p>
+</div>
+<div class="topic" id="topic3">
+<h2>Topic 3: Kaplan-Meier and Nelson-Aalen Estimators</h2><p><b>Estimated time:</b> ~40 minutes | <b>Objectives:</b> Explain KM, calculate KM survival, explain Nelson-Aalen, interpret steps.</p>
+<p>Kaplan-Meier is the workhorse. It updates survival only at event times, and uses only those still at risk.</p><div class='keybox'><p><b>KM:</b> S-hat(t) = Product over event times &le; t of (1 - d_i / n_i), where d_i = deaths at time i, n_i = at risk just before i.</p><p><b>Example:</b> At time 2: n=10, d=2. Factor = 1 - 2/10 = 0.8. S-hat(2) = 0.8. At time 5: n=7 (one censored), d=1. Factor = 1 - 1/7 = 0.8571. S-hat(5) = 0.8 x 0.8571 = 0.6857.</p><p><b>Nelson-Aalen:</b> H-hat(t) = Sum d_i / n_i. Then S-hat = exp(-H-hat).</p></div>
+<div class="exbox"><p><strong>Exercise 5 - Covers: Kaplan-Meier (NUMBERS)</strong><br>(a) Define Kaplan-Meier estimator.<br>(b) Explain why censored people leave the risk set but are not counted as deaths.<br>(c) Times: at t=1, n=20, d=4; at t=3, n=15, d=3. S-hat(1) = ? S-hat(3) = ? Show working.</p><p>(a) <textarea class="answer" id="t5a" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" id="t5b" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <input class="answer" id="q5c" type="text" placeholder="Type your answer - S-hat(1), S-hat(3)"></p><button onclick="checkEx(5)">Check Exercise 5</button> <button onclick="openOwnChat(5,'c5')">Open My Chatbox for Exercise 5</button><p id="msg5"></p></div>
+<div class="exbox"><p><strong>Exercise 6 - Covers: Nelson-Aalen + interpretation</strong><br>(a) Define Nelson-Aalen estimator.<br>(b) Using Ex 5 data, H-hat(3) = ? S-hat from Nelson-Aalen = ? Show working.<br>(c) Explain why KM is a step function.</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(6,'c6')">Send For Marking - Open My Chatbox</button><p id="msg6"></p></div>
+<ul class="check"><li><input type="checkbox" id="c5" disabled> <span>I have got Topic 3 - first exercise.</span></li><li><input type="checkbox" id="c6" disabled> <span>I have got Topic 3 - second exercise.</span></li></ul>
+<p><b>Appears in MUST papers:</b> Appears in MUST past papers for this unit.</p><p>Was this topic clear? <button onclick="feedback(3,'clear')">Clear</button> <button onclick="feedback(3,'not')">Not Clear</button> <span id="fb3"></span></p>
+<p><button onclick="showTopic(2)">Back to Topic 2</button> <button onclick="showTopic(4)">Next - Topic 4: Life Tables and Actuarial Estimator</button></p>
+</div>
+<div class="topic" id="topic4">
+<h2>Topic 4: Life Tables and Actuarial Estimator</h2><p><b>Estimated time:</b> ~35 minutes | <b>Objectives:</b> Explain life table, calculate actuarial estimator, explain grouping.</p>
+<p>Life tables group time into intervals - years, months. The actuarial estimator assumes censoring happens uniformly in the interval.</p><div class='keybox'><p><b>Actuarial:</b> Effective at risk n' = n - c/2, where c = censored in interval. q = d / n'. S = Product (1 - q).</p><p><b>Example:</b> Interval 0-1 year: n=100, d=10, c=20. n' = 100 - 10 = 90. q = 10/90 = 0.1111. S(1) = 0.8889.</p><p><b>KM vs Life table:</b> KM uses exact times, life table groups. KM is better with small data, life table is clearer for reports and old actuarial work.</p></div>
+<div class="exbox"><p><strong>Exercise 7 - Covers: life table + actuarial</strong><br>(a) Define life table and actuarial estimator.<br>(b) Explain why we subtract c/2.<br>(c) Give 2 advantages of life tables over KM.</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(7,'c7')">Send For Marking - Open My Chatbox</button><p id="msg7"></p></div>
+<div class="exbox"><p><strong>Exercise 8 - Covers: life table calculation</strong><br>(a) Interval 0-2 years: n=200, d=20, c=40. n' = ? q = ? S(2) = ? Show working.<br>(b) Explain what happens to S if censoring rises.<br>(c) Give one actuarial use of a life table.</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(8,'c8')">Send For Marking - Open My Chatbox</button><p id="msg8"></p></div>
+<ul class="check"><li><input type="checkbox" id="c7" disabled> <span>I have got Topic 4 - first exercise.</span></li><li><input type="checkbox" id="c8" disabled> <span>I have got Topic 4 - second exercise.</span></li></ul>
+<p><b>Appears in MUST papers:</b> Appears in MUST past papers for this unit.</p><p>Was this topic clear? <button onclick="feedback(4,'clear')">Clear</button> <button onclick="feedback(4,'not')">Not Clear</button> <span id="fb4"></span></p>
+<p><button onclick="showTopic(3)">Back to Topic 3</button> <button onclick="showTopic(5)">Next - Topic 5: Parametric Models - Exponential, Weibull, Lognormal</button></p>
+</div>
+<div class="topic" id="topic5">
+<h2>Topic 5: Parametric Models - Exponential, Weibull, Lognormal</h2><p><b>Estimated time:</b> ~35 minutes | <b>Objectives:</b> Explain parametric models, fit exponential, distinguish Weibull shape, interpret parameters.</p>
+<p>Parametric models assume a shape for survival. They use all data and can predict beyond the study.</p><div class='keybox'><p><b>Exponential:</b> h(t) = lambda constant. S(t) = exp(-lambda t). Mean = 1/lambda. Memoryless - old and young have same risk. Good for random failures, bad for human mortality.</p><p><b>Weibull:</b> h(t) = lambda p (lambda t)^(p-1). If p &gt; 1, hazard rises with age. If p &lt; 1, hazard falls. If p = 1, it is exponential.</p><p><b>Lognormal:</b> log T is normal. Hazard rises then falls. Good for some diseases.</p><p><b>Example:</b> Exponential lambda = 0.1. S(10) = exp(-1) = 0.3679. Median = ln 2 / lambda = 6.93.</p></div>
+<div class="exbox"><p><strong>Exercise 9 - Covers: exponential + Weibull</strong><br>(a) Define exponential and Weibull models.<br>(b) Explain what p tells you in Weibull.<br>(c) When would exponential be a bad model for human life? Explain.</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(9,'c9')">Send For Marking - Open My Chatbox</button><p id="msg9"></p></div>
+<div class="exbox"><p><strong>Exercise 10 - Covers: fitting + choice</strong><br>(a) Exponential lambda = 0.2. S(5) = ? Median = ? Show working.<br>(b) Explain how to check if exponential fits - plot log S vs t.<br>(c) Give 2 advantages of parametric over KM.</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(10,'c10')">Send For Marking - Open My Chatbox</button><p id="msg10"></p></div>
+<ul class="check"><li><input type="checkbox" id="c9" disabled> <span>I have got Topic 5 - first exercise.</span></li><li><input type="checkbox" id="c10" disabled> <span>I have got Topic 5 - second exercise.</span></li></ul>
+<p><b>Appears in MUST papers:</b> Appears in MUST past papers for this unit.</p><p>Was this topic clear? <button onclick="feedback(5,'clear')">Clear</button> <button onclick="feedback(5,'not')">Not Clear</button> <span id="fb5"></span></p>
+<p><button onclick="showTopic(4)">Back to Topic 4</button> <button onclick="showTopic(6)">Next - Topic 6: Cox Proportional Hazards and Comparing Groups</button></p>
+</div>
+<div class="topic" id="topic6">
+<h2>Topic 6: Cox Proportional Hazards and Comparing Groups</h2><p><b>Estimated time:</b> ~35 minutes | <b>Objectives:</b> Explain Cox model, interpret hazard ratio, explain log-rank test, compare groups.</p>
+<p>Cox model lets hazard depend on covariates - age, sex, treatment - without assuming a shape for baseline hazard.</p><div class='keybox'><p><b>Cox:</b> h(t|x) = h0(t) x exp(beta x). h0 is baseline hazard. exp(beta) is hazard ratio.</p><p><b>Interpretation:</b> Hazard ratio 2.0 = twice the risk at any time. Hazard ratio 0.5 = half the risk. Hazard ratio 1.0 = no difference.</p><p><b>Example:</b> Treatment beta = -0.693. Hazard ratio = exp(-0.693) = 0.5. Treated patients have half the hazard of untreated.</p><p><b>Log-rank test:</b> Tests if two survival curves differ, without assuming a model. p &lt; 0.05 = curves differ significantly.</p></div>
+<div class="exbox"><p><strong>Exercise 11 - Covers: Cox + hazard ratio (NUMBERS)</strong><br>(a) Define Cox model and hazard ratio.<br>(b) Explain proportional hazards assumption.<br>(c) beta for smoking = 0.693. Hazard ratio = ? What does it mean? Show working.</p><p>(a) <textarea class="answer" id="t11a" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" id="t11b" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <input class="answer" id="q11c" type="text" placeholder="Type your answer - hazard ratio"></p><button onclick="checkEx(11)">Check Exercise 11</button> <button onclick="openOwnChat(11,'c11')">Open My Chatbox for Exercise 11</button><p id="msg11"></p></div>
+<div class="exbox"><p><strong>Exercise 12 - Covers: comparing groups + practice</strong><br>(a) Define log-rank test.<br>(b) Two groups: KM curves cross. Is proportional hazards true? Explain.<br>(c) Give 2 actuarial uses of Cox models.</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(12,'c12')">Send For Marking - Open My Chatbox</button><p id="msg12"></p></div>
+<ul class="check"><li><input type="checkbox" id="c11" disabled> <span>I have got Topic 6 - first exercise.</span></li><li><input type="checkbox" id="c12" disabled> <span>I have got Topic 6 - second exercise.</span></li></ul>
+<p><b>Appears in MUST papers:</b> Appears in MUST past papers for this unit.</p><p>Was this topic clear? <button onclick="feedback(6,'clear')">Clear</button> <button onclick="feedback(6,'not')">Not Clear</button> <span id="fb6"></span></p>
+<p><button onclick="showTopic(5)">Back to Topic 5</button> <button onclick="showTopic(1)">Back to Topic 1</button> <a href="index.html"><button>Back to Home</button></a></p>
+<h2>Exam Strategy for SMS 3406</h2><ul><li>Attempt definitions first - easiest marks.</li><li>Always give actuarial example, not just definition.</li><li>Show every step - MUST gives marks for method.</li><li>Never leave blank - write key points you know.</li><li>For "explain" questions, give definition + example + why it matters.</li></ul>
+<footer><p>#Spas.must &nbsp; #ActuarialScienceMUST</p><p>Notes from MUST past papers. Built by frank-4Mrr111. Trusted Sources V3.4 Final.</p></footer>
+</div>
+</div>
+<div id="ownChat">
+<h3 id="chatTitle">Our Own Chatbox</h3>
+<div class="msg" id="chatGuide">Hi! I am your SPAS marking guide. Do this question manually on paper, step by step. Take a clear photo of YOUR WORKING and upload it below. You will see a preview. Then type your (a), (b), (c) answers. I will guide you by part.</div>
+<p><strong>1. Upload your working (photo of your manual work):</strong><br><input type="file" accept="image/*" onchange="previewPhoto(this)"><br><img id="photoPreview"></p>
+<p><strong>2. Type your answers here:</strong><br><input id="chatInput" style="padding:10px;width:90%" placeholder="Type your answer"></p>
+<p><button onclick="sendInChat()">Send in Our Chatbox</button> <button onclick="sendToMeta()">Send to Meta AI for Real Marking</button> <button onclick="tickFromChat()">AI Marked Me Correct - Tick</button> <button onclick="closeOwnChat()">Close Chatbox</button></p>
+<p id="chatLog"></p>
+<p><small>Our Chatbox guides you. For real AI marking, click Send to Meta AI - it copies question + answers + rubric for you to paste in Meta AI chat.</small></p>
+</div>
+<script>
+let tries={}, fontSize=16, currentEx=0, currentTick='';
+function showTopic(n){document.querySelectorAll('.topic').forEach(t=>t.classList.remove('active'));document.getElementById('topic'+n).classList.add('active');localStorage.setItem('sms3406_topic',n);updateProgress();window.scrollTo(0,0);}
+function updateProgress(){let done=document.querySelectorAll('.check input:checked').length;let pct=Math.round(done/12*100);document.getElementById('progressFill').style.width=pct+'%';let cur=document.querySelector('.topic.active');let num=cur?cur.id.replace('topic',''):'1';document.getElementById('progressText').textContent='Topic '+num+' of 6 - '+pct+'% done';}
+function tick(id){let el=document.getElementById(id);if(el){el.checked=true;updateProgress();}}
+function openPop(id){document.getElementById(id).style.display='block';} function closePop(id){document.getElementById(id).style.display='none';}
+function toggleDark(){document.body.classList.toggle('dark');}
+function changeFont(d){fontSize+=d;if(fontSize<13)fontSize=13;if(fontSize>24)fontSize=24;document.body.style.fontSize=fontSize+'px';let pct=Math.round(fontSize/16*100);let label=document.getElementById('fontLabel');if(label)label.textContent=pct+'%';}
+function feedback(n,v){document.getElementById('fb'+n).textContent=v==='clear'?'Thanks! Noted as Clear.':'Thanks! We will expand this topic.';localStorage.setItem('sms3406_fb'+n,v);}
+function doSearch(q){let r=document.getElementById('searchResult');if(!q){r.textContent='';return;}let topics=[['Introduction to Survival Data',1],['Survival Hazard Cumulative',2],['Kaplan-Meier Nelson-Aalen',3],['Life Tables Actuarial Estimator',4],['Parametric Exponential Weibull',5],['Cox Proportional Hazards',6]];let found=topics.filter(t=>t[0].toLowerCase().includes(q.toLowerCase()));r.innerHTML=found.length?found.map(f=>'<button onclick="showTopic('+f[1]+')">Go to Topic '+f[1]+': '+f[0]+'</button>').join(' '):'No topic found in this unit. Try: Survival, Hazard, Kaplan, Life Table, Weibull, Cox';}
+function num(v){let n=parseFloat((v||'').trim().replace(',','.'));return isNaN(n)?null:n;}
+function val(id){let el=document.getElementById(id);return el?el.value.trim():'';}
+function theoryOk(id){return val(id).length>=10;}
+function openOwnChat(ex,tickId){currentEx=ex;currentTick=tickId;document.getElementById('chatTitle').textContent='Our Own Chatbox - Exercise '+ex+' (SMS 3406)';document.getElementById('ownChat').style.display='block';document.getElementById('chatGuide').textContent='Hi! You are on Exercise '+ex+'. Step 1: Do it manually on paper. Step 2: Upload a photo of YOUR WORKING below. Step 3: Type your (a), (b), (c) answers. I will guide you by part. For real AI marking, click Send to Meta AI.';window.scrollTo(0,document.body.scrollHeight);}
+function closeOwnChat(){document.getElementById('ownChat').style.display='none';}
+function previewPhoto(input){let f=input.files[0];if(!f)return;let r=new FileReader();r.onload=function(e){let img=document.getElementById('photoPreview');img.src=e.target.result;img.style.display='block';document.getElementById('chatLog').innerHTML+='<p>Photo preview loaded. I can see your working. Now type your (a), (b), (c) answers.</p>';};r.readAsDataURL(f);}
+function sendInChat(){let v=document.getElementById('chatInput').value;if(!v)return;document.getElementById('chatLog').innerHTML+='<p><b>You:</b> '+v+'</p><p><b>Guide:</b> Thanks! Now check each part: (a) Did you define the term? (b) Did you show working / formula? (c) Did you explain in words? If a part is missing, add it and send again. If you want real AI marking, click Send to Meta AI. Only redo the part you failed.</p>';document.getElementById('chatInput').value='';}
+function collectAnswers(){let out=[];document.querySelectorAll('.topic.active .answer').forEach((el,i)=>{let label=el.closest('p')?el.closest('p').textContent.trim().slice(0,40):('Box '+(i+1));out.push(label+': '+el.value.trim());});let chat=document.getElementById('chatInput').value.trim();if(chat)out.push('Chatbox answer: '+chat);return out.join('\n');}
+function sendToMeta(){let answers=collectAnswers();let text='Please mark me for SMS 3406 Exercise '+currentEx+'. Mark by part with partial credit. Guide me step by step on the part I failed. Rubric is in the page HTML comment for this exercise.\n\nMY REAL ANSWERS:\n'+(answers||'(no answers typed yet)')+'\n\nI also uploaded a photo of my manual working.';navigator.clipboard.writeText(text).then(()=>{alert('Copied WITH your real answers! Paste this in Meta AI chat + attach your photo of your working.');});}
+function tickFromChat(){if(currentTick){tick(currentTick);alert('Ticked! This means AI / guide said you passed Exercise '+currentEx+'. Only this question is ticked.');closeOwnChat();}}
+function checkEx(n){
+  let msg=document.getElementById('msg'+n);
+  let numbersOk=false, theoryNeeded=[];
+  if(n===5){let v=val('q5c').toLowerCase(); numbersOk=v.includes('0.8')&&v.includes('0.64'); theoryNeeded=['t5a','t5b'];}
+  if(n===11){let v=num(val('q11c')); numbersOk=v!==null && Math.abs(v-2)<0.05; theoryNeeded=['t11a','t11b'];}
+  let theoryOkAll=theoryNeeded.every(id=>theoryOk(id));
+  if(numbersOk && theoryOkAll){msg.textContent="Correct! All number parts + theory written. Exercise "+n+" done.";if(n===5)tick('c5');if(n===11)tick('c11');}
+  else if(numbersOk && !theoryOkAll){msg.textContent="Numbers / formula are correct. Now write the theory part(s) - at least 10 characters each - then click Check again.";}
+  else {tries[n]=(tries[n]||0)+1;if(tries[n]>=2){msg.textContent="Wrong twice. Our Own Chatbox is open for THIS question only. Upload a photo of YOUR WORKING. Only redo the part you failed.";openOwnChat(n,'c'+n);}else{msg.textContent="Not yet - check ALL parts. You only redo THIS question.";}}
+}
+document.querySelectorAll('.answer').forEach((el,i)=>{let key='sms3406_ans_'+i;let saved=localStorage.getItem(key);if(saved)el.value=saved;el.addEventListener('input',()=>localStorage.setItem(key,el.value));});
+let saved=localStorage.getItem('sms3406_topic');if(saved)showTopic(parseInt(saved));else updateProgress();
+</script>
+</body>
+</html>
