@@ -35,7 +35,12 @@
 <button onclick="openPop('formulaPop')">📐 Formula Sheet</button>
 <button onclick="openPop('glossPop')">📖 Glossary</button>
 <button onclick="toggleDark()">🌙 Dark / Light</button>
-<button onclick="changeFont(-1)">A-</button><button onclick="changeFont(1)">A+</button>
+<span style="display:inline-flex;align-items:center;gap:6px;background:#E8F2EB;padding:4px 8px;border-radius:8px;">
+  <span style="font-weight:bold;">Text Size:</span>
+  <button onclick="changeFont(-1)" title="Make text smaller" style="padding:6px 12px;font-size:18px;font-weight:bold;">−</button>
+  <span id="fontLabel" style="min-width:38px;text-align:center;font-weight:bold;">100%</span>
+  <button onclick="changeFont(1)" title="Make text bigger" style="padding:6px 12px;font-size:18px;font-weight:bold;">+</button>
+</span>
 <input id="searchBox" placeholder="Type your answer" style="padding:10px;width:200px" oninput="doSearch(this.value)">
 </div><p id="searchResult"></p>
 <p><strong>Prerequisites:</strong> Basic computer use, basic Excel, basic maths. No programming needed before this unit.</p>
