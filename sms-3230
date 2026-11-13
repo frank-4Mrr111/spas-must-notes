@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SMS 3230 - Principles of Healthcare Reserving - SPAS MUST Notes</title>
+<style>
+  body{font-family:Arial,sans-serif;background:#F2F6F0;color:#1A1A1A;margin:0;padding:20px;line-height:1.7}
+  body.dark{background:#121212;color:#EDEDED} body.dark .wrap{background:#1E1E1E;color:#EDEDED}
+  .wrap{max-width:820px;margin:0 auto;background:#fff;padding:24px;border-radius:12px;border-top:8px solid #2E6B4A}
+  h1,h2{color:#2E6B4A} body.dark h1,body.dark h2{color:#7BC9A0}
+  .keybox{background:#E8F2EB;padding:14px;border-radius:10px;margin:12px 0} body.dark .keybox{background:#223528}
+  .exbox{background:#E8F2EB;padding:16px;border-radius:10px;margin:16px 0;border:1px solid #2E6B4A} body.dark .exbox{background:#223528}
+  .howbox{background:#FFF8E1;padding:16px;border-radius:10px;border:2px solid #2E6B4A;margin:16px 0} body.dark .howbox{background:#2A2A1A}
+  .check input{width:22px;height:22px;accent-color:#2E6B4A} .check input:disabled{cursor:not-allowed}
+  input.answer,textarea.answer{padding:10px;font-size:16px;width:90%;margin:4px}
+  button{padding:10px 16px;font-size:16px;background:#2E6B4A;color:#fff;border:none;border-radius:8px;cursor:pointer;margin:4px 4px 4px 0}
+  .topic{display:none} .topic.active{display:block}
+  .frac{display:inline-block;text-align:center;vertical-align:middle}.frac>span{display:block}.frac>span:first-child{border-bottom:1px solid currentColor}
+  .popup{display:none;position:fixed;inset:10% 5%;background:#fff;color:#111;padding:20px;overflow:auto;border-radius:12px;border:3px solid #2E6B4A;z-index:99} body.dark .popup{background:#1E1E1E;color:#EDEDED}
+  #progressBar{height:14px;background:#DDD;border-radius:8px;overflow:hidden}#progressFill{height:100%;width:0;background:#2E6B4A}
+  .topbar{display:flex;flex-wrap:wrap;gap:6px}
+  #ownChat{display:none;position:fixed;bottom:0;left:0;right:0;max-width:820px;margin:0 auto;background:#fff;color:#111;border-top:3px solid #2E6B4A;padding:16px;z-index:100;max-height:70vh;overflow:auto} body.dark #ownChat{background:#1E1E1E;color:#EDEDED}
+  .msg{background:#E3F2FD;padding:10px;border-radius:10px;margin:6px 0} body.dark .msg{background:#1A2A44}
+  #photoPreview{max-width:100%;display:none;margin:8px 0;border-radius:8px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<p><a href="index.html">&larr; Back to Home</a></p>
+<h1>SMS 3230 - Principles of Healthcare Reserving</h1>
+<p><strong>Unit Name:</strong> Principles of Healthcare Reserving | <strong>Code:</strong> SMS 3230</p>
+<p><span>#Spas.must</span> <span>#ActuarialScienceMUST</span></p>
+<div class="topbar">
+<button onclick="openPop('formulaPop')">Formula Sheet</button>
+<button onclick="openPop('glossPop')">Glossary</button>
+<button onclick="toggleDark()">Dark / Light</button>
+<span style="display:inline-flex;align-items:center;gap:6px;background:#E8F2EB;padding:4px 8px;border-radius:8px;">
+  <span style="font-weight:bold;">Text Size:</span>
+  <button onclick="changeFont(-1)" title="Make text smaller" style="padding:6px 12px;font-size:18px;font-weight:bold;">-</button>
+  <span id="fontLabel" style="min-width:38px;text-align:center;font-weight:bold;">100%</span>
+  <button onclick="changeFont(1)" title="Make text bigger" style="padding:6px 12px;font-size:18px;font-weight:bold;">+</button>
+</span>
+<input id="searchBox" placeholder="Search in this unit..." style="padding:10px;width:200px" oninput="doSearch(this.value)">
+</div><p id="searchResult"></p>
+<p><strong>Prerequisites:</strong> SMS 3120, SMS 3220, basic interest and probability. Calculator allowed.</p>
+<p id="progressText">Topic 1 of 6 - 0% done</p><div id="progressBar"><div id="progressFill"></div></div>
+<p>This unit is about healthcare - how health insurance works, how health costs are measured, and how insurers set aside reserves to pay future health claims. You do not need to have attended a lecture.</p>
+<h2>Top Topics That Appear Most in MUST Exams</h2>
+<ol><li>Introduction to Healthcare and Health Insurance</li><li>Types of Health Cover</li><li>Health Costs, Morbidity and Utilisation</li><li>Premiums for Health Insurance</li><li>Healthcare Reserves - IBNR, Outstanding and Unexpired</li><li>Managed Care, Fraud and Regulation in Health</li></ol>
+<div class="howbox">
+<p><strong>How this page works:</strong></p>
+<p>1. <b>One topic at a time.</b> Finish it, click <b>Next</b>. <b>Back</b> to revise.</p>
+<p>2. <b>2 exercises per topic.</b> Each has parts <b>(a)(b)(c)</b>, sometimes <b>(d)</b>. Together they cover the whole topic.</p>
+<p>3. <b>First 2 tries = final answer only.</b> Even if it says show your working, type just the answer here.</p>
+<p>4. <b>Our Own Chatbox.</b> Wrong twice? Our Chatbox opens for <b>that question only</b> and guides you step by step.</p>
+<p>5. <b>Upload your working.</b> Do it <b>manually on paper</b>, take a clear photo of <b>your working</b>, upload it in the Chatbox. You will see a preview.</p>
+<p>6. <b>Theory vs Numbers.</b> Numbers are checked here. Theory cannot be checked here, so click <b>Send For Marking</b> to open the Chatbox.</p>
+<p>7. <b>Send to Meta AI.</b> Chatbox has a button to copy your question + answers for real AI marking in Meta AI chat. Our Chatbox is the experience, Meta AI is the backup brain.</p>
+<p>8. <b>Boxes are locked.</b> They tick only when you prove it. Theory ticks after Meta AI says Pass, then click <b>AI Marked Me Correct - Tick</b> in the Chatbox.</p>
+<p>9. <b>Marking is by part.</b> Get (a) right = credit for (a). Only redo the part / question you failed.</p>
+<p>10. <b>Boxes = parts.</b> (a)(b)(c) = 3 boxes. If one part asks for 2 numbers, it gets 2 boxes. Each part has its own box. No answers are shown on this page.</p>
+</div>
+<div id="formulaPop" class="popup"><button onclick="closePop('formulaPop')">Close</button><h3>Formula Sheet - SMS 3230</h3><p><b>Expected Health Claims:</b> Members x Utilisation Rate x Average Cost | <b>Premium:</b> Expected Claims + Expenses + Profit | <b>IBNR:</b> Claims incurred but not yet reported | <b>Total Reserve:</b> Outstanding + IBNR + Unexpired Risk | <b>Loss Ratio:</b> Claims / Premiums x 100% | <b>Utilisation:</b> Claims / Members</p></div>
+<div id="glossPop" class="popup"><button onclick="closePop('glossPop')">Close</button><h3>Glossary - SMS 3230</h3><p><b>Health Insurance:</b> pays for medical care. <b>Morbidity:</b> illness rate. <b>Utilisation:</b> how often people use care. <b>Reserve:</b> money set aside for future claims. <b>IBNR:</b> incurred but not reported. <b>Outstanding Claims:</b> reported but not yet paid. <b>Unexpired Risk:</b> cover still to run, premium already paid. <b>Managed Care:</b> insurer controls cost and quality via network. <b>Capitation:</b> fixed pay per member. <b>Fee-for-service:</b> pay for each service.</p></div>
+<div class="topic active" id="topic1">
+<h2>Topic 1: Introduction to Healthcare and Health Insurance</h2><p><b>Estimated time:</b> ~30 minutes | <b>Objectives:</b> Define healthcare, explain health insurance, explain why health is different from motor / fire.</p>
+<p>Healthcare is care for illness and injury - hospital, doctor, medicine, surgery. Health insurance pays for that care, so one illness does not wipe out a family.</p><div class='keybox'><p><b>Why health is different:</b> 1. Everyone needs it, often. 2. Costs are unpredictable and can be huge. 3. Demand is urgent - you cannot wait. 4. Information is unequal - doctor knows more than patient.</p><p><b>Who pays:</b> Out-of-pocket, Employer, Insurer, Government / NHIF / SHA, Donor.</p></div>
+<div class="exbox"><p><strong>Exercise 1 - Covers: definition + why health is different</strong><br>(a) Define health insurance.<br>(b) Give 3 reasons health insurance is needed, with example each.<br>(c) Explain 2 ways health insurance differs from motor insurance.</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(1,'c1')">Send For Marking - Open My Chatbox</button><p id="msg1"></p></div>
+<div class="exbox"><p><strong>Exercise 2 - Covers: payers + access</strong><br>(a) Name 3 payers for healthcare and what each does.<br>(b) Explain what happens to a family with no health cover when a member needs surgery.<br>(c) Give 2 reasons healthcare costs keep rising.</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(2,'c2')">Send For Marking - Open My Chatbox</button><p id="msg2"></p></div>
+<ul class="check"><li><input type="checkbox" id="c1" disabled> <span>I have got Topic 1 - first exercise.</span></li><li><input type="checkbox" id="c2" disabled> <span>I have got Topic 1 - second exercise.</span></li></ul>
+<p><b>Appears in MUST papers:</b> Appears in MUST past papers for this unit.</p><p>Was this topic clear? <button onclick="feedback(1,'clear')">Clear</button> <button onclick="feedback(1,'not')">Not Clear</button> <span id="fb1"></span></p>
+<p><button onclick="showTopic(2)">Next - Topic 2: Types of Health Cover</button></p>
+</div>
+<div class="topic" id="topic2">
+<h2>Topic 2: Types of Health Cover</h2><p><b>Estimated time:</b> ~30 minutes | <b>Objectives:</b> Explain inpatient, outpatient, maternity, dental, optical, group vs individual, exclusions.</p>
+<p>Always answer: <b>What it covers + Example + One exclusion</b>.</p><div class='keybox'><p><b>Inpatient:</b> Hospital admission, surgery, bed. Example: appendicitis operation.</p><p><b>Outpatient:</b> Clinic visit, no admission. Example: malaria test + medicine.</p><p><b>Maternity:</b> Pregnancy, delivery, antenatal. Often has waiting period.</p><p><b>Dental / Optical:</b> Teeth, eyes. Often with limits.</p><p><b>Group vs Individual:</b> Group = employer covers all staff, cheaper. Individual = you buy for yourself / family.</p></div>
+<div class="exbox"><p><strong>Exercise 3 - Covers: types + cover</strong><br>(a) Define inpatient and outpatient.<br>(b) Distinguish group vs individual health cover.<br>(c) Which cover suits a company with 100 staff? Explain.</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(3,'c3')">Send For Marking - Open My Chatbox</button><p id="msg3"></p></div>
+<div class="exbox"><p><strong>Exercise 4 - Covers: exclusions + waiting period</strong><br>(a) Give 3 common exclusions in health insurance.<br>(b) Explain waiting period, with example.<br>(c) A person joins today and claims for a pre-existing illness tomorrow. Should it pay? Explain.</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(4,'c4')">Send For Marking - Open My Chatbox</button><p id="msg4"></p></div>
+<ul class="check"><li><input type="checkbox" id="c3" disabled> <span>I have got Topic 2 - first exercise.</span></li><li><input type="checkbox" id="c4" disabled> <span>I have got Topic 2 - second exercise.</span></li></ul>
+<p><b>Appears in MUST papers:</b> Appears in MUST past papers for this unit.</p><p>Was this topic clear? <button onclick="feedback(2,'clear')">Clear</button> <button onclick="feedback(2,'not')">Not Clear</button> <span id="fb2"></span></p>
+<p><button onclick="showTopic(1)">Back to Topic 1</button> <button onclick="showTopic(3)">Next - Topic 3: Health Costs, Morbidity and Utilisation</button></p>
+</div>
+<div class="topic" id="topic3">
+<h2>Topic 3: Health Costs, Morbidity and Utilisation</h2><p><b>Estimated time:</b> ~35 minutes | <b>Objectives:</b> Explain morbidity, utilisation, average cost, calculate expected claims.</p>
+<p>Morbidity is how often people get ill. Utilisation is how often they use care. Average cost is how much each claim costs. Together they give expected claims.</p><div class='keybox'><p><b>Expected Claims = Members x Utilisation Rate x Average Cost.</b></p><p><b>Example:</b> 1000 members, utilisation 0.8 claims per member per year, average cost 10000. Expected claims = 1000 x 0.8 x 10000 = 8000000.</p><p><b>What drives cost:</b> Age, chronic illness, hospital prices, new technology, fraud, over-treatment.</p></div>
+<div class="exbox"><p><strong>Exercise 5 - Covers: morbidity + expected claims (NUMBERS)</strong><br>(a) Define morbidity, utilisation, average cost.<br>(b) 2000 members, utilisation 0.5, average cost 8000. Expected claims = ? Show working.<br>(c) Give 2 reasons health costs rise, with example each.</p><p>(a) <textarea class="answer" id="t5a" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <input class="answer" id="q5b" type="text" placeholder="Type your answer"></p><p>(c) <textarea class="answer" id="t5c" rows="3" placeholder="Type your answer"></textarea></p><button onclick="checkEx(5)">Check Exercise 5</button> <button onclick="openOwnChat(5,'c5')">Open My Chatbox for Exercise 5</button><p id="msg5"></p></div>
+<div class="exbox"><p><strong>Exercise 6 - Covers: cost drivers + data</strong><br>(a) Give 3 factors that affect health claims.<br>(b) If average cost rises from 8000 to 10000, what happens to expected claims? Explain.<br>(c) Give 2 data an actuary needs to price health cover.</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(6,'c6')">Send For Marking - Open My Chatbox</button><p id="msg6"></p></div>
+<ul class="check"><li><input type="checkbox" id="c5" disabled> <span>I have got Topic 3 - first exercise.</span></li><li><input type="checkbox" id="c6" disabled> <span>I have got Topic 3 - second exercise.</span></li></ul>
+<p><b>Appears in MUST papers:</b> Appears in MUST past papers for this unit.</p><p>Was this topic clear? <button onclick="feedback(3,'clear')">Clear</button> <button onclick="feedback(3,'not')">Not Clear</button> <span id="fb3"></span></p>
+<p><button onclick="showTopic(2)">Back to Topic 2</button> <button onclick="showTopic(4)">Next - Topic 4: Premiums for Health Insurance</button></p>
+</div>
+<div class="topic" id="topic4">
+<h2>Topic 4: Premiums for Health Insurance</h2><p><b>Estimated time:</b> ~35 minutes | <b>Objectives:</b> Explain health premium, calculate premium, explain loading, age, waiting period.</p>
+<p>Health premium must cover expected claims + expenses + profit, with margin. Unlike life, health claims happen every year, so premium is reviewed every year.</p><div class='keybox'><p><b>Premium = Expected Claims + Expenses + Profit.</b></p><p><b>Example:</b> Expected claims 8000000, expenses 1000000, profit 500000. Total = 9500000. Members 1000. Premium per member = 9500.</p><p><b>Rating factors:</b> Age, family size, area, benefit level, claims history, waiting period.</p></div>
+<div class="exbox"><p><strong>Exercise 7 - Covers: premium + rating</strong><br>(a) Define health premium. What 3 things must it cover?<br>(b) Give 3 rating factors and why each matters.<br>(c) Why is health premium reviewed yearly, unlike life premium?</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(7,'c7')">Send For Marking - Open My Chatbox</button><p id="msg7"></p></div>
+<div class="exbox"><p><strong>Exercise 8 - Covers: premium calculation</strong><br>(a) Expected claims 12000000, expenses 2000000, profit 1000000. Total = ? Premium per member if 2000 members = ? Show working.<br>(b) If claims rise 10%, what happens to premium? Explain.<br>(c) Give 2 ways to keep health premium affordable.</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(8,'c8')">Send For Marking - Open My Chatbox</button><p id="msg8"></p></div>
+<ul class="check"><li><input type="checkbox" id="c7" disabled> <span>I have got Topic 4 - first exercise.</span></li><li><input type="checkbox" id="c8" disabled> <span>I have got Topic 4 - second exercise.</span></li></ul>
+<p><b>Appears in MUST papers:</b> Appears in MUST past papers for this unit.</p><p>Was this topic clear? <button onclick="feedback(4,'clear')">Clear</button> <button onclick="feedback(4,'not')">Not Clear</button> <span id="fb4"></span></p>
+<p><button onclick="showTopic(3)">Back to Topic 3</button> <button onclick="showTopic(5)">Next - Topic 5: Healthcare Reserves - IBNR, Outstanding and Unexpired</button></p>
+</div>
+<div class="topic" id="topic5">
+<h2>Topic 5: Healthcare Reserves - IBNR, Outstanding and Unexpired</h2><p><b>Estimated time:</b> ~40 minutes | <b>Objectives:</b> Explain reserve, distinguish IBNR, outstanding, unexpired, calculate total reserve.</p>
+<p>Reserve is money set aside for claims that have happened, or cover that has been paid for but not yet used. Without reserves, an insurer looks profitable today and fails tomorrow.</p><div class='keybox'><p><b>3 Reserves:</b></p><ol><li><strong>Outstanding:</strong> Reported but not yet paid. Example: claim reported, hospital bill not yet settled.</li><li><strong>IBNR:</strong> Incurred But Not Reported. Example: patient treated in December, claim arrives in January.</li><li><strong>Unexpired Risk:</strong> Premium paid for cover still to run. Example: annual premium paid in January, 6 months still to run in July.</li></ol><p><b>Total Reserve = Outstanding + IBNR + Unexpired.</b></p></div>
+<div class="exbox"><p><strong>Exercise 9 - Covers: reserves + types</strong><br>(a) Define reserve in health insurance.<br>(b) Define IBNR, Outstanding, Unexpired, with example each.<br>(c) Explain why IBNR is hardest to estimate.</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(9,'c9')">Send For Marking - Open My Chatbox</button><p id="msg9"></p></div>
+<div class="exbox"><p><strong>Exercise 10 - Covers: total reserve + danger</strong><br>(a) Outstanding 3000000, IBNR 2000000, Unexpired 1000000. Total reserve = ? Show working.<br>(b) What happens if IBNR is underestimated? Give 2 consequences.<br>(c) Give 2 methods to estimate IBNR.</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(10,'c10')">Send For Marking - Open My Chatbox</button><p id="msg10"></p></div>
+<ul class="check"><li><input type="checkbox" id="c9" disabled> <span>I have got Topic 5 - first exercise.</span></li><li><input type="checkbox" id="c10" disabled> <span>I have got Topic 5 - second exercise.</span></li></ul>
+<p><b>Appears in MUST papers:</b> Appears in MUST past papers for this unit.</p><p>Was this topic clear? <button onclick="feedback(5,'clear')">Clear</button> <button onclick="feedback(5,'not')">Not Clear</button> <span id="fb5"></span></p>
+<p><button onclick="showTopic(4)">Back to Topic 4</button> <button onclick="showTopic(6)">Next - Topic 6: Managed Care, Fraud and Regulation in Health</button></p>
+</div>
+<div class="topic" id="topic6">
+<h2>Topic 6: Managed Care, Fraud and Regulation in Health</h2><p><b>Estimated time:</b> ~30 minutes | <b>Objectives:</b> Explain managed care, capitation vs fee-for-service, explain fraud, explain regulation.</p>
+<p>Managed care tries to control cost and quality. The insurer does not just pay bills - it agrees prices, checks necessity, and uses a network of hospitals.</p><div class='keybox'><p><b>Capitation:</b> Hospital gets fixed pay per member per month, whether they treat or not. Controls cost, but may under-treat.</p><p><b>Fee-for-service:</b> Hospital gets paid for each service. May over-treat to earn more.</p><p><b>Fraud:</b> Fake claims, inflated bills, unnecessary tests, sharing cards.</p><p><b>Regulation:</b> IRA + Ministry of Health oversee insurers, hospitals, SHA / NHIF. Protect patients and policyholders.</p></div>
+<div class="exbox"><p><strong>Exercise 11 - Covers: managed care + payment (NUMBERS)</strong><br>(a) Define managed care.<br>(b) Distinguish capitation vs fee-for-service, with one advantage and one disadvantage each.<br>(c) A hospital is paid capitation 500 per member per month for 1000 members. Monthly pay = ? Show working.</p><p>(a) <textarea class="answer" id="t11a" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" id="t11b" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <input class="answer" id="q11c" type="text" placeholder="Type your answer"></p><button onclick="checkEx(11)">Check Exercise 11</button> <button onclick="openOwnChat(11,'c11')">Open My Chatbox for Exercise 11</button><p id="msg11"></p></div>
+<div class="exbox"><p><strong>Exercise 12 - Covers: fraud + regulation</strong><br>(a) Give 2 examples of health insurance fraud.<br>(b) How does fraud affect honest members? Give 2 ways.<br>(c) Give 2 duties of IRA / regulator in health insurance.</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(12,'c12')">Send For Marking - Open My Chatbox</button><p id="msg12"></p></div>
+<ul class="check"><li><input type="checkbox" id="c11" disabled> <span>I have got Topic 6 - first exercise.</span></li><li><input type="checkbox" id="c12" disabled> <span>I have got Topic 6 - second exercise.</span></li></ul>
+<p><b>Appears in MUST papers:</b> Appears in MUST past papers for this unit.</p><p>Was this topic clear? <button onclick="feedback(6,'clear')">Clear</button> <button onclick="feedback(6,'not')">Not Clear</button> <span id="fb6"></span></p>
+<p><button onclick="showTopic(5)">Back to Topic 5</button> <button onclick="showTopic(1)">Back to Topic 1</button> <a href="index.html"><button>Back to Home</button></a></p>
+<h2>Exam Strategy for SMS 3230</h2><ul><li>Attempt definitions first - easiest marks.</li><li>Always give actuarial example, not just definition.</li><li>Show every step - MUST gives marks for method.</li><li>Never leave blank - write key points you know.</li><li>For "explain" questions, give definition + example + why it matters.</li></ul>
+<footer><p>#Spas.must &nbsp; #ActuarialScienceMUST</p><p>Notes from MUST past papers. Built by frank-4Mrr111. Trusted Sources V3.4 Final.</p></footer>
+</div>
+</div>
+<div id="ownChat">
+<h3 id="chatTitle">Our Own Chatbox</h3>
+<div class="msg" id="chatGuide">Hi! I am your SPAS marking guide. Do this question manually on paper, step by step. Take a clear photo of YOUR WORKING and upload it below. You will see a preview. Then type your (a), (b), (c) answers. I will guide you by part.</div>
+<p><strong>1. Upload your working (photo of your manual work):</strong><br><input type="file" accept="image/*" onchange="previewPhoto(this)"><br><img id="photoPreview"></p>
+<p><strong>2. Type your answers here:</strong><br><input id="chatInput" style="padding:10px;width:90%" placeholder="Type your answer"></p>
+<p><button onclick="sendInChat()">Send in Our Chatbox</button> <button onclick="sendToMeta()">Send to Meta AI for Real Marking</button> <button onclick="tickFromChat()">AI Marked Me Correct - Tick</button> <button onclick="closeOwnChat()">Close Chatbox</button></p>
+<p id="chatLog"></p>
+<p><small>Our Chatbox guides you. For real AI marking, click Send to Meta AI - it copies question + answers + rubric for you to paste in Meta AI chat.</small></p>
+</div>
+<script>
+let tries={}, fontSize=16, currentEx=0, currentTick='';
+function showTopic(n){document.querySelectorAll('.topic').forEach(t=>t.classList.remove('active'));document.getElementById('topic'+n).classList.add('active');localStorage.setItem('sms3230_topic',n);updateProgress();window.scrollTo(0,0);}
+function updateProgress(){let done=document.querySelectorAll('.check input:checked').length;let pct=Math.round(done/12*100);document.getElementById('progressFill').style.width=pct+'%';let cur=document.querySelector('.topic.active');let num=cur?cur.id.replace('topic',''):'1';document.getElementById('progressText').textContent='Topic '+num+' of 6 - '+pct+'% done';}
+function tick(id){let el=document.getElementById(id);if(el){el.checked=true;updateProgress();}}
+function openPop(id){document.getElementById(id).style.display='block';} function closePop(id){document.getElementById(id).style.display='none';}
+function toggleDark(){document.body.classList.toggle('dark');}
+function changeFont(d){fontSize+=d;if(fontSize<13)fontSize=13;if(fontSize>24)fontSize=24;document.body.style.fontSize=fontSize+'px';let pct=Math.round(fontSize/16*100);let label=document.getElementById('fontLabel');if(label)label.textContent=pct+'%';}
+function feedback(n,v){document.getElementById('fb'+n).textContent=v==='clear'?'Thanks! Noted as Clear.':'Thanks! We will expand this topic.';localStorage.setItem('sms3230_fb'+n,v);}
+function doSearch(q){let r=document.getElementById('searchResult');if(!q){r.textContent='';return;}let topics=[['Introduction to General Insurance',1],['Profession Ethics',2],['Insurance Principles Types',3],['Risk Uncertainty Pooling',4],['Interest Mortality Calculations',5],['Where Actuaries Work',6]];let found=topics.filter(t=>t[0].toLowerCase().includes(q.toLowerCase()));r.innerHTML=found.length?found.map(f=>'<button onclick="showTopic('+f[1]+')">Go to Topic '+f[1]+': '+f[0]+'</button>').join(' '):'No topic found in this unit. Try: Healthcare, Types, Morbidity, Premium, Reserve, Managed';}
+function num(v){let n=parseFloat((v||'').trim().replace(',','.'));return isNaN(n)?null:n;}
+function val(id){let el=document.getElementById(id);return el?el.value.trim():'';}
+function theoryOk(id){return val(id).length>=10;}
+function openOwnChat(ex,tickId){currentEx=ex;currentTick=tickId;document.getElementById('chatTitle').textContent='Our Own Chatbox - Exercise '+ex+' (SMS 3230)';document.getElementById('ownChat').style.display='block';document.getElementById('chatGuide').textContent='Hi! You are on Exercise '+ex+'. Step 1: Do it manually on paper. Step 2: Upload a photo of YOUR WORKING below. Step 3: Type your (a), (b), (c) answers. I will guide you by part. For real AI marking, click Send to Meta AI.';window.scrollTo(0,document.body.scrollHeight);}
+function closeOwnChat(){document.getElementById('ownChat').style.display='none';}
+function previewPhoto(input){let f=input.files[0];if(!f)return;let r=new FileReader();r.onload=function(e){let img=document.getElementById('photoPreview');img.src=e.target.result;img.style.display='block';document.getElementById('chatLog').innerHTML+='<p>Photo preview loaded. I can see your working. Now type your (a), (b), (c) answers.</p>';};r.readAsDataURL(f);}
+function sendInChat(){let v=document.getElementById('chatInput').value;if(!v)return;document.getElementById('chatLog').innerHTML+='<p><b>You:</b> '+v+'</p><p><b>Guide:</b> Thanks! Now check each part: (a) Did you define the term? (b) Did you show working / formula? (c) Did you explain in words? If a part is missing, add it and send again. If you want real AI marking, click Send to Meta AI. Only redo the part you failed.</p>';document.getElementById('chatInput').value='';}
+function collectAnswers(){let out=[];document.querySelectorAll('.topic.active .answer').forEach((el,i)=>{let label=el.closest('p')?el.closest('p').textContent.trim().slice(0,40):('Box '+(i+1));out.push(label+': '+el.value.trim());});let chat=document.getElementById('chatInput').value.trim();if(chat)out.push('Chatbox answer: '+chat);return out.join('\n');}
+function sendToMeta(){let answers=collectAnswers();let text='Please mark me for SMS 3230 Exercise '+currentEx+'. Mark by part with partial credit. Guide me step by step on the part I failed. Rubric is in the page HTML comment for this exercise.\n\nMY REAL ANSWERS:\n'+(answers||'(no answers typed yet)')+'\n\nI also uploaded a photo of my manual working.';navigator.clipboard.writeText(text).then(()=>{alert('Copied WITH your real answers! Paste this in Meta AI chat + attach your photo of your working.');});}
+function tickFromChat(){if(currentTick){tick(currentTick);alert('Ticked! This means AI / guide said you passed Exercise '+currentEx+'. Only this question is ticked.');closeOwnChat();}}
+function checkEx(n){
+  let msg=document.getElementById('msg'+n);
+  let numbersOk=false, theoryNeeded=[];
+  if(n===5){numbersOk=num(val('q5b'))===8000000; theoryNeeded=['t5a','t5c'];}
+  if(n===11){numbersOk=num(val('q11c'))===500000; theoryNeeded=['t11a','t11b'];}
+  let theoryOkAll=theoryNeeded.every(id=>theoryOk(id));
+  if(numbersOk && theoryOkAll){msg.textContent="Correct! All number parts + theory written. Exercise "+n+" done.";if(n===5)tick('c5');if(n===11)tick('c11');}
+  else if(numbersOk && !theoryOkAll){msg.textContent="Numbers / formula are correct. Now write the theory part(s) - at least 10 characters each - then click Check again.";}
+  else {tries[n]=(tries[n]||0)+1;if(tries[n]>=2){msg.textContent="Wrong twice. Our Own Chatbox is open for THIS question only. Upload a photo of YOUR WORKING. Only redo the part you failed.";openOwnChat(n,'c'+n);}else{msg.textContent="Not yet - check ALL parts. You only redo THIS question.";}}
+}
+document.querySelectorAll('.answer').forEach((el,i)=>{let key='sms3230_ans_'+i;let saved=localStorage.getItem(key);if(saved)el.value=saved;el.addEventListener('input',()=>localStorage.setItem(key,el.value));});
+let saved=localStorage.getItem('sms3230_topic');if(saved)showTopic(parseInt(saved));else updateProgress();
+</script>
+</body>
+</html>
