@@ -204,4 +204,43 @@
 <!-- OUR OWN CHATBOX — OPTION B -->
 <div id="ownChat">
 <h3 id="chatTitle">Our Own Chatbox</h3>
-<div class="msg" id="chatGuide">Hi! I am your SPAS marking guide. Do this question manually on paper, step by step. Take a clear photo of YOUR WORKING and upload it below
+<div class="msg" id="chatGuide">Hi! I am your SPAS marking guide. Do this question manually on paper, step by step. Take a clear photo of YOUR WORKING and upload it below. You will see a preview. Then type your (a), (b), (c) answers. I will guide you by part.</div>
+<p><strong>1. Upload your working (photo of your manual work):</strong><br><input type="file" accept="image/*" onchange="previewPhoto(this)"><br><img id="photoPreview"></p>
+<p><strong>2. Type your answers here:</strong><br><input id="chatInput" style="padding:10px;width:90%" placeholder="Type your answer"></p>
+<p><button onclick="sendInChat()">Send in Our Chatbox</button> <button onclick="sendToMeta()">Send to Meta AI for Real Marking</button> <button onclick="tickFromChat()">AI Marked Me Correct → Tick</button> <button onclick="closeOwnChat()">Close Chatbox</button></p>
+<p id="chatLog"></p>
+<p><small>Our Chatbox guides you. For real AI marking, click “Send to Meta AI” — it copies question + answers + rubric for you to paste in Meta AI chat. Our site is on GitHub Pages with no server, so real AI marking happens there.</small></p>
+</div>
+
+<script>
+let tries={}, fontSize=16, currentEx=0, currentTick='';
+function showTopic(n){document.querySelectorAll('.topic').forEach(t=>t.classList.remove('active'));document.getElementById('topic'+n).classList.add('active');localStorage.setItem('sms3214_topic',n);updateProgress();window.scrollTo(0,0);}
+function updateProgress(){let done=document.querySelectorAll('.check input:checked').length;let pct=Math.round(done/12*100);document.getElementById('progressFill').style.width=pct+'%';let cur=document.querySelector('.topic.active');let num=cur?cur.id.replace('topic',''):'1';document.getElementById('progressText').textContent='Topic '+num+' of 6 — '+pct+'% done';}
+function tick(id){let el=document.getElementById(id);if(el){el.checked=true;updateProgress();}}
+function openPop(id){document.getElementById(id).style.display='block';} function closePop(id){document.getElementById(id).style.display='none';}
+function toggleDark(){document.body.classList.toggle('dark');}
+function changeFont(d){fontSize+=d;document.body.style.fontSize=fontSize+'px';}
+function feedback(n,v){document.getElementById('fb'+n).textContent=v==='clear'?'Thanks! Noted as Clear.':'Thanks! We will expand this topic.';localStorage.setItem('sms3214_fb'+n,v);}
+function doSearch(q){let r=document.getElementById('searchResult');if(!q){r.textContent='';return;}let topics=[['Life Tables',1],['Survival',2],['Life Expectancy',3],['Annuities',4],['Assurances',5],['Premiums',6]];let found=topics.filter(t=>t[0].toLowerCase().includes(q.toLowerCase()));r.innerHTML=found.length?found.map(f=>'<button onclick="showTopic('+f[1]+')">Go to Topic '+f[1]+': '+f[0]+'</button>').join(' '):'No topic found in this unit. Try: Life Tables, Survival, Annuity, Assurance, Premium';}
+function num(v){let n=parseFloat(v.trim().replace(',','.'));return isNaN(n)?null:n;}
+function openOwnChat(ex,tickId){currentEx=ex;currentTick=tickId;document.getElementById('chatTitle').textContent='Our Own Chatbox — Exercise '+ex+' (SMS 3214)';document.getElementById('ownChat').style.display='block';document.getElementById('chatGuide').textContent='Hi! You are on Exercise '+ex+'. Step 1: Do it manually on paper. Step 2: Upload a photo of YOUR WORKING below. Step 3: Type your (a), (b), (c) answers. I will guide you by part. For real AI marking, click Send to Meta AI.';window.scrollTo(0,document.body.scrollHeight);}
+function closeOwnChat(){document.getElementById('ownChat').style.display='none';}
+function previewPhoto(input){let f=input.files[0];if(!f)return;let r=new FileReader();r.onload=function(e){let img=document.getElementById('photoPreview');img.src=e.target.result;img.style.display='block';document.getElementById('chatLog').innerHTML+='<p>✅ Photo preview loaded. I can see your working. Now type your (a), (b), (c) answers.</p>';};r.readAsDataURL(f);}
+function sendInChat(){let v=document.getElementById('chatInput').value;if(!v)return;document.getElementById('chatLog').innerHTML+='<p><b>You:</b> '+v+'</p><p><b>Guide:</b> Thanks! Now check each part: (a) Did you define the term? (b) Did you show working? (c) Did you explain in words? If a part is missing, add it and send again. If you want real AI marking, click Send to Meta AI. Only redo the part you failed.</p>';document.getElementById('chatInput').value='';}
+function sendToMeta(){let text='Please mark me for SMS 3214 Exercise '+currentEx+'. Here are my answers (a)(b)(c). I uploaded a photo of my manual working. Mark by part with partial credit. Guide me step by step on the part I failed. Rubric is in the page HTML comment for this exercise.';navigator.clipboard.writeText(text).then(()=>{alert('Copied! Paste this in Meta AI chat + attach your photo of your working.');});}
+function tickFromChat(){if(currentTick){tick(currentTick);alert('Ticked! This means AI / guide said you passed Exercise '+currentEx+'. Only this question is ticked.');closeOwnChat();}}
+function checkEx(n){let msg=document.getElementById('msg'+n);let correct=false;
+if(n===1){correct=Math.abs(num(document.getElementById('q1b').value)-900)<1&&Math.abs(num(document.getElementById('q1c').value)-0.01)<0.001;}
+if(n===3){correct=Math.abs(num(document.getElementById('q3b').value)-0.9667)<0.002;}
+if(n===5){correct=Math.abs(num(document.getElementById('q5b').value)-23.529)<0.1;}
+if(n===7){correct=Math.abs(num(document.getElementById('q7b').value)-12)<0.01&&Math.abs(num(document.getElementById('q7c').value)-240000)<1;}
+if(n===9){correct=Math.abs(num(document.getElementById('q9c').value)-40000)<1;}
+if(n===11){correct=Math.abs(num(document.getElementById('q11c').value)-2500)<1;}
+if(correct){msg.textContent="✅ Correct! Exercise "+n+" done.";if(n===1)tick('c1');if(n===3)tick('c3');if(n===5)tick('c5');if(n===7)tick('c7');if(n===9)tick('c9');if(n===11)tick('c11');}
+else{tries[n]=(tries[n]||0)+1;if(tries[n]>=2){msg.textContent="Wrong twice. Our Own Chatbox is open for THIS question only. Upload a photo of YOUR WORKING.";openOwnChat(n,'c'+n);}else{msg.textContent="Not yet - try again. You only redo THIS question.";}}}
+// Save answers
+document.querySelectorAll('.answer').forEach((el,i)=>{let key='sms3214_ans_'+i;let saved=localStorage.getItem(key);if(saved)el.value=saved;el.addEventListener('input',()=>localStorage.setItem(key,el.value));});
+let saved=localStorage.getItem('sms3214_topic');if(saved)showTopic(parseInt(saved));else updateProgress();
+</script>
+</body>
+</html>
