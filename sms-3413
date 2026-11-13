@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SMS 3413 - Financial Reporting & Interpretation of Accounts - SPAS MUST Notes</title>
+<style>
+  body{font-family:Arial,sans-serif;background:#F2F6F0;color:#1A1A1A;margin:0;padding:20px;line-height:1.7}
+  body.dark{background:#121212;color:#EDEDED} body.dark .wrap{background:#1E1E1E;color:#EDEDED}
+  .wrap{max-width:820px;margin:0 auto;background:#fff;padding:24px;border-radius:12px;border-top:8px solid #2E6B4A}
+  h1,h2{color:#2E6B4A} body.dark h1,body.dark h2{color:#7BC9A0}
+  .keybox{background:#E8F2EB;padding:14px;border-radius:10px;margin:12px 0} body.dark .keybox{background:#223528}
+  .exbox{background:#E8F2EB;padding:16px;border-radius:10px;margin:16px 0;border:1px solid #2E6B4A} body.dark .exbox{background:#223528}
+  .howbox{background:#FFF8E1;padding:16px;border-radius:10px;border:2px solid #2E6B4A;margin:16px 0} body.dark .howbox{background:#2A2A1A}
+  .check input{width:22px;height:22px;accent-color:#2E6B4A} .check input:disabled{cursor:not-allowed}
+  input.answer,textarea.answer{padding:10px;font-size:16px;width:90%;margin:4px}
+  button{padding:10px 16px;font-size:16px;background:#2E6B4A;color:#fff;border:none;border-radius:8px;cursor:pointer;margin:4px 4px 4px 0}
+  .topic{display:none} .topic.active{display:block}
+  .frac{display:inline-block;text-align:center;vertical-align:middle}.frac>span{display:block}.frac>span:first-child{border-bottom:1px solid currentColor}
+  .popup{display:none;position:fixed;inset:10% 5%;background:#fff;color:#111;padding:20px;overflow:auto;border-radius:12px;border:3px solid #2E6B4A;z-index:99} body.dark .popup{background:#1E1E1E;color:#EDEDED}
+  #progressBar{height:14px;background:#DDD;border-radius:8px;overflow:hidden}#progressFill{height:100%;width:0;background:#2E6B4A}
+  .topbar{display:flex;flex-wrap:wrap;gap:6px}
+  #ownChat{display:none;position:fixed;bottom:0;left:0;right:0;max-width:820px;margin:0 auto;background:#fff;color:#111;border-top:3px solid #2E6B4A;padding:16px;z-index:100;max-height:70vh;overflow:auto} body.dark #ownChat{background:#1E1E1E;color:#EDEDED}
+  .msg{background:#E3F2FD;padding:10px;border-radius:10px;margin:6px 0} body.dark .msg{background:#1A2A44}
+  #photoPreview{max-width:100%;display:none;margin:8px 0;border-radius:8px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<p><a href="index.html">&larr; Back to Home</a></p>
+<h1>SMS 3413 - Financial Reporting & Interpretation of Accounts</h1>
+<p><strong>Unit Name:</strong> Financial Reporting &amp; Interpretation of Accounts | <strong>Code:</strong> SMS 3413</p>
+<p><span>#Spas.must</span> <span>#ActuarialScienceMUST</span></p>
+<div class="topbar">
+<button onclick="openPop('formulaPop')">Formula Sheet</button>
+<button onclick="openPop('glossPop')">Glossary</button>
+<button onclick="toggleDark()">Dark / Light</button>
+<span style="display:inline-flex;align-items:center;gap:6px;background:#E8F2EB;padding:4px 8px;border-radius:8px;">
+  <span style="font-weight:bold;">Text Size:</span>
+  <button onclick="changeFont(-1)" title="Make text smaller" style="padding:6px 12px;font-size:18px;font-weight:bold;">-</button>
+  <span id="fontLabel" style="min-width:38px;text-align:center;font-weight:bold;">100%</span>
+  <button onclick="changeFont(1)" title="Make text bigger" style="padding:6px 12px;font-size:18px;font-weight:bold;">+</button>
+</span>
+<input id="searchBox" placeholder="Search in this unit..." style="padding:10px;width:200px" oninput="doSearch(this.value)">
+</div><p id="searchResult"></p>
+<p><strong>Prerequisites:</strong> Basic accounting, SMS 3163 Financial Mathematics I. Calculator allowed.</p>
+<p style="background:#FFF8E1;padding:10px;border-radius:8px;border:2px solid #2E6B4A;"><strong>Code note:</strong> SMS 3413 was reused at MUST. Older papers = Financial Economics. This page is the current 2025/26 version = <strong>Financial Reporting &amp; Interpretation of Accounts</strong>.</p>
+<p id="progressText">Topic 1 of 6 - 0% done</p><div id="progressBar"><div id="progressFill"></div></div>
+<p>This unit is how to read a company - its profit, its assets, its debts, its cash. You will learn to build and interpret the three statements every insurer and company must publish. You do not need to have attended a lecture.</p>
+<h2>Top Topics That Appear Most in MUST Exams</h2>
+<ol><li>Introduction to Financial Reporting - Users, Framework, Statements</li><li>Statement of Profit or Loss and Other Comprehensive Income</li><li>Statement of Financial Position - Assets, Liabilities, Equity</li><li>Statement of Cash Flows</li><li>Ratio Analysis and Interpretation</li><li>Financial Reporting for Insurers and Creative Accounting</li></ol>
+<div class="howbox">
+<p><strong>How this page works:</strong></p>
+<p>1. <b>One topic at a time.</b> Finish it, click <b>Next</b>. <b>Back</b> to revise.</p>
+<p>2. <b>2 exercises per topic.</b> Each has parts <b>(a)(b)(c)</b>, sometimes <b>(d)</b>. Together they cover the whole topic.</p>
+<p>3. <b>First 2 tries = final answer only.</b> Even if it says show your working, type just the answer here.</p>
+<p>4. <b>Our Own Chatbox.</b> Wrong twice? Our Chatbox opens for <b>that question only</b> and guides you step by step.</p>
+<p>5. <b>Upload your working.</b> Do it <b>manually on paper</b>, take a clear photo of <b>your working</b>, upload it in the Chatbox. You will see a preview.</p>
+<p>6. <b>Theory vs Numbers.</b> Numbers are checked here. Theory cannot be checked here, so click <b>Send For Marking</b> to open the Chatbox.</p>
+<p>7. <b>Send to Meta AI.</b> Chatbox has a button to copy your question + answers for real AI marking in Meta AI chat. Our Chatbox is the experience, Meta AI is the backup brain.</p>
+<p>8. <b>Boxes are locked.</b> They tick only when you prove it. Theory ticks after Meta AI says Pass, then click <b>AI Marked Me Correct - Tick</b> in the Chatbox.</p>
+<p>9. <b>Marking is by part.</b> Get (a) right = credit for (a). Only redo the part / question you failed.</p>
+<p>10. <b>Boxes = parts.</b> (a)(b)(c) = 3 boxes. If one part asks for 2 numbers, it gets 2 boxes. Each part has its own box. No answers are shown on this page.</p>
+</div>
+<div id="formulaPop" class="popup"><button onclick="closePop('formulaPop')">Close</button><h3>Formula Sheet - SMS 3413</h3><p><b>Accounting equation:</b> Assets = Liabilities + Equity | <b>Gross profit:</b> Revenue - Cost of Sales | <b>Profit:</b> Gross Profit - Expenses + Other Income | <b>Working capital:</b> Current Assets - Current Liabilities | <b>Current ratio:</b> Current Assets / Current Liabilities | <b>Quick ratio:</b> (Current Assets - Inventory) / Current Liabilities | <b>ROCE:</b> Operating Profit / Capital Employed x 100% | <b>ROE:</b> Profit After Tax / Equity x 100% | <b>Gross margin:</b> Gross Profit / Revenue x 100% | <b>Net margin:</b> Profit After Tax / Revenue x 100% | <b>Debt ratio:</b> Total Liabilities / Total Assets | <b>Cash flow:</b> Operating + Investing + Financing = Change in Cash</p></div>
+<div id="glossPop" class="popup"><button onclick="closePop('glossPop')">Close</button><h3>Glossary - SMS 3413</h3><p><b>Financial reporting:</b> publishing what a company owns, owes, earns. <b>IFRS:</b> international reporting rules. <b>Revenue:</b> sales. <b>Cost of sales:</b> direct cost of goods sold. <b>Asset:</b> what company owns. <b>Liability:</b> what company owes. <b>Equity:</b> owners stake = Assets - Liabilities. <b>Depreciation:</b> spreading cost of asset over life. <b>Accrual:</b> record when earned / incurred, not when cash moves. <b>Cash flow:</b> cash in and out. <b>Ratio:</b> one number divided by another, to compare. <b>Audit:</b> independent check of accounts. <b>Creative accounting:</b> bending rules to look better.</p></div>
+<div class="topic active" id="topic1">
+<h2>Topic 1: Introduction to Financial Reporting - Users, Framework, Statements</h2><p><b>Estimated time:</b> ~30 minutes | <b>Objectives:</b> Define financial reporting, name users, name three statements, explain IFRS.</p>
+<p>Financial reporting tells the truth about a company - in numbers, in a standard way, so anyone can compare.</p><div class='keybox'><p><b>Users:</b> Investors, lenders, 【entity-IRA¦canonical_name=IRA】 / 【entity-RBA¦canonical_name=RBA】, tax (KRA), employees, suppliers, management.</p><p><b>Three statements:</b> 1. <strong>Profit or Loss</strong> - did we make profit? 2. <strong>Financial Position</strong> - what do we own and owe? 3. <strong>Cash Flows</strong> - where did cash come from and go?</p><p><b>IFRS:</b> International Financial Reporting Standards - rules all listed companies follow, so accounts are comparable. <strong>IFRS 17</strong> is the special rule for insurance contracts.</p><p><b>Qualities:</b> Relevant, faithful, comparable, understandable, timely.</p></div>
+<div class="exbox"><p><strong>Exercise 1 - Covers: reporting + users</strong><br>(a) Define financial reporting.<br>(b) Name 4 users and what each wants.<br>(c) Explain why one set of rules (IFRS) helps.</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(1,'c1')">Send For Marking - Open My Chatbox</button><p id="msg1"></p></div>
+<div class="exbox"><p><strong>Exercise 2 - Covers: statements + IFRS 17</strong><br>(a) Name the 3 main statements and what each shows.<br>(b) Define IFRS.<br>(c) Why does insurance need its own rule, IFRS 17?</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(2,'c2')">Send For Marking - Open My Chatbox</button><p id="msg2"></p></div>
+<ul class="check"><li><input type="checkbox" id="c1" disabled> <span>I have got Topic 1 - first exercise.</span></li><li><input type="checkbox" id="c2" disabled> <span>I have got Topic 1 - second exercise.</span></li></ul>
+<p><b>Appears in MUST papers:</b> Appears in MUST past papers for this unit.</p><p>Was this topic clear? <button onclick="feedback(1,'clear')">Clear</button> <button onclick="feedback(1,'not')">Not Clear</button> <span id="fb1"></span></p>
+<p><button onclick="showTopic(2)">Next - Topic 2: Statement of Profit or Loss</button></p>
+</div>
+<div class="topic" id="topic2">
+<h2>Topic 2: Statement of Profit or Loss and Other Comprehensive Income</h2><p><b>Estimated time:</b> ~35 minutes | <b>Objectives:</b> Build profit or loss, calculate gross profit, operating profit, profit after tax.</p>
+<p>Profit or Loss answers: How much did we sell, what did it cost, what is left?</p><div class='keybox'><p><b>Steps:</b> Revenue - Cost of Sales = Gross Profit. Gross Profit - Expenses (salaries, rent, depreciation) + Other Income = Operating Profit. Operating Profit - Finance Cost - Tax = Profit After Tax.</p><p><b>Example:</b> Revenue 10000000, Cost of Sales 6000000. Gross Profit = 4000000. Expenses 2000000. Operating Profit = 2000000. Finance 200000, Tax 360000. Profit After Tax = 1440000.</p><p><b>Other Comprehensive Income:</b> Gains not in profit, e.g. revaluation of property. Total Comprehensive Income = Profit After Tax + OCI.</p></div>
+<div class="exbox"><p><strong>Exercise 3 - Covers: profit or loss</strong><br>(a) Define revenue, cost of sales, gross profit.<br>(b) Distinguish gross profit vs operating profit vs profit after tax.<br>(c) Explain depreciation, with example.</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(3,'c3')">Send For Marking - Open My Chatbox</button><p id="msg3"></p></div>
+<div class="exbox"><p><strong>Exercise 4 - Covers: profit calculation</strong><br>(a) Revenue 8000000, Cost of Sales 5000000. Gross Profit = ? Show working.<br>(b) If expenses are 1500000, Operating Profit = ? Show working.<br>(c) Give 2 expenses an insurer has that a shop does not.</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(4,'c4')">Send For Marking - Open My Chatbox</button><p id="msg4"></p></div>
+<ul class="check"><li><input type="checkbox" id="c3" disabled> <span>I have got Topic 2 - first exercise.</span></li><li><input type="checkbox" id="c4" disabled> <span>I have got Topic 2 - second exercise.</span></li></ul>
+<p><b>Appears in MUST papers:</b> Appears in MUST past papers for this unit.</p><p>Was this topic clear? <button onclick="feedback(2,'clear')">Clear</button> <button onclick="feedback(2,'not')">Not Clear</button> <span id="fb2"></span></p>
+<p><button onclick="showTopic(1)">Back to Topic 1</button> <button onclick="showTopic(3)">Next - Topic 3: Statement of Financial Position - Assets, Liabilities, Equity</button></p>
+</div>
+<div class="topic" id="topic3">
+<h2>Topic 3: Statement of Financial Position - Assets, Liabilities, Equity</h2><p><b>Estimated time:</b> ~40 minutes | <b>Objectives:</b> Explain financial position, classify assets and liabilities, use accounting equation.</p>
+<p>Financial Position is a photo at one date: What do we own? What do we owe? What is left for owners?</p><div class='keybox'><p><b>Equation:</b> Assets = Liabilities + Equity. Always balances.</p><p><b>Assets:</b> Non-current (building, motor vehicle, equipment - used &gt;1 year), Current (inventory, receivables, cash - used &lt;1 year).</p><p><b>Liabilities:</b> Non-current (long loan), Current (payables, overdraft, tax due).</p><p><b>Equity:</b> Share capital + Retained profits.</p><p><b>Example:</b> Assets 50000000, Liabilities 30000000. Equity = 20000000.</p><p><b>Insurer special:</b> Insurance liabilities - reserves for future claims - are the biggest liability.</p></div>
+<div class="exbox"><p><strong>Exercise 5 - Covers: financial position (NUMBERS)</strong><br>(a) Define asset, liability, equity.<br>(b) Distinguish current vs non-current.<br>(c) Assets 120000000, Liabilities 75000000. Equity = ? Working capital if Current Assets 40000000 and Current Liabilities 25000000 = ? Show working.</p><p>(a) <textarea class="answer" id="t5a" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" id="t5b" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <input class="answer" id="q5c" type="text" placeholder="Type your answer - equity, working capital"></p><button onclick="checkEx(5)">Check Exercise 5</button> <button onclick="openOwnChat(5,'c5')">Open My Chatbox for Exercise 5</button><p id="msg5"></p></div>
+<div class="exbox"><p><strong>Exercise 6 - Covers: classification + insurer</strong><br>(a) Classify: building, inventory, receivables, loan, payables, cash.<br>(b) Explain why insurance reserves are liabilities.<br>(c) What happens to equity if profit rises? Explain.</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(6,'c6')">Send For Marking - Open My Chatbox</button><p id="msg6"></p></div>
+<ul class="check"><li><input type="checkbox" id="c5" disabled> <span>I have got Topic 3 - first exercise.</span></li><li><input type="checkbox" id="c6" disabled> <span>I have got Topic 3 - second exercise.</span></li></ul>
+<p><b>Appears in MUST papers:</b> Appears in MUST past papers for this unit.</p><p>Was this topic clear? <button onclick="feedback(3,'clear')">Clear</button> <button onclick="feedback(3,'not')">Not Clear</button> <span id="fb3"></span></p>
+<p><button onclick="showTopic(2)">Back to Topic 2</button> <button onclick="showTopic(4)">Next - Topic 4: Statement of Cash Flows</button></p>
+</div>
+<div class="topic" id="topic4">
+<h2>Topic 4: Statement of Cash Flows</h2><p><b>Estimated time:</b> ~35 minutes | <b>Objectives:</b> Explain cash flows, distinguish operating, investing, financing, calculate change in cash.</p>
+<p>Profit is not cash. A company can be profitable and still run out of cash. Cash Flow statement shows cash.</p><div class='keybox'><p><b>Operating:</b> Cash from day-to-day business - customers pay, suppliers paid, salaries paid.</p><p><b>Investing:</b> Cash buying / selling long assets - buy building, sell vehicle.</p><p><b>Financing:</b> Cash from owners and lenders - issue shares, take loan, repay loan, pay dividend.</p><p><b>Example:</b> Operating +5000000, Investing -3000000, Financing -1000000. Change in cash = +1000000. Opening cash 2000000. Closing cash = 3000000.</p></div>
+<div class="exbox"><p><strong>Exercise 7 - Covers: cash flows</strong><br>(a) Define cash flow statement.<br>(b) Distinguish operating, investing, financing, with one example each.<br>(c) Explain why profit is not cash.</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(7,'c7')">Send For Marking - Open My Chatbox</button><p id="msg7"></p></div>
+<div class="exbox"><p><strong>Exercise 8 - Covers: cash calculation</strong><br>(a) Operating 4000000, Investing -2000000, Financing -500000. Change in cash = ? Show working.<br>(b) Opening cash 1000000. Closing cash = ? Show working.<br>(c) Give 2 reasons cash falls even when profit rises.</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(8,'c8')">Send For Marking - Open My Chatbox</button><p id="msg8"></p></div>
+<ul class="check"><li><input type="checkbox" id="c7" disabled> <span>I have got Topic 4 - first exercise.</span></li><li><input type="checkbox" id="c8" disabled> <span>I have got Topic 4 - second exercise.</span></li></ul>
+<p><b>Appears in MUST papers:</b> Appears in MUST past papers for this unit.</p><p>Was this topic clear? <button onclick="feedback(4,'clear')">Clear</button> <button onclick="feedback(4,'not')">Not Clear</button> <span id="fb4"></span></p>
+<p><button onclick="showTopic(3)">Back to Topic 3</button> <button onclick="showTopic(5)">Next - Topic 5: Ratio Analysis and Interpretation</button></p>
+</div>
+<div class="topic" id="topic5">
+<h2>Topic 5: Ratio Analysis and Interpretation</h2><p><b>Estimated time:</b> ~40 minutes | <b>Objectives:</b> Explain ratios, calculate liquidity, profitability, gearing, interpret trends.</p>
+<p>Ratios turn big numbers into meaning. One ratio alone means little - compare to last year, to competitors, to target.</p><div class='keybox'><p><b>Liquidity:</b> Current ratio = Current Assets / Current Liabilities. Quick ratio = (Current Assets - Inventory) / Current Liabilities. Can we pay short debts?</p><p><b>Profitability:</b> Gross margin = Gross Profit / Revenue. Net margin = Profit After Tax / Revenue. ROCE = Operating Profit / Capital Employed.</p><p><b>Gearing:</b> Debt ratio = Total Liabilities / Total Assets. How much is borrowed?</p><p><b>Example:</b> Current Assets 6000000, Current Liabilities 3000000. Current ratio = 2.0. Good - can pay twice over.</p></div>
+<div class="exbox"><p><strong>Exercise 9 - Covers: ratios + meaning</strong><br>(a) Define ratio analysis.<br>(b) Explain current ratio and quick ratio.<br>(c) Explain why we compare ratios, not just calculate them.</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(9,'c9')">Send For Marking - Open My Chatbox</button><p id="msg9"></p></div>
+<div class="exbox"><p><strong>Exercise 10 - Covers: ratio calculation</strong><br>(a) Revenue 10000000, Gross Profit 4000000. Gross margin = ? Show working.<br>(b) Current Assets 9000000, Inventory 3000000, Current Liabilities 3000000. Quick ratio = ? Show working.<br>(c) If current ratio falls from 2.5 to 1.1, what does it mean?</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(10,'c10')">Send For Marking - Open My Chatbox</button><p id="msg10"></p></div>
+<ul class="check"><li><input type="checkbox" id="c9" disabled> <span>I have got Topic 5 - first exercise.</span></li><li><input type="checkbox" id="c10" disabled> <span>I have got Topic 5 - second exercise.</span></li></ul>
+<p><b>Appears in MUST papers:</b> Appears in MUST past papers for this unit.</p><p>Was this topic clear? <button onclick="feedback(5,'clear')">Clear</button> <button onclick="feedback(5,'not')">Not Clear</button> <span id="fb5"></span></p>
+<p><button onclick="showTopic(4)">Back to Topic 4</button> <button onclick="showTopic(6)">Next - Topic 6: Financial Reporting for Insurers and Creative Accounting</button></p>
+</div>
+<div class="topic" id="topic6">
+<h2>Topic 6: Financial Reporting for Insurers and Creative Accounting</h2><p><b>Estimated time:</b> ~30 minutes | <b>Objectives:</b> Explain insurer reporting, explain IFRS 17, explain creative accounting and how to spot it.</p>
+<p>Insurers are special: they collect premium now, pay claims later. Their accounts must show if they can pay future claims.</p><div class='keybox'><p><b>Insurer statements:</b> Premium earned, Claims incurred, Insurance reserves (liabilities), Investment income, Underwriting profit = Premium - Claims - Expenses.</p><p><b>IFRS 17:</b> New rule - measure insurance contracts at present value of future cashflows + risk adjustment + contractual service margin. Makes insurers comparable worldwide.</p><p><b>Creative accounting:</b> Bending rules - hiding debt, inflating profit, delaying expenses. Red flags: profit rises but cash falls, receivables rise faster than sales, frequent change of accounting policy.</p></div>
+<div class="exbox"><p><strong>Exercise 11 - Covers: insurer reporting (NUMBERS)</strong><br>(a) Define underwriting profit.<br>(b) Explain IFRS 17 in your own words.<br>(c) Premium earned 50000000, Claims 30000000, Expenses 10000000. Underwriting profit = ? Combined ratio = (Claims + Expenses) / Premium = ? Show working.</p><p>(a) <textarea class="answer" id="t11a" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" id="t11b" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <input class="answer" id="q11c" type="text" placeholder="Type your answer - underwriting profit, combined ratio"></p><button onclick="checkEx(11)">Check Exercise 11</button> <button onclick="openOwnChat(11,'c11')">Open My Chatbox for Exercise 11</button><p id="msg11"></p></div>
+<div class="exbox"><p><strong>Exercise 12 - Covers: creative accounting + audit</strong><br>(a) Define creative accounting.<br>(b) Give 3 red flags of creative accounting.<br>(c) Explain what an auditor does and why it matters.</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(12,'c12')">Send For Marking - Open My Chatbox</button><p id="msg12"></p></div>
+<ul class="check"><li><input type="checkbox" id="c11" disabled> <span>I have got Topic 6 - first exercise.</span></li><li><input type="checkbox" id="c12" disabled> <span>I have got Topic 6 - second exercise.</span></li></ul>
+<p><b>Appears in MUST papers:</b> Appears in MUST past papers for this unit.</p><p>Was this topic clear? <button onclick="feedback(6,'clear')">Clear</button> <button onclick="feedback(6,'not')">Not Clear</button> <span id="fb6"></span></p>
+<p><button onclick="showTopic(5)">Back to Topic 5</button> <button onclick="showTopic(1)">Back to Topic 1</button> <a href="index.html"><button>Back to Home</button></a></p>
+<h2>Exam Strategy for SMS 3413</h2><ul><li>Attempt definitions first - easiest marks.</li><li>Always give actuarial example, not just definition.</li><li>Show every step - MUST gives marks for method.</li><li>Never leave blank - write key points you know.</li><li>For "explain" questions, give definition + example + why it matters.</li></ul>
+<footer><p>#Spas.must &nbsp; #ActuarialScienceMUST</p><p>Notes from MUST past papers. Built by frank-4Mrr111. Trusted Sources V3.4 Final.</p></footer>
+</div>
+</div>
+<div id="ownChat">
+<h3 id="chatTitle">Our Own Chatbox</h3>
+<div class="msg" id="chatGuide">Hi! I am your SPAS marking guide. Do this question manually on paper, step by step. Take a clear photo of YOUR WORKING and upload it below. You will see a preview. Then type your (a), (b), (c) answers. I will guide you by part.</div>
+<p><strong>1. Upload your working (photo of your manual work):</strong><br><input type="file" accept="image/*" onchange="previewPhoto(this)"><br><img id="photoPreview"></p>
+<p><strong>2. Type your answers here:</strong><br><input id="chatInput" style="padding:10px;width:90%" placeholder="Type your answer"></p>
+<p><button onclick="sendInChat()">Send in Our Chatbox</button> <button onclick="sendToMeta()">Send to Meta AI for Real Marking</button> <button onclick="tickFromChat()">AI Marked Me Correct - Tick</button> <button onclick="closeOwnChat()">Close Chatbox</button></p>
+<p id="chatLog"></p>
+<p><small>Our Chatbox guides you. For real AI marking, click Send to Meta AI - it copies question + answers + rubric for you to paste in Meta AI chat.</small></p>
+</div>
+<script>
+let tries={}, fontSize=16, currentEx=0, currentTick='';
+function showTopic(n){document.querySelectorAll('.topic').forEach(t=>t.classList.remove('active'));document.getElementById('topic'+n).classList.add('active');localStorage.setItem('sms3413_topic',n);updateProgress();window.scrollTo(0,0);}
+function updateProgress(){let done=document.querySelectorAll('.check input:checked').length;let pct=Math.round(done/12*100);document.getElementById('progressFill').style.width=pct+'%';let cur=document.querySelector('.topic.active');let num=cur?cur.id.replace('topic',''):'1';document.getElementById('progressText').textContent='Topic '+num+' of 6 - '+pct+'% done';}
+function tick(id){let el=document.getElementById(id);if(el){el.checked=true;updateProgress();}}
+function openPop(id){document.getElementById(id).style.display='block';} function closePop(id){document.getElementById(id).style.display='none';}
+function toggleDark(){document.body.classList.toggle('dark');}
+function changeFont(d){fontSize+=d;if(fontSize<13)fontSize=13;if(fontSize>24)fontSize=24;document.body.style.fontSize=fontSize+'px';let pct=Math.round(fontSize/16*100);let label=document.getElementById('fontLabel');if(label)label.textContent=pct+'%';}
+function feedback(n,v){document.getElementById('fb'+n).textContent=v==='clear'?'Thanks! Noted as Clear.':'Thanks! We will expand this topic.';localStorage.setItem('sms3413_fb'+n,v);}
+function doSearch(q){let r=document.getElementById('searchResult');if(!q){r.textContent='';return;}let topics=[['Introduction Financial Reporting',1],['Profit or Loss',2],['Financial Position',3],['Cash Flows',4],['Ratio Analysis Interpretation',5],['Insurer Reporting Creative Accounting',6]];let found=topics.filter(t=>t[0].toLowerCase().includes(q.toLowerCase()));r.innerHTML=found.length?found.map(f=>'<button onclick="showTopic('+f[1]+')">Go to Topic '+f[1]+': '+f[0]+'</button>').join(' '):'No topic found in this unit. Try: Reporting, Profit, Position, Cash, Ratio, IFRS';}
+function num(v){let n=parseFloat((v||'').trim().replace(',','.'));return isNaN(n)?null:n;}
+function val(id){let el=document.getElementById(id);return el?el.value.trim():'';}
+function theoryOk(id){return val(id).length>=10;}
+function openOwnChat(ex,tickId){currentEx=ex;currentTick=tickId;document.getElementById('chatTitle').textContent='Our Own Chatbox - Exercise '+ex+' (SMS 3413)';document.getElementById('ownChat').style.display='block';document.getElementById('chatGuide').textContent='Hi! You are on Exercise '+ex+'. Step 1: Do it manually on paper. Step 2: Upload a photo of YOUR WORKING below. Step 3: Type your (a), (b), (c) answers. I will guide you by part. For real AI marking, click Send to Meta AI.';window.scrollTo(0,document.body.scrollHeight);}
+function closeOwnChat(){document.getElementById('ownChat').style.display='none';}
+function previewPhoto(input){let f=input.files[0];if(!f)return;let r=new FileReader();r.onload=function(e){let img=document.getElementById('photoPreview');img.src=e.target.result;img.style.display='block';document.getElementById('chatLog').innerHTML+='<p>Photo preview loaded. I can see your working. Now type your (a), (b), (c) answers.</p>';};r.readAsDataURL(f);}
+function sendInChat(){let v=document.getElementById('chatInput').value;if(!v)return;document.getElementById('chatLog').innerHTML+='<p><b>You:</b> '+v+'</p><p><b>Guide:</b> Thanks! Now check each part: (a) Did you define the term? (b) Did you show working / formula? (c) Did you explain in words? If a part is missing, add it and send again. If you want real AI marking, click Send to Meta AI. Only redo the part you failed.</p>';document.getElementById('chatInput').value='';}
+function collectAnswers(){let out=[];document.querySelectorAll('.topic.active .answer').forEach((el,i)=>{let label=el.closest('p')?el.closest('p').textContent.trim().slice(0,40):('Box '+(i+1));out.push(label+': '+el.value.trim());});let chat=document.getElementById('chatInput').value.trim();if(chat)out.push('Chatbox answer: '+chat);return out.join('\n');}
+function sendToMeta(){let answers=collectAnswers();let text='Please mark me for SMS 3413 Exercise '+currentEx+'. Mark by part with partial credit. Guide me step by step on the part I failed. Rubric is in the page HTML comment for this exercise.\n\nMY REAL ANSWERS:\n'+(answers||'(no answers typed yet)')+'\n\nI also uploaded a photo of my manual working.';navigator.clipboard.writeText(text).then(()=>{alert('Copied WITH your real answers! Paste this in Meta AI chat + attach your photo of your working.');});}
+function tickFromChat(){if(currentTick){tick(currentTick);alert('Ticked! This means AI / guide said you passed Exercise '+currentEx+'. Only this question is ticked.');closeOwnChat();}}
+function checkEx(n){
+  let msg=document.getElementById('msg'+n);
+  let numbersOk=false, theoryNeeded=[];
+  if(n===5){let v=val('q5c').toLowerCase(); numbersOk=v.includes('45000000')&&v.includes('15000000'); theoryNeeded=['t5a','t5b'];}
+  if(n===11){let v=val('q11c').toLowerCase(); numbersOk=v.includes('10000000')&&(v.includes('80')||v.includes('0.8')); theoryNeeded=['t11a','t11b'];}
+  let theoryOkAll=theoryNeeded.every(id=>theoryOk(id));
+  if(numbersOk && theoryOkAll){msg.textContent="Correct! All number parts + theory written. Exercise "+n+" done.";if(n===5)tick('c5');if(n===11)tick('c11');}
+  else if(numbersOk && !theoryOkAll){msg.textContent="Numbers / formula are correct. Now write the theory part(s) - at least 10 characters each - then click Check again.";}
+  else {tries[n]=(tries[n]||0)+1;if(tries[n]>=2){msg.textContent="Wrong twice. Our Own Chatbox is open for THIS question only. Upload a photo of YOUR WORKING. Only redo the part you failed.";openOwnChat(n,'c'+n);}else{msg.textContent="Not yet - check ALL parts. You only redo THIS question.";}}
+}
+document.querySelectorAll('.answer').forEach((el,i)=>{let key='sms3413_ans_'+i;let saved=localStorage.getItem(key);if(saved)el.value=saved;el.addEventListener('input',()=>localStorage.setItem(key,el.value));});
+let saved=localStorage.getItem('sms3413_topic');if(saved)showTopic(parseInt(saved));else updateProgress();
+</script>
+</body>
+</html>
