@@ -223,7 +223,15 @@ function updateProgress(){let done=document.querySelectorAll('.check input:check
 function tick(id){let el=document.getElementById(id);if(el){el.checked=true;updateProgress();}}
 function openPop(id){document.getElementById(id).style.display='block';} function closePop(id){document.getElementById(id).style.display='none';}
 function toggleDark(){document.body.classList.toggle('dark');}
-function changeFont(d){fontSize+=d;document.body.style.fontSize=fontSize+'px';}
+function changeFont(d){
+  fontSize+=d;
+  if(fontSize<13) fontSize=13;
+  if(fontSize>24) fontSize=24;
+  document.body.style.fontSize=fontSize+'px';
+  let pct=Math.round(fontSize/16*100);
+  let label=document.getElementById('fontLabel');
+  if(label) label.textContent=pct+'%';
+}
 function feedback(n,v){document.getElementById('fb'+n).textContent=v==='clear'?'Thanks! Noted as Clear.':'Thanks! We will expand this topic.';localStorage.setItem('sms3214_fb'+n,v);}
 function doSearch(q){let r=document.getElementById('searchResult');if(!q){r.textContent='';return;}let topics=[['Life Tables',1],['Survival',2],['Life Expectancy',3],['Annuities',4],['Assurances',5],['Premiums',6]];let found=topics.filter(t=>t[0].toLowerCase().includes(q.toLowerCase()));r.innerHTML=found.length?found.map(f=>'<button onclick="showTopic('+f[1]+')">Go to Topic '+f[1]+': '+f[0]+'</button>').join(' '):'No topic found in this unit. Try: Life Tables, Survival, Annuity, Assurance, Premium';}
 function num(v){let n=parseFloat(v.trim().replace(',','.'));return isNaN(n)?null:n;}
