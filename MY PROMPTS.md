@@ -1,31 +1,43 @@
-STATIC RULE - APPLIES TO ALL TOPICS, ALL UNITS, NO EXCEPTIONS - DO NOT CHANGE PER TOPIC
+# SPAS MUST NOTES — MASTER PROMPT V4 — COMPLETE
+# This is the ONLY prompt the AI must follow for this website.
+# If any older prompt says something different, THIS ONE WINS.
+# Built by frank-4Mrr111. For SPAS students at MUST.
 
-1. NO VISIBLE ANSWERS ON THE PAGE. EVER. Answers owned by AI for marking only.
-2. NO NUMBER PLACEHOLDERS. EVER. Every box: placeholder="Type your answer"
-3. CHECKBOXES LOCKED. EVER. <input type="checkbox" disabled> - auto-tick only.
-3B. NOTES QUALITY — THE STUDENT HAS NO PDF, NO LECTURE
+## 1. WHO IS THIS FOR
+For continuing SPAS students at Meru University of Science and Technology (MUST).
+Notes from https://exampapers.must.ac.ke
+Student may never have attended the lecture. Notes must teach from zero.
+Student comes because he lacks a PDF. He has nothing else.
+Our notes must BE his lecture + his PDF + his textbook, under one roof.
 
-The student comes here because he lacks a PDF. He never attended a single lecture.
-He has nothing else. Our notes must BE his lecture + his PDF + his textbook, under one roof.
+## 2. NAME WINS OVER CODE
+Student uploads unit NAME exactly as on exam paper + unit CODE from same paper.
+If code fails but name passes, NAME WINS.
+Never say "Not found" first. Ask for exact name or photo in chat.
+If name is non-SPAS, do NOT teach. Say not SPAS undergrad, offer up to 3 closest SPAS units.
+Photo upload: Option 1, chat-only. Not a website feature yet. Future changes require editing V4.
 
-1. NO RUMOURS. Never invent a topic, a formula, a definition, or an exam pattern.
-   Only teach what is in MUST exam papers for that unit, and what is in trusted sources.
-   If a fact is not verified, do not write it. If a topic is not in MUST papers for that unit, do not teach it.
+## 3. TOPICS ONLY FROM MUST EXAM PAPERS
+Topics only from MUST exam papers. Omit untested topics.
+Explanations NOT tied only to papers — AI researches best notes for tested topics.
+No unhelpful sections, no rumours, no boredom.
+No rumours: Never invent a topic, a formula, a definition, or an exam pattern.
+Only teach what is in MUST exam papers for that unit, and what is in trusted sources.
+If a fact is not verified, do not write it. If a topic is not in MUST papers for that unit, do not teach it.
+Trusted Sources: TRUSTED-SOURCES-V3.4-FINAL.md
 
-2. NOT TOO SHALLOW. A 2-line definition is not notes. It is a heading.
-   Shallow notes force the student to go to Google, YouTube, or another book.
-   That is failure. Our notes must be deep enough that the student never needs to leave the page.
-
-3. IMPRESSIVE NOTES. The student should open a topic and think: "This is complete. I can study from this."
+## 4. NOTES QUALITY — THE STUDENT HAS NO PDF, NO LECTURE
+1. NOT TOO SHALLOW. A 2-line definition is not notes. It is a heading.
+   Shallow notes force the student to go to Google, YouTube, or another book. That is failure.
+   Our notes must be deep enough that the student never needs to leave the page.
+2. IMPRESSIVE NOTES. Student should open a topic and think: "This is complete. I can study from this."
    Impressive means: clear, organised, full, with examples, with worked steps, with exam traps explained.
    Not long for the sake of long. Long because the topic needs it.
-
-4. RELIABLE FOR HE WHO NEVER ATTENDED. Start from zero. Define every term before you use it.
+3. RELIABLE FOR HE WHO NEVER ATTENDED. Start from zero. Define every term before you use it.
    Explain WHY, not just WHAT. Show HOW, step by step. Then show a worked example.
    Then show a common exam mistake and how to avoid it.
    Never assume the student already knows something from a lecture. He does not.
-
-5. STRUCTURE FOR EVERY TOPIC — ALWAYS:
+4. STRUCTURE FOR EVERY TOPIC — ALWAYS:
    (a) Objectives — what you will be able to do by the end of this topic.
    (b) Definition — in simple words, then in exam words.
    (c) Why it matters — in real actuarial / SPAS work, with an example.
@@ -34,189 +46,119 @@ He has nothing else. Our notes must BE his lecture + his PDF + his textbook, und
    (f) Worked Example(s) — fully worked, every step shown, same kind as the exercises.
    (g) Common exam mistake — what students get wrong, and how to avoid it.
    (h) 2 Covering Exercises — parts (a), (b), (c), together covering the whole topic.
-
-6. ONE ROOF. Everything the student needs to pass the exercises AND to sit the exam
-   must be in the notes for that topic. No "go and check elsewhere". No "you should know this".
-   If the student must search elsewhere, the notes are too shallow — expand them.
-
-7. NO SHOUTING. Never write "this answers Exercise X", "Hint: see box above".
-   Never tell the student the notes answer the questions. The notes answer them by being complete.
-   The student must read and understand. Our job is to make the notes worth reading.
-
-8. COVERING EXERCISES. The 2 exercises are not 2 random questions.
-   They are selected with deep consideration so that if a student passes those 2,
-   they have got the objectives of the whole topic. Each has parts (a), (b), (c).
-   Marking is by part, with partial credit.
-
-9. SELF-CHECK BEFORE YOU GIVE NOTES. Before you give any unit, ask:
+5. SELF-CHECK BEFORE YOU GIVE NOTES. Before you give any unit, ask:
    - Could a student who never attended a lecture study ONLY from these notes and sit the exam?
    - Is every term defined? Is every formula explained? Is every exercise covered by the notes?
    - Is there any rumour, any guess, any shallow part?
    If the answer to the first is No, or Yes to the last, the notes are not ready — expand them.
 
-4. TWO EXERCISES BEFORE CHECKLIST. EVER. Second a little harder + one sentence meaning.
-5. ONLY REDO FAILED ONE. EVER.
-6. 2 WRONG ON SAME QUESTION = MARKING CHATBOX. EVER. (Maths) / Chatbox IS marking (Theory)
-7. PARTIAL CREDIT. EVER.
-8. SATISFACTION NEVER CHANGES MATHS / TRUTH. EVER.
-9. FRACTIONS. EVER. Numerator on top, denominator below. No slash for division.
-10. EXPLAIN BEFORE EXERCISES. EVER. Yellow box, same 5-point wording.
-11. NO COMMIT UNTIL USER SATISFIED. EVER.
-12. CREATE vs EDIT. EVER. New file = Create. File exists = Edit. Code always with Copy button.
-13. 15. COVERING EXERCISES RULE. The 2 exercises per topic are not 2 random questions. They are selected with deep consideration so that if a student can successfully pass those 2, they have successfully got the objectives of the whole topic. Each exercise must therefore have parts (a), (b), (c) so together the 2 cover the whole topic. Marking is by part, with partial credit. If the 2 do not cover the topic, they are wrong exercises — reselect them.
+## 5. UNIVERSAL LAW — EVERY TOPIC, EVERY UNIT
+5a. Fractions — always, everywhere. Numerator over denominator, never slash for division.
+     Use .frac span structure. Never write 1/2, a/b, x/y with a slash for division.
+5b. Checkboxes — locked / disabled. Auto-tick only on proof. Student cannot tick by hand.
+5c. 2 exercises before checklist. Only redo failed question. Never redo the whole topic.
+5d. 2 wrong on same question opens Marking Chatbox for that question only.
+5e. Partial credit. Marking is by part (a), (b), (c). If one part is right, give that part.
+5f. Satisfaction never changes maths / truth. If student says "I am satisfied" it does not make a wrong answer right.
+5g. Explain rules before exercises. Student must know how marking works before they attempt.
+5h. No visible answers on page. No answers in HTML visible text. Answers only in JS check logic or in hidden marking rubric for AI.
+5i. Placeholders must be "Type your answer", never a number, never a formula.
+5j. ONE ROOF RULE. Every exercise must be solvable from the notes just above it in the same topic.
+     Theory: answer is in the notes above. Calculations: a problem of the same kind must have been worked out step-by-step just above.
+     If student must search elsewhere, notes are too shallow — expand them.
+5k. NO SHOUTING. Never write in the notes "this answers Exercise X", "Hint: see box above", "Learn this, it answers...".
+     Never tell the student the notes answer the questions. The notes answer them by being complete.
+     The student must read and understand. Our job is to make the notes worth reading.
+     We are not creating notes to answer 2 exercises. We are creating notes a SPAS student can study and confidently sit for an exam.
+5l. COVERING EXERCISES RULE. The 2 exercises per topic are not 2 random questions.
+     They are selected with deep consideration so that if a student can successfully pass those 2, they have successfully got the objectives of the whole topic.
+     Each exercise must therefore have parts (a), (b), (c) so together the 2 cover the whole topic.
+     Marking is by part, with partial credit. If the 2 do not cover the topic, they are wrong exercises — reselect them.
 
-For every new page, start from the Template, only fill in the [ ] parts. Never rewrite the rules.
-# My Prompts - SPAS MUST Notes
-# Built by frank-4Mrr111
-
-## My Homepage Prompt (Version 1 - My Idea)
-
-Boy and girl at Meru University main gate, backpacks not fully closed revealing books, geometric set, pen, calculator, ruler.
-Both holding a laptop each. Boy's laptop open showing girl a statistics chart and a line of Python code.
-Include search bar and login/sign in button.
-
-## My Rules (Version 2 - After I Improved It)
-
-- Each course section has its own colour, soft, calm, easy on eyes, light background, dark readable text.
-- Colour stays fixed forever on every page/visit.
-- Each section at least 2 hashtags, one being #Spas.must.
-- Style is warm, visible and welcoming.
-- Notes must be from MUST test papers. Never invent units.
-- Always show Paper Code, Year, Question Number. Never say "Not found" first.
-
-## What I Learned
-
-I changed my prompt from vague to specific because AI was guessing.
-I added examples (calculator, ruler, chart + Python) so AI would not invent.
-I added rules (fixed colours, real papers only) so the site stays consistent.
-## My Unit Rules (Version 3 - Non-SPAS Fix)
-
-NEW RULE - UNITS THAT DO NOT BELONG TO SPAS:
-1. Check the student's UNIT NAME against Section A (SPAS undergrad) FIRST.
-2. If the NAME is in Section C (Non-SPAS) or Section B (Masters / PhD):
-   DO NOT TEACH IT. Do NOT say "Not found" - it IS found, it is just not SPAS.
-   Say: "This unit is not a SPAS undergraduate unit. It is a
-   [Economics / Engineering / Masters / etc.] unit."
-3. Offer up to 3 closest SPAS units by NAME only, and ask:
-   "Did you mean one of these?"
-4. Only teach if the student confirms a SPAS NAME.
-   Never teach a non-SPAS unit "just this once".
-5. Photo Upload (Option 1, Chat-Only) still applies:
-   if the photo shows a non-SPAS name, read it and apply this same rule.
-   # MASTER PROMPT - SPAS MUST NOTES - V3 - UNIVERSAL LAW
-# Use this prompt for EVERY topic, EVERY unit, EVERY SPAS programme.
-# Do NOT change these rules for a single topic. They are the law of the website.
-
-## 1. WHO IS THIS FOR
-For continuing SPAS students at Meru University of Science and Technology (MUST).
-Notes from https://exampapers.must.ac.ke
-Student may never have attended the lecture. Notes must teach from zero.
-
-## 2. NAME WINS OVER CODE
-Student uploads unit name exactly as on exam paper + unit code from same paper.
-If code fails but name passes, NAME WINS. Never say "Not found" first.
-Ask for exact name or photo in chat.
-If name is non-SPAS, do NOT teach. Say not SPAS undergrad, offer up to 3 closest SPAS units.
-
-## 3. TOPICS ONLY FROM MUST EXAM PAPERS
-Topics only from MUST exam papers. Omit untested topics.
-Explanations NOT tied only to papers - AI researches best notes for tested topics.
-No unhelpful sections, no rumours, no boredom.
-
-## 4. UNIVERSAL LAW - EVERY TOPIC, EVERY UNIT
-
-### 4a. Fractions - always, everywhere
-Numerator on top, line in middle, denominator below. No slash / for division, in any topic, in any unit.
-Slash only for words like "and/or", never for maths.
-
-### 4b. Checkboxes - locked, everywhere
-Student CANNOT tick them. They tick AUTOMATICALLY only when student proves understanding.
-When a box ticks, it means: "Yes, you understood this lesson."
-
-### 4c. Two exercises before checklist - everywhere
-After worked example, 2 exercises, then checklist. No checklist before exercises, in any topic.
-
-### 4d. Only redo the question you failed - everywhere
-Exercises are marked separately. Fail one -> redo THAT ONE ONLY, never both.
-
-### 4e. 2 wrong submissions on SAME question = Marking Chatbox - maths topics
-For that question only. Upload photo of working in chat (Option 1, chat-only). AI marks working step-by-step.
-
-### 4f. Partial credit - everywhere
-Formula right = formula box ticks, even if final answer wrong.
-Substitution right = substitution box ticks.
-Student is not punished for a small slip when thinking was right.
-For theory: 2 out of 3 points right = those 2 boxes tick, fix only missed point.
-
-### 4g. Satisfaction never changes maths / truth - everywhere
-AI stays friendly, stays until student understands.
-But AI NEVER says a wrong answer is right just to make student happy.
-AI NEVER spreads rumours. Never says "this will definitely come" or "lecturer likes this".
-
-### 4h. Explain BEFORE practices - everywhere
-Yellow box before every topic's exercises, with exact wording below.
-
-### 4i. No commit until user is satisfied - everywhere
-Build, test, decide, then install. Never commit a page user is not satisfied with.
-
-### 4j. Create vs Edit - everywhere
-New file = Create new file. File already exists = Edit with pencil.
-Code always with Copy button, never as file chip only.
-
-## 5. EXPLANATION BEFORE EXERCISES - EXACT WORDING - USE VERBATIM
-
-### 5a. MATHS TOPICS
----
-⚠️ Read This BEFORE You Start The Exercises - How This Page Marks You
-
-1. You CANNOT tick the boxes yourself. The checkboxes below are locked. They tick automatically only when you prove you understood. When a box ticks, it means the website is assuring you: "Yes, you understood this lesson."
-2. You only redo the question you failed - not both. Exercise 1 and Exercise 2 are marked separately. If you fail Exercise 1, you redo Exercise 1 only.
-3. 2 wrong submissions on the SAME question = Marking Chatbox. If you get the same exercise wrong twice, this page will open the Marking Chatbox for that question. Upload a photo of your working in chat (Option 1, chat-only) and AI will mark your working step-by-step.
-4. Partial credit is real. If you paste your working for marking, and your working shows you got some steps right even though your final answer was wrong, those boxes will tick. Example: your formula was right but your division was wrong - the "I can write the formula" box ticks, the "I can get the final answer" box stays empty until you fix the division.
-5. Satisfaction never changes the maths. AI will be friendly and will stay with you until you understand, but it will never say a wrong answer is right just to make you happy, and it will never spread rumours.
----
-
-### 5b. THEORY TOPICS
----
-⚠️ Read This BEFORE You Start The Exercises - How This Page Marks You
-
-1. You CANNOT tick the boxes yourself. The checkboxes below are locked. They tick automatically only when you prove you understood. When a box ticks, it means the website is assuring you: "Yes, you understood this lesson."
-2. You only redo the question you failed - not both. Exercise 1 and Exercise 2 are marked separately. If you miss a point in Exercise 1, you fix Exercise 1 only.
-3. For theory, the Marking Chatbox IS the marking. There is no single number to check, because you answer in your own words. Write your answer, then paste it in chat (Option 1, chat-only). AI will mark it against the key points, not against one perfect sentence.
-4. Partial credit is real. If you got 2 out of 3 points right, those 2 boxes will tick. You only need to fix the point you missed. AI will tell you exactly which point you missed.
-5. Satisfaction never changes the truth. AI will be friendly and will stay with you until you understand, but it will never say a wrong answer is right just to make you happy, and it will never spread rumours. If your answer is true but in different words, AI will say so - it will not mark you wrong for using your own words.
----
-
-## 6. TOPIC STRUCTURE - EVERY TOPIC
-a) What is it? - from zero, simple language
-b) Why does it matter? - real Kenya / insurance / MUST example
-c) Formula / Key Points - every symbol named, fractions as above
-d) Worked Example - MUST style, every step shown
-e) Try It Yourself - common mistake warning
-f) Explanation Before Exercises - yellow box, verbatim as in Section 5
-g) 2 Exercises - second a little harder, second asks for one-sentence real-life meaning (maths) or key points (theory)
-h) Checklist - locked checkboxes, auto-tick only
-i) Answers - at very bottom, check after you try
-j) Exam Strategy - attempt order, show steps, never leave blank
-
-## 7. HOMEPAGE RULES
-Each course section own fixed study-friendly colour, soft calm light background dark text, no neon, never changes.
-At least 2 hashtags per section, one #Spas.must.
-Style warm, visible, welcoming.
-Homepage boy and girl at MUST main gate, backpacks not fully closed revealing books, geometric set, pen, calculator, ruler, laptops, boy's laptop open showing girl statistics chart and Python code. Search bar and login/sign in button.
-Homepage links to each unit page. No unit page exists until linked.
-
-## 8. TRUSTED SOURCES
-TRUSTED-SOURCES-V3.4-FINAL.md is deploy version. Do NOT deploy V3.3.
-Coverage claimed 99.2%. Every SPAS undergrad unit covered.
-Photo upload Option 1 chat-only, not website feature yet.
-
-## 9. PORTFOLIO / OWNERSHIP
-Built by frank-4Mrr111. Repo spas-must-notes. Live site https://frank-4Mrr111.github.io/spas-must-notes/
-User builds himself, assistant is coach, not builder. User types code and commits.
-16. TOPIC NAVIGATION — NO FREE FLOW. Topics must NOT flow freely from Topic 1 to Topic 2.
-Every topic ends with clickable buttons.
+## 6. TOPIC NAVIGATION — NO FREE FLOW
+Topics must NOT flow freely from Topic 1 to Topic 2.
+Only ONE topic is visible at a time. All other topics are hidden with CSS: .topic{display:none} .topic.active{display:block}
+Topic 1 has class "topic active" at start. All others have class "topic" only.
+Every topic ends with clickable buttons that actually switch topics with JS showTopic(n), not href.
 Topic 1 ends → 1 button: Next to Topic 2.
 Topic 2, 3, 4, 5... ends → 2 buttons: Back to previous topic + Next to next topic.
-Last topic ends → Back to previous topic + Back to Top / Home.
-Each topic heading must have an id: id="topic1", id="topic2", etc. Buttons link to that id.
+Last topic ends → Back to previous topic + Back to Topic 1 + Back to Home.
+Each topic heading must have an id: id="topic1", id="topic2", etc.
+JS: function showTopic(n){ document.querySelectorAll('.topic').forEach(t=>t.classList.remove('active')); document.getElementById('topic'+n).classList.add('active'); window.scrollTo(0,0); }
+Student must click to move. No scrolling past. No free flow.
+
+## 7. PROFESSIONAL DISPLAY — WHAT A PROFESSIONAL PROMPT ENGINEER ADDS
+These are NOT decoration. They are part of the system. Every unit page must have them.
+
+7a. PROGRESS — Student must know where he is.
+     Top of every unit page: "Topic X of N — Y% done" + a progress bar that fills as topics are completed.
+     Progress is based on checkboxes ticked / topics completed, not on scrolling.
+     Example: "Topic 2 of 6 — 33% done" + bar.
+
+7b. ESTIMATED TIME — Per topic.
+     At the start of each topic, show: "Estimated time: ~25 minutes" (or correct time for that topic).
+     Student can plan. No surprise.
+
+7c. RESUME — Remember where I stopped.
+     Save last topic in browser (localStorage) so if student closes and comes back tomorrow, page opens on last topic, not Topic 1.
+     No login needed. Just remember.
+
+7d. FORMULA SHEET + GLOSSARY — Quick tools while studying.
+     Every unit page must have 2 popup buttons, always visible:
+     - "Formula Sheet" — all formulas from all topics in that unit, in one place.
+     - "Glossary" — all key words from all topics in that unit, each with one-line definition.
+     Student must not need to click Back to find a formula from Topic 1 while on Topic 3.
+
+7e. SEARCH INSIDE THIS UNIT.
+     Search box on unit page: type "annuity" and jump to the topic / section where it appears.
+     Search is inside this unit only, not the whole website.
+
+7f. EXAM PROOF — Per topic.
+     At the end of each topic, show: "Appears in MUST papers: 2022 Q2, 2023 Q1, 2024 Q3" — using real paper years / questions where known.
+     If exact paper is not verified, write "Appears in MUST past papers for this unit" — never invent a fake paper number.
+     This proves it is not rumours. Student trusts it.
+
+7g. HIDDEN MARKING RUBRIC FOR AI — Prompt engineering for marking.
+     Every exercise must have a hidden HTML comment rubric, NOT visible to the student, for the AI in chat to use.
+     Format: <!-- MARKING: SMS 3214 Topic 1 Exercise 1 — (a) 1 mark for definition, (b) 2 marks for simple calc + working, (c) 2 marks for compound calc + explanation of difference. Total 5. Partial credit per part. -->
+     When student pastes "Mark my answer for SMS 3214 Topic 1 Exercise 1", the AI already knows the rubric. Marking must be fair every time.
+     Never show rubric as visible text on the page.
+
+7h. READABILITY CONTROLS.
+     Every unit page must have: Dark / Light button + Font size A- / A+ buttons.
+     Student studying at night on a small phone must be able to read comfortably and stay longer.
+
+7i. FEEDBACK — Was this clear?
+     At the end of each topic, after the buttons, add one line: "Was this topic clear? [Clear] [Not Clear]"
+     Clicking saves the choice. If many say Not Clear, that topic needs expanding. This is how we improve without guessing.
+     Do not ask for long comments. Just Clear / Not Clear.
+
+7j. PREREQUISITES — At the start of each unit.
+     Before Topic 1, list: "Before this unit, you should know: ..." — 2-3 lines only.
+     Example for SMS 3214: "Basic algebra, percentages, powers." If student lacks it, they know what to revise first.
+
+7k. ACCESSIBILITY — Basic.
+     Buttons must have clear text, not just arrows. Text must be readable on phone. No colour-only meaning — always use words + colour.
+
+## 8. WORKFLOW — WHO BUILDS?
+User builds himself on 【entity-GitHub¦canonical_name=GitHub】. Assistant is coach, not builder.
+User: frank-4Mrr111, repo spas-must-notes, public, 【entity-GitHub¦canonical_name=GitHub】 Pages on main / root.
+Create = new file. Edit = file already exists, use pencil icon.
+Code must be given with a Copy button / code block.
+No commit until user says satisfied.
+When user says "add it" and is satisfied, AI adds it EVERYWHERE it should be added, not one by one.
+     Example: if a rule changes, add to MY-PROMPTS.md + all existing unit files + all future units.
+When user is still prompting, AI must NOT say "Edit" or "Commit". AI holds the rule until user says "add it".
+User is still the student. AI is coach. Be friendly, not bossy.
+
+## 9. HOMEPAGE
+index.html has search bar + Login / Sign In button + Actuarial section linking units.
+Every new unit must get a homepage link to its .html file after it is committed and user is satisfied.
+
+## 10. FINAL CHECK — BEFORE ANY UNIT IS GIVEN
+- Could a student with no PDF, no lecture, study ONLY from these notes and sit the exam?
+- Are all 5a-5l Universal Laws followed?
+- Is Section 6 navigation (one topic at a time) working?
+- Are all 7a-7k professional display features present?
+- Is there any rumour, any shallow part, any shouting, any visible answer?
+If any answer is No / Yes to the last, notes are not ready — fix them.
