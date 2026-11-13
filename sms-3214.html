@@ -41,7 +41,7 @@
   <span id="fontLabel" style="min-width:38px;text-align:center;font-weight:bold;">100%</span>
   <button onclick="changeFont(1)" title="Make text bigger" style="padding:6px 12px;font-size:18px;font-weight:bold;">+</button>
 </span>
-<input id="searchBox" placeholder="Type your answer" style="padding:10px;width:200px" oninput="doSearch(this.value)">
+<input id="searchBox" placeholder="Search in this unit..." style="padding:10px;width:200px" oninput="doSearch(this.value)">
 </div><p id="searchResult"></p>
 <p><strong>Prerequisites:</strong> Basic algebra, percentages, powers. If you can do 1000 × 1.05, you are ready.</p>
 <p id="progressText">Topic 1 of 6 — 0% done</p><div id="progressBar"><div id="progressFill"></div></div>
@@ -59,7 +59,7 @@
 <p>7. <b>Send to Meta AI.</b> Chatbox has a button to copy your question + answers for real AI marking in Meta AI chat. Our Chatbox is the experience, Meta AI is the backup brain.</p>
 <p>8. <b>Boxes are locked.</b> They tick only when you prove it. Theory ticks after Meta AI says Pass, then click <b>“AI Marked Me Correct → Tick”</b> in the Chatbox.</p>
 <p>9. <b>Marking is by part.</b> Get (a) right = credit for (a). Only redo the part / question you failed.</p>
-<p>10. <b>Boxes = parts.</b> (a)(b)(c) = 3 boxes. (a)(b)(c)(d) = 4 boxes. Each part has its own box. No answers are shown on this page.</p>
+<p>10. <b>Boxes = parts.</b> (a)(b)(c) = 3 boxes. If one part asks for 2 numbers, it gets 2 boxes. Each part has its own box. No answers are shown on this page.</p>
 </div>
 <div id="formulaPop" class="popup"><button onclick="closePop('formulaPop')">Close</button><h3>Formula Sheet — SMS 3214</h3><p>d<sub>x</sub> = l<sub>x</sub> − l<sub>x+1</sub> | q<sub>x</sub> = <span class="frac"><span>d<sub>x</sub></span><span>l<sub>x</sub></span></span> | p<sub>x</sub> = 1 − q<sub>x</sub></p><p><sub>t</sub>p<sub>x</sub> = <span class="frac"><span>l<sub>x+t</sub></span><span>l<sub>x</sub></span></span> | e<sub>x</sub> = <span class="frac"><span>T<sub>x</sub></span><span>l<sub>x</sub></span></span> | a<sub>x</sub> = ä<sub>x</sub> − 1 | Net Premium = <span class="frac"><span>PV Benefits</span><span>PV Annuity</span></span></p></div>
 <div id="glossPop" class="popup"><button onclick="closePop('glossPop')">Close</button><h3>Glossary — SMS 3214</h3><p><b>l<sub>x</sub>:</b> number alive at exact age x. <b>d<sub>x</sub>:</b> deaths between x and x+1. <b>q<sub>x</sub>:</b> probability a person aged x dies before x+1. <b>p<sub>x</sub>:</b> probability they survive. <b>e<sub>x</sub>:</b> expected remaining years. <b>Annuity:</b> payments while alive. <b>Assurance:</b> payment on death. <b>Premium:</b> payment for cover. <b>PV:</b> present value.</p></div>
@@ -70,13 +70,14 @@
 <div class="keybox"><p><b>l<sub>x</sub></b> = number alive at exact age x. <b>d<sub>x</sub></b> = deaths between x and x+1. d<sub>x</sub> = l<sub>x</sub> − l<sub>x+1</sub></p><p><b>q<sub>x</sub></b> = probability a person aged x dies before x+1. q<sub>x</sub> = <span class="frac"><span>d<sub>x</sub></span><span>l<sub>x</sub></span></span></p><p><b>p<sub>x</sub></b> = probability they survive. p<sub>x</sub> = 1 − q<sub>x</sub></p></div>
 <p><b>Worked Example:</b> l<sub>30</sub> = 95,000, l<sub>31</sub> = 94,500. d<sub>30</sub> = 95,000 − 94,500 = 500. q<sub>30</sub> = <span class="frac"><span>500</span><span>95000</span></span> = 0.005263. p<sub>30</sub> = 1 − 0.005263 = 0.994737.</p>
 <p><b>Common exam mistake:</b> Using d<sub>x</sub> as q<sub>x</sub>. d<sub>x</sub> is number of people (500). q<sub>x</sub> is probability (0.005263). Always divide.</p>
-<!-- MARKING: SMS 3214 Topic 1 Ex 1 — (a) 1 mark for l_x definition, (b) 2 marks for d_x calc, (c) 2 marks for q_x + p_x. Total 5. Partial credit per part. -->
+<!-- MARKING: SMS 3214 Topic 1 Ex 1 — (a) 1 mark for l_x + d_x definitions, (b) 2 marks for d_40 = 900, (c) 2 marks: q_40 = 0.01 (1 mark) + p_40 = 0.99 (1 mark). Total 5. Partial credit per part. -->
 <div class="exbox"><p><strong>Exercise 1 — Covers: l_x, d_x, q_x</strong><br>(a) Define l<sub>x</sub> and d<sub>x</sub>.<br>(b) l<sub>40</sub>=90,000, l<sub>41</sub>=89,100. Find d<sub>40</sub>.<br>(c) Find q<sub>40</sub> and p<sub>40</sub>.</p>
-<p>(a) <input class="answer" type="text" placeholder="Type your answer"></p>
+<p>(a) <textarea class="answer" id="t1a" rows="3" placeholder="Type your answer"></textarea></p>
 <p>(b) <input class="answer" id="q1b" type="text" placeholder="Type your answer"></p>
-<p>(c) <input class="answer" id="q1c" type="text" placeholder="Type your answer"></p>
+<p>(c1) q<sub>40</sub> = <input class="answer" id="q1c1" type="text" placeholder="Type your answer"></p>
+<p>(c2) p<sub>40</sub> = <input class="answer" id="q1c2" type="text" placeholder="Type your answer"></p>
 <button onclick="checkEx(1)">Check Exercise 1</button> <button onclick="openOwnChat(1,'c1')">Open My Chatbox for Exercise 1</button><p id="msg1"></p></div>
-<!-- MARKING: Topic 1 Ex 2 — (a) 2 marks q_x vs d_x, (b) 2 marks reading table, (c) 1 mark why life table matters. Total 5. -->
+<!-- MARKING: Topic 1 Ex 2 — (a) 2 marks q_x vs d_x + example, (b) 2 marks d_50 = 800, (c) 1 mark why life table matters. Total 5. -->
 <div class="exbox"><p><strong>Exercise 2 — Covers: reading table + meaning</strong><br>(a) Explain difference between d<sub>x</sub> and q<sub>x</sub> with example.<br>(b) If q<sub>50</sub>=0.01 and l<sub>50</sub>=80,000, find d<sub>50</sub>.<br>(c) Why does insurer need life table? Give 1 reason.</p>
 <p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p>
 <p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p>
@@ -93,13 +94,14 @@
 <div class="keybox"><p><sub>t</sub>p<sub>x</sub> = <span class="frac"><span>l<sub>x+t</sub></span><span>l<sub>x</sub></span></span> | <sub>t</sub>q<sub>x</sub> = 1 − <sub>t</sub>p<sub>x</sub></p></div>
 <p><b>Worked Example:</b> l<sub>30</sub>=95,000, l<sub>35</sub>=93,000. <sub>5</sub>p<sub>30</sub> = <span class="frac"><span>93000</span><span>95000</span></span> = 0.9789. <sub>5</sub>q<sub>30</sub> = 0.0211.</p>
 <p><b>Common exam mistake:</b> Forgetting to subtract from 1 for q. Bottom is always l<sub>x</sub>.</p>
-<!-- MARKING: Topic 2 Ex 3 — (a) 1 mark definition, (b) 2 marks calc, (c) 2 marks q + words. Total 5. -->
+<!-- MARKING: Topic 2 Ex 3 — (a) 1 mark definition of t p_x, (b) 2 marks 5p_40 = 0.9667, (c) 2 marks: 5q_40 = 0.0333 (1 mark) + words explanation (1 mark). Total 5. -->
 <div class="exbox"><p><strong>Exercise 3 — Covers: t p_x calc</strong><br>(a) Define <sub>t</sub>p<sub>x</sub>.<br>(b) l<sub>40</sub>=90,000, l<sub>45</sub>=87,000. Find <sub>5</sub>p<sub>40</sub>.<br>(c) Find <sub>5</sub>q<sub>40</sub> and explain in words.</p>
-<p>(a) <input class="answer" type="text" placeholder="Type your answer"></p>
+<p>(a) <textarea class="answer" id="t3a" rows="3" placeholder="Type your answer"></textarea></p>
 <p>(b) <input class="answer" id="q3b" type="text" placeholder="Type your answer"></p>
-<p>(c) <input class="answer" id="q3c" type="text" placeholder="Type your answer"></p>
+<p>(c1) <sub>5</sub>q<sub>40</sub> = <input class="answer" id="q3c1" type="text" placeholder="Type your answer"></p>
+<p>(c2) In words: <textarea class="answer" id="t3c2" rows="3" placeholder="Type your answer"></textarea></p>
 <button onclick="checkEx(3)">Check Exercise 3</button> <button onclick="openOwnChat(3,'c3')">Open My Chatbox for Exercise 3</button><p id="msg3"></p></div>
-<!-- MARKING: Topic 2 Ex 4 — (a) 2 marks survival, (b) 2 marks death prob, (c) 1 mark interpretation. -->
+<!-- MARKING: Topic 2 Ex 4 — (a) 2 marks 10p_20 = 0.97, (b) 2 marks 10q_20 = 0.03, (c) 1 mark interpretation for 1,000 people = 970 survive, 30 die. -->
 <div class="exbox"><p><strong>Exercise 4 — Covers: long survival + interpretation</strong><br>(a) l<sub>20</sub>=100,000, l<sub>30</sub>=97,000. Find <sub>10</sub>p<sub>20</sub>.<br>(b) Find <sub>10</sub>q<sub>20</sub>.<br>(c) What does answer mean for 1,000 people aged 20?</p>
 <p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p>
 <p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p>
@@ -116,9 +118,9 @@
 <div class="keybox"><p>e<sub>x</sub> = <span class="frac"><span>T<sub>x</sub></span><span>l<sub>x</sub></span></span></p></div>
 <p><b>Worked Example:</b> T<sub>60</sub> = 1,200,000, l<sub>60</sub> = 80,000. e<sub>60</sub> = <span class="frac"><span>1200000</span><span>80000</span></span> = 15 years. So a 60-year-old is expected to live to 75 on average.</p>
 <p><b>Common exam mistake:</b> Saying "will live 15 more years". No — on average.</p>
-<!-- MARKING: Topic 3 Ex 5 — (a) 1 mark definition, (b) 2 marks calc, (c) 2 marks interpretation. Total 5. -->
+<!-- MARKING: Topic 3 Ex 5 — (a) 1 mark definition, (b) 2 marks e_50 = 23.53, (c) 2 marks expected age = 73.53. Total 5. -->
 <div class="exbox"><p><strong>Exercise 5 — Covers: e_x calc + meaning</strong><br>(a) Define e<sub>x</sub>.<br>(b) T<sub>50</sub>=2,000,000, l<sub>50</sub>=85,000. Find e<sub>50</sub>.<br>(c) What age is a 50-year-old expected to reach on average?</p>
-<p>(a) <input class="answer" type="text" placeholder="Type your answer"></p>
+<p>(a) <textarea class="answer" id="t5a" rows="3" placeholder="Type your answer"></textarea></p>
 <p>(b) <input class="answer" id="q5b" type="text" placeholder="Type your answer"></p>
 <p>(c) <input class="answer" id="q5c" type="text" placeholder="Type your answer"></p>
 <button onclick="checkEx(5)">Check Exercise 5</button> <button onclick="openOwnChat(5,'c5')">Open My Chatbox for Exercise 5</button><p id="msg5"></p></div>
@@ -139,9 +141,9 @@
 <div class="keybox"><p><b>ä<sub>x</sub></b> = annuity-due: first payment NOW. <b>a<sub>x</sub></b> = annuity-immediate: first payment in 1 year. a<sub>x</sub> = ä<sub>x</sub> − 1.</p></div>
 <p><b>Worked Example:</b> If ä<sub>65</sub> = 12.5, then a<sub>65</sub> = 11.5. If you pay 10,000 per year, PV = 10,000 × 11.5 = 115,000 for immediate annuity.</p>
 <p><b>Common exam mistake:</b> Mixing ä and a. "First payment now" = ä. "First payment in one year" = a.</p>
-<!-- MARKING: Topic 4 Ex 7 — (a) 1 mark definition, (b) 2 marks ä vs a, (c) 2 marks calc. Total 5. -->
+<!-- MARKING: Topic 4 Ex 7 — (a) 1 mark definition, (b) 2 marks a_60 = 12.0, (c) 2 marks PV = 240,000. Total 5. -->
 <div class="exbox"><p><strong>Exercise 7 — Covers: annuity types + PV</strong><br>(a) Define a life annuity.<br>(b) ä<sub>60</sub>=13.0. Find a<sub>60</sub>.<br>(c) If annual payment is 20,000 and a<sub>60</sub>=12.0, find PV of immediate annuity.</p>
-<p>(a) <input class="answer" type="text" placeholder="Type your answer"></p>
+<p>(a) <textarea class="answer" id="t7a" rows="3" placeholder="Type your answer"></textarea></p>
 <p>(b) <input class="answer" id="q7b" type="text" placeholder="Type your answer"></p>
 <p>(c) <input class="answer" id="q7c" type="text" placeholder="Type your answer"></p>
 <button onclick="checkEx(7)">Check Exercise 7</button> <button onclick="openOwnChat(7,'c7')">Open My Chatbox for Exercise 7</button><p id="msg7"></p></div>
@@ -162,10 +164,10 @@
 <div class="keybox"><p><b>A<sub>x</sub></b> = PV of 1 paid on death of person aged x.</p></div>
 <p><b>Worked Example:</b> If A<sub>40</sub> = 0.25, PV of 100,000 whole life cover = 100,000 × 0.25 = 25,000.</p>
 <p><strong>Common exam mistake:</strong> Saying assurance pays while alive. No — assurance pays on death. Annuity pays while alive.</p>
-<!-- MARKING: Topic 5 Ex 9 — (a) 1 mark definition, (b) 2 marks term vs whole, (c) 2 marks calc. Total 5. -->
+<!-- MARKING: Topic 5 Ex 9 — (a) 1 mark definition, (b) 2 marks term vs whole, (c) 2 marks PV = 40,000. Total 5. -->
 <div class="exbox"><p><strong>Exercise 9 — Covers: assurance types + PV</strong><br>(a) Define life assurance.<br>(b) Explain difference between term and whole life assurance.<br>(c) A<sub>35</sub>=0.20. Find PV of 200,000 whole life cover.</p>
-<p>(a) <input class="answer" type="text" placeholder="Type your answer"></p>
-<p>(b) <input class="answer" type="text" placeholder="Type your answer"></p>
+<p>(a) <textarea class="answer" id="t9a" rows="3" placeholder="Type your answer"></textarea></p>
+<p>(b) <textarea class="answer" id="t9b" rows="3" placeholder="Type your answer"></textarea></p>
 <p>(c) <input class="answer" id="q9c" type="text" placeholder="Type your answer"></p>
 <button onclick="checkEx(9)">Check Exercise 9</button> <button onclick="openOwnChat(9,'c9')">Open My Chatbox for Exercise 9</button><p id="msg9"></p></div>
 <!-- MARKING: Topic 5 Ex 10 — (a) 2 marks annuity vs assurance, (b) 2 marks why term cheaper, (c) 1 mark example. -->
@@ -185,10 +187,10 @@
 <div class="keybox"><p>Net Annual Premium P = <span class="frac"><span>PV of Benefits</span><span>PV of Annuity of 1 per year</span></span></p><p>Example: PV Benefits = 25,000, ä<sub>x</sub> = 12.5. P = <span class="frac"><span>25000</span><span>12.5</span></span> = 2,000 per year.</p></div>
 <p><b>Worked Example:</b> PV Benefits = 30,000, ä<sub>40</sub> = 15. P = 30,000 ÷ 15 = 2,000 per year.</p>
 <p><b>Common exam mistake:</b> Dividing by wrong annuity — use ä if premiums paid at start of year, a if at end.</p>
-<!-- MARKING: Topic 6 Ex 11 — (a) 1 mark definition, (b) 2 marks formula, (c) 2 marks calc. Total 5. -->
+<!-- MARKING: Topic 6 Ex 11 — (a) 1 mark definition, (b) 2 marks formula, (c) 2 marks P = 2,500. Total 5. -->
 <div class="exbox"><p><strong>Exercise 11 — Covers: net premium calc</strong><br>(a) Define net premium.<br>(b) Write formula for net annual premium.<br>(c) PV Benefits = 40,000, ä<sub>x</sub>=16. Find net annual premium.</p>
-<p>(a) <input class="answer" type="text" placeholder="Type your answer"></p>
-<p>(b) <input class="answer" type="text" placeholder="Type your answer"></p>
+<p>(a) <textarea class="answer" id="t11a" rows="3" placeholder="Type your answer"></textarea></p>
+<p>(b) <textarea class="answer" id="t11b" rows="3" placeholder="Type your answer"></textarea></p>
 <p>(c) <input class="answer" id="q11c" type="text" placeholder="Type your answer"></p>
 <button onclick="checkEx(11)">Check Exercise 11</button> <button onclick="openOwnChat(11,'c11')">Open My Chatbox for Exercise 11</button><p id="msg11"></p></div>
 <!-- MARKING: Topic 6 Ex 12 — (a) 2 marks net vs gross, (b) 2 marks why premium rises with age, (c) 1 mark example. -->
@@ -234,23 +236,37 @@ function changeFont(d){
 }
 function feedback(n,v){document.getElementById('fb'+n).textContent=v==='clear'?'Thanks! Noted as Clear.':'Thanks! We will expand this topic.';localStorage.setItem('sms3214_fb'+n,v);}
 function doSearch(q){let r=document.getElementById('searchResult');if(!q){r.textContent='';return;}let topics=[['Life Tables',1],['Survival',2],['Life Expectancy',3],['Annuities',4],['Assurances',5],['Premiums',6]];let found=topics.filter(t=>t[0].toLowerCase().includes(q.toLowerCase()));r.innerHTML=found.length?found.map(f=>'<button onclick="showTopic('+f[1]+')">Go to Topic '+f[1]+': '+f[0]+'</button>').join(' '):'No topic found in this unit. Try: Life Tables, Survival, Annuity, Assurance, Premium';}
-function num(v){let n=parseFloat(v.trim().replace(',','.'));return isNaN(n)?null:n;}
+function num(v){let n=parseFloat((v||'').trim().replace(',','.'));return isNaN(n)?null:n;}
+function val(id){let el=document.getElementById(id);return el?el.value.trim():'';}
+function theoryOk(id){return val(id).length>=10;}
 function openOwnChat(ex,tickId){currentEx=ex;currentTick=tickId;document.getElementById('chatTitle').textContent='Our Own Chatbox — Exercise '+ex+' (SMS 3214)';document.getElementById('ownChat').style.display='block';document.getElementById('chatGuide').textContent='Hi! You are on Exercise '+ex+'. Step 1: Do it manually on paper. Step 2: Upload a photo of YOUR WORKING below. Step 3: Type your (a), (b), (c) answers. I will guide you by part. For real AI marking, click Send to Meta AI.';window.scrollTo(0,document.body.scrollHeight);}
 function closeOwnChat(){document.getElementById('ownChat').style.display='none';}
 function previewPhoto(input){let f=input.files[0];if(!f)return;let r=new FileReader();r.onload=function(e){let img=document.getElementById('photoPreview');img.src=e.target.result;img.style.display='block';document.getElementById('chatLog').innerHTML+='<p>✅ Photo preview loaded. I can see your working. Now type your (a), (b), (c) answers.</p>';};r.readAsDataURL(f);}
 function sendInChat(){let v=document.getElementById('chatInput').value;if(!v)return;document.getElementById('chatLog').innerHTML+='<p><b>You:</b> '+v+'</p><p><b>Guide:</b> Thanks! Now check each part: (a) Did you define the term? (b) Did you show working? (c) Did you explain in words? If a part is missing, add it and send again. If you want real AI marking, click Send to Meta AI. Only redo the part you failed.</p>';document.getElementById('chatInput').value='';}
-function sendToMeta(){let text='Please mark me for SMS 3214 Exercise '+currentEx+'. Here are my answers (a)(b)(c). I uploaded a photo of my manual working. Mark by part with partial credit. Guide me step by step on the part I failed. Rubric is in the page HTML comment for this exercise.';navigator.clipboard.writeText(text).then(()=>{alert('Copied! Paste this in Meta AI chat + attach your photo of your working.');});}
+function collectAnswers(){let out=[];document.querySelectorAll('.topic.active .answer').forEach((el,i)=>{let label=el.closest('p')?el.closest('p').textContent.trim().slice(0,30):('Box '+(i+1));out.push(label+': '+el.value.trim());});let chat=document.getElementById('chatInput').value.trim();if(chat) out.push('Chatbox answer: '+chat);return out.join('\n');}
+function sendToMeta(){let answers=collectAnswers();let text='Please mark me for SMS 3214 Exercise '+currentEx+'. Mark by part with partial credit. Guide me step by step on the part I failed. Rubric is in the page HTML comment for this exercise.\n\nMY REAL ANSWERS:\n'+(answers||'(no answers typed yet)')+'\n\nI also uploaded a photo of my manual working.';navigator.clipboard.writeText(text).then(()=>{alert('Copied WITH your real answers! Paste this in Meta AI chat + attach your photo of your working.');});}
 function tickFromChat(){if(currentTick){tick(currentTick);alert('Ticked! This means AI / guide said you passed Exercise '+currentEx+'. Only this question is ticked.');closeOwnChat();}}
-function checkEx(n){let msg=document.getElementById('msg'+n);let correct=false;
-if(n===1){correct=Math.abs(num(document.getElementById('q1b').value)-900)<1&&Math.abs(num(document.getElementById('q1c').value)-0.01)<0.001;}
-if(n===3){correct=Math.abs(num(document.getElementById('q3b').value)-0.9667)<0.002;}
-if(n===5){correct=Math.abs(num(document.getElementById('q5b').value)-23.529)<0.1;}
-if(n===7){correct=Math.abs(num(document.getElementById('q7b').value)-12)<0.01&&Math.abs(num(document.getElementById('q7c').value)-240000)<1;}
-if(n===9){correct=Math.abs(num(document.getElementById('q9c').value)-40000)<1;}
-if(n===11){correct=Math.abs(num(document.getElementById('q11c').value)-2500)<1;}
-if(correct){msg.textContent="✅ Correct! Exercise "+n+" done.";if(n===1)tick('c1');if(n===3)tick('c3');if(n===5)tick('c5');if(n===7)tick('c7');if(n===9)tick('c9');if(n===11)tick('c11');}
-else{tries[n]=(tries[n]||0)+1;if(tries[n]>=2){msg.textContent="Wrong twice. Our Own Chatbox is open for THIS question only. Upload a photo of YOUR WORKING.";openOwnChat(n,'c'+n);}else{msg.textContent="Not yet - try again. You only redo THIS question.";}}}
-// Save answers
+function checkEx(n){
+  let msg=document.getElementById('msg'+n);
+  let numbersOk=false, theoryNeeded=[];
+  if(n===1){numbersOk=Math.abs(num(val('q1b'))-900)<1 && Math.abs(num(val('q1c1'))-0.01)<0.001 && Math.abs(num(val('q1c2'))-0.99)<0.001; theoryNeeded=['t1a'];}
+  if(n===3){numbersOk=Math.abs(num(val('q3b'))-0.9667)<0.002 && Math.abs(num(val('q3c1'))-0.0333)<0.002; theoryNeeded=['t3a','t3c2'];}
+  if(n===5){numbersOk=Math.abs(num(val('q5b'))-23.529)<0.1 && Math.abs(num(val('q5c'))-73.53)<0.1; theoryNeeded=['t5a'];}
+  if(n===7){numbersOk=Math.abs(num(val('q7b'))-12)<0.01 && Math.abs(num(val('q7c'))-240000)<1; theoryNeeded=['t7a'];}
+  if(n===9){numbersOk=Math.abs(num(val('q9c'))-40000)<1; theoryNeeded=['t9a','t9b'];}
+  if(n===11){numbersOk=Math.abs(num(val('q11c'))-2500)<1; theoryNeeded=['t11a','t11b'];}
+  let theoryOkAll=theoryNeeded.every(id=>theoryOk(id));
+  if(numbersOk && theoryOkAll){
+    msg.textContent="✅ Correct! All number parts + theory written. Exercise "+n+" done.";
+    if(n===1)tick('c1'); if(n===3)tick('c3'); if(n===5)tick('c5'); if(n===7)tick('c7'); if(n===9)tick('c9'); if(n===11)tick('c11');
+  } else if(numbersOk && !theoryOkAll){
+    msg.textContent="Numbers are correct ✅. Now write the theory part(s) — at least 10 characters each — then click Check again. Theory is not auto-marked, so for full marking open Chatbox.";
+  } else {
+    tries[n]=(tries[n]||0)+1;
+    if(tries[n]>=2){msg.textContent="Wrong twice. Our Own Chatbox is open for THIS question only. Upload a photo of YOUR WORKING. Only redo the part you failed.";openOwnChat(n,'c'+n);}
+    else{msg.textContent="Not yet — check ALL number parts. You only redo THIS question.";}
+  }
+}
 document.querySelectorAll('.answer').forEach((el,i)=>{let key='sms3214_ans_'+i;let saved=localStorage.getItem(key);if(saved)el.value=saved;el.addEventListener('input',()=>localStorage.setItem(key,el.value));});
 let saved=localStorage.getItem('sms3214_topic');if(saved)showTopic(parseInt(saved));else updateProgress();
 </script>
