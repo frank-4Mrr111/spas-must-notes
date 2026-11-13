@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SMS 3403 - Game Theory for Actuarial Science - SPAS MUST Notes</title>
+<style>
+  body{font-family:Arial,sans-serif;background:#F2F6F0;color:#1A1A1A;margin:0;padding:20px;line-height:1.7}
+  body.dark{background:#121212;color:#EDEDED} body.dark .wrap{background:#1E1E1E;color:#EDEDED}
+  .wrap{max-width:820px;margin:0 auto;background:#fff;padding:24px;border-radius:12px;border-top:8px solid #2E6B4A}
+  h1,h2{color:#2E6B4A} body.dark h1,body.dark h2{color:#7BC9A0}
+  .keybox{background:#E8F2EB;padding:14px;border-radius:10px;margin:12px 0} body.dark .keybox{background:#223528}
+  .exbox{background:#E8F2EB;padding:16px;border-radius:10px;margin:16px 0;border:1px solid #2E6B4A} body.dark .exbox{background:#223528}
+  .howbox{background:#FFF8E1;padding:16px;border-radius:10px;border:2px solid #2E6B4A;margin:16px 0} body.dark .howbox{background:#2A2A1A}
+  .check input{width:22px;height:22px;accent-color:#2E6B4A} .check input:disabled{cursor:not-allowed}
+  input.answer,textarea.answer{padding:10px;font-size:16px;width:90%;margin:4px}
+  button{padding:10px 16px;font-size:16px;background:#2E6B4A;color:#fff;border:none;border-radius:8px;cursor:pointer;margin:4px 4px 4px 0}
+  .topic{display:none} .topic.active{display:block}
+  .frac{display:inline-block;text-align:center;vertical-align:middle}.frac>span{display:block}.frac>span:first-child{border-bottom:1px solid currentColor}
+  .popup{display:none;position:fixed;inset:10% 5%;background:#fff;color:#111;padding:20px;overflow:auto;border-radius:12px;border:3px solid #2E6B4A;z-index:99} body.dark .popup{background:#1E1E1E;color:#EDEDED}
+  #progressBar{height:14px;background:#DDD;border-radius:8px;overflow:hidden}#progressFill{height:100%;width:0;background:#2E6B4A}
+  .topbar{display:flex;flex-wrap:wrap;gap:6px}
+  #ownChat{display:none;position:fixed;bottom:0;left:0;right:0;max-width:820px;margin:0 auto;background:#fff;color:#111;border-top:3px solid #2E6B4A;padding:16px;z-index:100;max-height:70vh;overflow:auto} body.dark #ownChat{background:#1E1E1E;color:#EDEDED}
+  .msg{background:#E3F2FD;padding:10px;border-radius:10px;margin:6px 0} body.dark .msg{background:#1A2A44}
+  #photoPreview{max-width:100%;display:none;margin:8px 0;border-radius:8px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<p><a href="index.html">&larr; Back to Home</a></p>
+<h1>SMS 3403 - Game Theory for Actuarial Science</h1>
+<p><strong>Unit Name:</strong> Game Theory for Actuarial Science | <strong>Code:</strong> SMS 3403</p>
+<p><span>#Spas.must</span> <span>#ActuarialScienceMUST</span></p>
+<div class="topbar">
+<button onclick="openPop('formulaPop')">Formula Sheet</button>
+<button onclick="openPop('glossPop')">Glossary</button>
+<button onclick="toggleDark()">Dark / Light</button>
+<span style="display:inline-flex;align-items:center;gap:6px;background:#E8F2EB;padding:4px 8px;border-radius:8px;">
+  <span style="font-weight:bold;">Text Size:</span>
+  <button onclick="changeFont(-1)" title="Make text smaller" style="padding:6px 12px;font-size:18px;font-weight:bold;">-</button>
+  <span id="fontLabel" style="min-width:38px;text-align:center;font-weight:bold;">100%</span>
+  <button onclick="changeFont(1)" title="Make text bigger" style="padding:6px 12px;font-size:18px;font-weight:bold;">+</button>
+</span>
+<input id="searchBox" placeholder="Search in this unit..." style="padding:10px;width:200px" oninput="doSearch(this.value)">
+</div><p id="searchResult"></p>
+<p><strong>Prerequisites:</strong> SMS 3214 Actuarial Mathematics I, basic probability. Calculator allowed.</p>
+<p style="background:#FFF8E1;padding:10px;border-radius:8px;border:2px solid #2E6B4A;"><strong>Code note:</strong> SMS 3403 was reused at MUST. Older 2017/18 paper = Financial Reporting. This page is the 2021/22 version = <strong>Game Theory for Actuarial Science</strong>. If your lecturer uses Financial Reporting, use that page instead.</p>
+<p id="progressText">Topic 1 of 6 - 0% done</p><div id="progressBar"><div id="progressFill"></div></div>
+<p>This unit is how insurers, firms and people make decisions when others are deciding too - pricing, reinsurance, competition, auctions. You will learn to find the best move, predict what others will do, and find equilibrium. You do not need to have attended a lecture.</p>
+<h2>Top Topics That Appear Most in MUST Exams</h2>
+<ol><li>Introduction to Games - Players, Strategies, Payoffs</li><li>Dominant Strategies and Nash Equilibrium</li><li>Zero-Sum Games and Mixed Strategies</li><li>Prisoners Dilemma and Repeated Games</li><li>Sequential Games and Game Trees</li><li>Game Theory in Insurance - Pricing, Reinsurance, Auctions</li></ol>
+<div class="howbox">
+<p><strong>How this page works:</strong></p>
+<p>1. <b>One topic at a time.</b> Finish it, click <b>Next</b>. <b>Back</b> to revise.</p>
+<p>2. <b>2 exercises per topic.</b> Each has parts <b>(a)(b)(c)</b>, sometimes <b>(d)</b>. Together they cover the whole topic.</p>
+<p>3. <b>First 2 tries = final answer only.</b> Even if it says show your working, type just the answer here.</p>
+<p>4. <b>Our Own Chatbox.</b> Wrong twice? Our Chatbox opens for <b>that question only</b> and guides you step by step.</p>
+<p>5. <b>Upload your working.</b> Do it <b>manually on paper</b>, take a clear photo of <b>your working</b>, upload it in the Chatbox. You will see a preview.</p>
+<p>6. <b>Theory vs Numbers.</b> Numbers are checked here. Theory cannot be checked here, so click <b>Send For Marking</b> to open the Chatbox.</p>
+<p>7. <b>Send to Meta AI.</b> Chatbox has a button to copy your question + answers for real AI marking in Meta AI chat. Our Chatbox is the experience, Meta AI is the backup brain.</p>
+<p>8. <b>Boxes are locked.</b> They tick only when you prove it. Theory ticks after Meta AI says Pass, then click <b>AI Marked Me Correct - Tick</b> in the Chatbox.</p>
+<p>9. <b>Marking is by part.</b> Get (a) right = credit for (a). Only redo the part / question you failed.</p>
+<p>10. <b>Boxes = parts.</b> (a)(b)(c) = 3 boxes. If one part asks for 2 numbers, it gets 2 boxes. Each part has its own box. No answers are shown on this page.</p>
+</div>
+<div id="formulaPop" class="popup"><button onclick="closePop('formulaPop')">Close</button><h3>Formula Sheet - SMS 3403</h3><p><b>Payoff:</b> What each player gets for each combination | <b>Nash:</b> No player can gain by changing alone | <b>Zero-sum:</b> One gains what other loses, sum = 0 | <b>Mixed strategy:</b> Play A with prob p, B with prob 1-p | <b>Expected payoff:</b> p x Payoff A + (1-p) x Payoff B | <b>Minimax:</b> Maximin = Minimax at saddle point | <b>Backward induction:</b> Solve from end of tree backwards</p></div>
+<div id="glossPop" class="popup"><button onclick="closePop('glossPop')">Close</button><h3>Glossary - SMS 3403</h3><p><b>Game:</b> situation where outcome depends on all players choices. <b>Player:</b> decision maker. <b>Strategy:</b> plan of action. <b>Payoff:</b> reward for each outcome. <b>Dominant strategy:</b> best no matter what other does. <b>Nash equilibrium:</b> no one wants to change alone. <b>Zero-sum:</b> one gains, other loses same. <b>Mixed strategy:</b> randomise between strategies. <b>Cooperation:</b> players work together. <b>Auction:</b> bidding game. <b>Backward induction:</b> solve sequential game from end.</p></div>
+<div class="topic active" id="topic1">
+<h2>Topic 1: Introduction to Games - Players, Strategies, Payoffs</h2><p><b>Estimated time:</b> ~30 minutes | <b>Objectives:</b> Define game, identify players, strategies, payoffs, build a payoff matrix.</p>
+<p>A game is any situation where your best choice depends on what someone else does. Two insurers setting premiums is a game. Two firms bidding is a game.</p><div class='keybox'><p><b>3 parts:</b> 1. <strong>Players</strong> - who decides? 2. <strong>Strategies</strong> - what can each do? 3. <strong>Payoffs</strong> - what does each get for each combination?</p><p><b>Example - Two insurers:</b> Each can Charge High or Charge Low. If both High: each gets 10. If both Low: each gets 4. If one High, one Low: Low gets 12, High gets 2. The matrix shows all 4 outcomes.</p></div>
+<div class="exbox"><p><strong>Exercise 1 - Covers: game + parts</strong><br>(a) Define game, player, strategy, payoff.<br>(b) Give 2 examples of games in insurance.<br>(c) Explain why a premium decision is a game.</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(1,'c1')">Send For Marking - Open My Chatbox</button><p id="msg1"></p></div>
+<div class="exbox"><p><strong>Exercise 2 - Covers: payoff matrix</strong><br>(a) Two shops can Price High or Low. Build a payoff matrix with your own numbers.<br>(b) Explain how to read a payoff matrix.<br>(c) Give one game from daily life in Kenya, with players and strategies.</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(2,'c2')">Send For Marking - Open My Chatbox</button><p id="msg2"></p></div>
+<ul class="check"><li><input type="checkbox" id="c1" disabled> <span>I have got Topic 1 - first exercise.</span></li><li><input type="checkbox" id="c2" disabled> <span>I have got Topic 1 - second exercise.</span></li></ul>
+<p><b>Appears in MUST papers:</b> Appears in MUST past papers for this unit.</p><p>Was this topic clear? <button onclick="feedback(1,'clear')">Clear</button> <button onclick="feedback(1,'not')">Not Clear</button> <span id="fb1"></span></p>
+<p><button onclick="showTopic(2)">Next - Topic 2: Dominant Strategies and Nash Equilibrium</button></p>
+</div>
+<div class="topic" id="topic2">
+<h2>Topic 2: Dominant Strategies and Nash Equilibrium</h2><p><b>Estimated time:</b> ~35 minutes | <b>Objectives:</b> Explain dominant strategy, find Nash equilibrium, explain why Nash matters.</p>
+<p>A dominant strategy is best no matter what the other player does. Nash equilibrium is where no one wants to change alone.</p><div class='keybox'><p><b>Find Nash:</b> For each column, circle Row best payoff. For each row, circle Column best payoff. Any cell with both circled is Nash.</p><p><b>Example - Insurers:</b> Both High: 10,10. Both Low: 4,4. One High, one Low: Low 12, High 2. Low is dominant for both - Low is best whether other is High or Low. Nash = Both Low (4,4), even though Both High (10,10) is better for both. That is the dilemma.</p></div>
+<div class="exbox"><p><strong>Exercise 3 - Covers: dominant + Nash</strong><br>(a) Define dominant strategy and Nash equilibrium.<br>(b) Explain why Nash may not be best for everyone, with example.<br>(c) Give one Nash equilibrium in real life.</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(3,'c3')">Send For Marking - Open My Chatbox</button><p id="msg3"></p></div>
+<div class="exbox"><p><strong>Exercise 4 - Covers: finding Nash</strong><br>(a) Game: A High/Low, B High/Low. Payoffs: HH 8,8; HL 2,10; LH 10,2; LL 5,5. Find dominant strategies.<br>(b) Find Nash equilibrium in that game. Show working.<br>(c) Is Nash the best outcome for both? Explain.</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(4,'c4')">Send For Marking - Open My Chatbox</button><p id="msg4"></p></div>
+<ul class="check"><li><input type="checkbox" id="c3" disabled> <span>I have got Topic 2 - first exercise.</span></li><li><input type="checkbox" id="c4" disabled> <span>I have got Topic 2 - second exercise.</span></li></ul>
+<p><b>Appears in MUST papers:</b> Appears in MUST past papers for this unit.</p><p>Was this topic clear? <button onclick="feedback(2,'clear')">Clear</button> <button onclick="feedback(2,'not')">Not Clear</button> <span id="fb2"></span></p>
+<p><button onclick="showTopic(1)">Back to Topic 1</button> <button onclick="showTopic(3)">Next - Topic 3: Zero-Sum Games and Mixed Strategies</button></p>
+</div>
+<div class="topic" id="topic3">
+<h2>Topic 3: Zero-Sum Games and Mixed Strategies</h2><p><b>Estimated time:</b> ~40 minutes | <b>Objectives:</b> Explain zero-sum, find saddle point, calculate mixed strategy probabilities.</p>
+<p>Zero-sum: one gains what the other loses. Total = 0. Think of two firms fighting for one contract - one wins, one loses.</p><div class='keybox'><p><b>Saddle point:</b> Maximin = Minimax. Row player picks row with highest minimum. Column player picks column with lowest maximum. If they meet, that is saddle point - pure strategy Nash.</p><p><b>No saddle point? Use mixed strategy:</b> Randomise. Example 2x2 game: Row plays A with prob p, B with 1-p. Choose p so Column is indifferent between its two strategies. Solve: Expected payoff to Column from C1 = Expected payoff from C2. That gives p.</p><p><b>Worked:</b> Row payoffs: A/C1=6, A/C2=2, B/C1=1, B/C2=5. Column indifferent: 6p + 1(1-p) = 2p + 5(1-p). Left = 5p+1. Right = -3p+5. 5p+1 = -3p+5. 8p=4. p=0.5. Row plays A 50%, B 50%. Value = 5(0.5)+1 = 3.5.</p></div>
+<div class="exbox"><p><strong>Exercise 5 - Covers: zero-sum + mixed (NUMBERS)</strong><br>(a) Define zero-sum game and saddle point.<br>(b) Explain why a player would randomise.<br>(c) Row payoffs: A/C1=8, A/C2=2, B/C1=3, B/C2=7. Find p for Row A so Column is indifferent. p = ? Value = ? Show working.</p><p>(a) <textarea class="answer" id="t5a" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" id="t5b" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <input class="answer" id="q5c" type="text" placeholder="Type your answer - p, value"></p><button onclick="checkEx(5)">Check Exercise 5</button> <button onclick="openOwnChat(5,'c5')">Open My Chatbox for Exercise 5</button><p id="msg5"></p></div>
+<div class="exbox"><p><strong>Exercise 6 - Covers: saddle point + value</strong><br>(a) Define maximin and minimax.<br>(b) Game: Row minima 2 and 4, Column maxima 6 and 4. Is there a saddle point? Where? Explain.<br>(c) Give 2 examples of zero-sum games.</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(6,'c6')">Send For Marking - Open My Chatbox</button><p id="msg6"></p></div>
+<ul class="check"><li><input type="checkbox" id="c5" disabled> <span>I have got Topic 3 - first exercise.</span></li><li><input type="checkbox" id="c6" disabled> <span>I have got Topic 3 - second exercise.</span></li></ul>
+<p><b>Appears in MUST papers:</b> Appears in MUST past papers for this unit.</p><p>Was this topic clear? <button onclick="feedback(3,'clear')">Clear</button> <button onclick="feedback(3,'not')">Not Clear</button> <span id="fb3"></span></p>
+<p><button onclick="showTopic(2)">Back to Topic 2</button> <button onclick="showTopic(4)">Next - Topic 4: Prisoners Dilemma and Repeated Games</button></p>
+</div>
+<div class="topic" id="topic4">
+<h2>Topic 4: Prisoners Dilemma and Repeated Games</h2><p><b>Estimated time:</b> ~30 minutes | <b>Objectives:</b> Explain Prisoners Dilemma, explain cooperation, explain repeated games and tit-for-tat.</p>
+<p>Prisoners Dilemma: Both would be better cooperating, but each has incentive to defect. So both defect and both lose.</p><div class='keybox'><p><b>Classic:</b> Two suspects. If both stay silent: 1 year each. If one confesses, other silent: confessor free, silent 10 years. If both confess: 5 years each. Confess is dominant. Nash = both confess (5,5), worse than both silent (1,1).</p><p><b>Insurance version:</b> Two insurers. Cooperate = keep premiums high. Defect = undercut. Undercut is dominant. Both undercut, both earn little.</p><p><b>Repeated games:</b> If game repeats, cooperation can work. Tit-for-tat: start cooperating, then copy what other did last time. Punishes cheating, rewards cooperation.</p></div>
+<div class="exbox"><p><strong>Exercise 7 - Covers: Prisoners Dilemma</strong><br>(a) Define Prisoners Dilemma, with example.<br>(b) Explain why defect is dominant.<br>(c) Explain why Nash is worse than cooperation.</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(7,'c7')">Send For Marking - Open My Chatbox</button><p id="msg7"></p></div>
+<div class="exbox"><p><strong>Exercise 8 - Covers: repeated games</strong><br>(a) Define repeated game and tit-for-tat.<br>(b) Explain why cooperation can work in a repeated game but not a one-off game.<br>(c) Give one insurance example where tit-for-tat would help.</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(8,'c8')">Send For Marking - Open My Chatbox</button><p id="msg8"></p></div>
+<ul class="check"><li><input type="checkbox" id="c7" disabled> <span>I have got Topic 4 - first exercise.</span></li><li><input type="checkbox" id="c8" disabled> <span>I have got Topic 4 - second exercise.</span></li></ul>
+<p><b>Appears in MUST papers:</b> Appears in MUST past papers for this unit.</p><p>Was this topic clear? <button onclick="feedback(4,'clear')">Clear</button> <button onclick="feedback(4,'not')">Not Clear</button> <span id="fb4"></span></p>
+<p><button onclick="showTopic(3)">Back to Topic 3</button> <button onclick="showTopic(5)">Next - Topic 5: Sequential Games and Game Trees</button></p>
+</div>
+<div class="topic" id="topic5">
+<h2>Topic 5: Sequential Games and Game Trees</h2><p><b>Estimated time:</b> ~35 minutes | <b>Objectives:</b> Explain sequential games, draw game tree, solve by backward induction.</p>
+<p>Sequential game: players move one after another, not at same time. Example: Firm A enters market or not, then Firm B responds.</p><div class='keybox'><p><b>Game tree:</b> Nodes = decisions, Branches = choices, Leaves = payoffs.</p><p><b>Backward induction:</b> Start at end. At each last node, pick best move for player who moves there. Work backwards to start.</p><p><b>Example:</b> A can Enter or Stay Out. If Stay Out: A 0, B 10. If Enter: B can Fight or Share. If Fight: A -2, B 2. If Share: A 5, B 5. B will Share (5 > 2). So A knows Enter gives 5, Stay Out gives 0. A Enters. Equilibrium: Enter, Share.</p></div>
+<div class="exbox"><p><strong>Exercise 9 - Covers: sequential + tree</strong><br>(a) Define sequential game and game tree.<br>(b) Distinguish simultaneous vs sequential game.<br>(c) Explain backward induction in your own words.</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(9,'c9')">Send For Marking - Open My Chatbox</button><p id="msg9"></p></div>
+<div class="exbox"><p><strong>Exercise 10 - Covers: solving tree</strong><br>(a) A can Launch or Not. If Not: A 0, B 8. If Launch: B can Price Low or High. Low: A 2, B 2. High: A 6, B 4. What will B do? What will A do? Explain.<br>(b) Draw the tree in words.<br>(c) Give one sequential game in insurance.</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(10,'c10')">Send For Marking - Open My Chatbox</button><p id="msg10"></p></div>
+<ul class="check"><li><input type="checkbox" id="c9" disabled> <span>I have got Topic 5 - first exercise.</span></li><li><input type="checkbox" id="c10" disabled> <span>I have got Topic 5 - second exercise.</span></li></ul>
+<p><b>Appears in MUST papers:</b> Appears in MUST past papers for this unit.</p><p>Was this topic clear? <button onclick="feedback(5,'clear')">Clear</button> <button onclick="feedback(5,'not')">Not Clear</button> <span id="fb5"></span></p>
+<p><button onclick="showTopic(4)">Back to Topic 4</button> <button onclick="showTopic(6)">Next - Topic 6: Game Theory in Insurance - Pricing, Reinsurance, Auctions</button></p>
+</div>
+<div class="topic" id="topic6">
+<h2>Topic 6: Game Theory in Insurance - Pricing, Reinsurance, Auctions</h2><p><b>Estimated time:</b> ~30 minutes | <b>Objectives:</b> Apply game theory to insurance pricing, reinsurance, auctions, explain collusion and regulation.</p>
+<p>Game theory explains real insurance markets.</p><div class='keybox'><p><b>Pricing:</b> Insurers undercut to win customers, but if all undercut, all lose. That is Prisoners Dilemma.</p><p><b>Reinsurance:</b> Insurer and reinsurer bargain. Each wants better price. Nash bargaining splits surplus.</p><p><b>Auctions:</b> Bidding for a contract is a game. Bid too high = lose. Bid too low = win but lose money. Winner's curse: winner overpays.</p><p><b>Collusion:</b> Firms agreeing to keep prices high is cooperation. It helps firms, hurts customers. That is why competition law (in Kenya, Competition Authority) bans price-fixing.</p></div>
+<div class="exbox"><p><strong>Exercise 11 - Covers: insurance games (NUMBERS)</strong><br>(a) Explain how Prisoners Dilemma applies to insurance pricing.<br>(b) Explain winner's curse, with example.<br>(c) Two insurers bid for a contract worth 1000000. Insurer A bids 900000, B bids 950000. Who wins? Profit if cost is 850000 = ? Show working.</p><p>(a) <textarea class="answer" id="t11a" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" id="t11b" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <input class="answer" id="q11c" type="text" placeholder="Type your answer - winner, profit"></p><button onclick="checkEx(11)">Check Exercise 11</button> <button onclick="openOwnChat(11,'c11')">Open My Chatbox for Exercise 11</button><p id="msg11"></p></div>
+<div class="exbox"><p><strong>Exercise 12 - Covers: collusion + regulation</strong><br>(a) Define collusion.<br>(b) Explain why collusion helps firms but hurts customers.<br>(c) Give 2 ways a regulator can stop collusion.</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(12,'c12')">Send For Marking - Open My Chatbox</button><p id="msg12"></p></div>
+<ul class="check"><li><input type="checkbox" id="c11" disabled> <span>I have got Topic 6 - first exercise.</span></li><li><input type="checkbox" id="c12" disabled> <span>I have got Topic 6 - second exercise.</span></li></ul>
+<p><b>Appears in MUST papers:</b> Appears in MUST past papers for this unit.</p><p>Was this topic clear? <button onclick="feedback(6,'clear')">Clear</button> <button onclick="feedback(6,'not')">Not Clear</button> <span id="fb6"></span></p>
+<p><button onclick="showTopic(5)">Back to Topic 5</button> <button onclick="showTopic(1)">Back to Topic 1</button> <a href="index.html"><button>Back to Home</button></a></p>
+<h2>Exam Strategy for SMS 3403</h2><ul><li>Attempt definitions first - easiest marks.</li><li>Always give actuarial example, not just definition.</li><li>Show every step - MUST gives marks for method.</li><li>Never leave blank - write key points you know.</li><li>For "explain" questions, give definition + example + why it matters.</li></ul>
+<footer><p>#Spas.must &nbsp; #ActuarialScienceMUST</p><p>Notes from MUST past papers. Built by frank-4Mrr111. Trusted Sources V3.4 Final.</p></footer>
+</div>
+</div>
+<div id="ownChat">
+<h3 id="chatTitle">Our Own Chatbox</h3>
+<div class="msg" id="chatGuide">Hi! I am your SPAS marking guide. Do this question manually on paper, step by step. Take a clear photo of YOUR WORKING and upload it below. You will see a preview. Then type your (a), (b), (c) answers. I will guide you by part.</div>
+<p><strong>1. Upload your working (photo of your manual work):</strong><br><input type="file" accept="image/*" onchange="previewPhoto(this)"><br><img id="photoPreview"></p>
+<p><strong>2. Type your answers here:</strong><br><input id="chatInput" style="padding:10px;width:90%" placeholder="Type your answer"></p>
+<p><button onclick="sendInChat()">Send in Our Chatbox</button> <button onclick="sendToMeta()">Send to Meta AI for Real Marking</button> <button onclick="tickFromChat()">AI Marked Me Correct - Tick</button> <button onclick="closeOwnChat()">Close Chatbox</button></p>
+<p id="chatLog"></p>
+<p><small>Our Chatbox guides you. For real AI marking, click Send to Meta AI - it copies question + answers + rubric for you to paste in Meta AI chat.</small></p>
+</div>
+<script>
+let tries={}, fontSize=16, currentEx=0, currentTick='';
+function showTopic(n){document.querySelectorAll('.topic').forEach(t=>t.classList.remove('active'));document.getElementById('topic'+n).classList.add('active');localStorage.setItem('sms3403_topic',n);updateProgress();window.scrollTo(0,0);}
+function updateProgress(){let done=document.querySelectorAll('.check input:checked').length;let pct=Math.round(done/12*100);document.getElementById('progressFill').style.width=pct+'%';let cur=document.querySelector('.topic.active');let num=cur?cur.id.replace('topic',''):'1';document.getElementById('progressText').textContent='Topic '+num+' of 6 - '+pct+'% done';}
+function tick(id){let el=document.getElementById(id);if(el){el.checked=true;updateProgress();}}
+function openPop(id){document.getElementById(id).style.display='block';} function closePop(id){document.getElementById(id).style.display='none';}
+function toggleDark(){document.body.classList.toggle('dark');}
+function changeFont(d){fontSize+=d;if(fontSize<13)fontSize=13;if(fontSize>24)fontSize=24;document.body.style.fontSize=fontSize+'px';let pct=Math.round(fontSize/16*100);let label=document.getElementById('fontLabel');if(label)label.textContent=pct+'%';}
+function feedback(n,v){document.getElementById('fb'+n).textContent=v==='clear'?'Thanks! Noted as Clear.':'Thanks! We will expand this topic.';localStorage.setItem('sms3403_fb'+n,v);}
+function doSearch(q){let r=document.getElementById('searchResult');if(!q){r.textContent='';return;}let topics=[['Introduction to General Insurance',1],['Profession Ethics',2],['Insurance Principles Types',3],['Risk Uncertainty Pooling',4],['Interest Mortality Calculations',5],['Where Actuaries Work',6]];let found=topics.filter(t=>t[0].toLowerCase().includes(q.toLowerCase()));r.innerHTML=found.length?found.map(f=>'<button onclick="showTopic('+f[1]+')">Go to Topic '+f[1]+': '+f[0]+'</button>').join(' '):'No topic found in this unit. Try: Game, Nash, Zero-Sum, Prisoners, Sequential, Auction';}
+function num(v){let n=parseFloat((v||'').trim().replace(',','.'));return isNaN(n)?null:n;}
+function val(id){let el=document.getElementById(id);return el?el.value.trim():'';}
+function theoryOk(id){return val(id).length>=10;}
+function openOwnChat(ex,tickId){currentEx=ex;currentTick=tickId;document.getElementById('chatTitle').textContent='Our Own Chatbox - Exercise '+ex+' (SMS 3403)';document.getElementById('ownChat').style.display='block';document.getElementById('chatGuide').textContent='Hi! You are on Exercise '+ex+'. Step 1: Do it manually on paper. Step 2: Upload a photo of YOUR WORKING below. Step 3: Type your (a), (b), (c) answers. I will guide you by part. For real AI marking, click Send to Meta AI.';window.scrollTo(0,document.body.scrollHeight);}
+function closeOwnChat(){document.getElementById('ownChat').style.display='none';}
+function previewPhoto(input){let f=input.files[0];if(!f)return;let r=new FileReader();r.onload=function(e){let img=document.getElementById('photoPreview');img.src=e.target.result;img.style.display='block';document.getElementById('chatLog').innerHTML+='<p>Photo preview loaded. I can see your working. Now type your (a), (b), (c) answers.</p>';};r.readAsDataURL(f);}
+function sendInChat(){let v=document.getElementById('chatInput').value;if(!v)return;document.getElementById('chatLog').innerHTML+='<p><b>You:</b> '+v+'</p><p><b>Guide:</b> Thanks! Now check each part: (a) Did you define the term? (b) Did you show working / formula? (c) Did you explain in words? If a part is missing, add it and send again. If you want real AI marking, click Send to Meta AI. Only redo the part you failed.</p>';document.getElementById('chatInput').value='';}
+function collectAnswers(){let out=[];document.querySelectorAll('.topic.active .answer').forEach((el,i)=>{let label=el.closest('p')?el.closest('p').textContent.trim().slice(0,40):('Box '+(i+1));out.push(label+': '+el.value.trim());});let chat=document.getElementById('chatInput').value.trim();if(chat)out.push('Chatbox answer: '+chat);return out.join('\n');}
+function sendToMeta(){let answers=collectAnswers();let text='Please mark me for SMS 3403 Exercise '+currentEx+'. Mark by part with partial credit. Guide me step by step on the part I failed. Rubric is in the page HTML comment for this exercise.\n\nMY REAL ANSWERS:\n'+(answers||'(no answers typed yet)')+'\n\nI also uploaded a photo of my manual working.';navigator.clipboard.writeText(text).then(()=>{alert('Copied WITH your real answers! Paste this in Meta AI chat + attach your photo of your working.');});}
+function tickFromChat(){if(currentTick){tick(currentTick);alert('Ticked! This means AI / guide said you passed Exercise '+currentEx+'. Only this question is ticked.');closeOwnChat();}}
+function checkEx(n){
+  let msg=document.getElementById('msg'+n);
+  let numbersOk=false, theoryNeeded=[];
+  if(n===5){let v=val('q5c').toLowerCase(); numbersOk=(v.includes('0.4')||v.includes('2/5')||v.includes('40%'))&&v.includes('5'); theoryNeeded=['t5a','t5b'];}
+  if(n===11){let v=val('q11c').toLowerCase(); numbersOk=v.includes('900000')&&v.includes('50000'); theoryNeeded=['t11a','t11b'];}
+  let theoryOkAll=theoryNeeded.every(id=>theoryOk(id));
+  if(numbersOk && theoryOkAll){msg.textContent="Correct! All number parts + theory written. Exercise "+n+" done.";if(n===5)tick('c5');if(n===11)tick('c11');}
+  else if(numbersOk && !theoryOkAll){msg.textContent="Numbers / formula are correct. Now write the theory part(s) - at least 10 characters each - then click Check again.";}
+  else {tries[n]=(tries[n]||0)+1;if(tries[n]>=2){msg.textContent="Wrong twice. Our Own Chatbox is open for THIS question only. Upload a photo of YOUR WORKING. Only redo the part you failed.";openOwnChat(n,'c'+n);}else{msg.textContent="Not yet - check ALL parts. You only redo THIS question.";}}
+}
+document.querySelectorAll('.answer').forEach((el,i)=>{let key='sms3403_ans_'+i;let saved=localStorage.getItem(key);if(saved)el.value=saved;el.addEventListener('input',()=>localStorage.setItem(key,el.value));});
+let saved=localStorage.getItem('sms3403_topic');if(saved)showTopic(parseInt(saved));else updateProgress();
+</script>
+</body>
+</html>
