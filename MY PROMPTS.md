@@ -59,10 +59,8 @@ Trusted Sources: TRUSTED-SOURCES-V3.4-FINAL.md
 5n. WORKING RULE.
      Even if a question says "show your working", website only asks for JUST THE FINAL ANSWER for first two attempts. Type answer only.
      Full working is done in Our Own Chatbox, where AI / guide walks step by step.
-5o. HOW THIS PAGE WORKS BOX — Simple campus English, not cheap, not complex. Must explain:
-     Only one topic at a time. 2 exercises per topic. Marking by part. Boxes locked. Only redo failed question.
-     First two attempts = just final answer, even if question says show working.
-     Chatbox = guides step by step to conquer the question.
+5o. HOW THIS PAGE WORKS BOX — Short, numbered, 10 lines max. People hate long rules. Must cover all 10, no extra words:
+     1. One topic at a time. Next / Back. 2. 2 exercises per topic, parts (a)(b)(c) sometimes (d), together cover whole topic. 3. First 2 tries = final answer only, even if says show working. 4. Our Own Chatbox opens for that question only if wrong twice, guides step by step. 5. Upload your working — do manually on paper, photo of your working, upload in Chatbox, see preview. 6. Theory vs Numbers — numbers checked here, theory click Send For Marking to open Chatbox. 7. Send to Meta AI — Chatbox copies question + answers for real AI marking, Chatbox is experience, Meta AI is backup brain. 8. Boxes locked, tick only on proof, theory ticks after Meta AI Pass + click AI Marked Me Correct → Tick. 9. Marking by part, only redo failed part/question. 10. Boxes = parts, (a)(b)(c)=3 boxes, (a)(b)(c)(d)=4 boxes, no visible answers.
 5p. CHATBOX PICTURE RULE — CORRECTION: Our old explanation never said user uploads his/her working. NOW WE CORRECT IT.
      The user DOES upload his/her working. Student does the question MANUALLY on paper, step by step.
      Takes a clear photo of his/her working and uploads it in Our Own Chatbox.
