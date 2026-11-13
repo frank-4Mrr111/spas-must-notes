@@ -103,7 +103,7 @@ JS: function showTopic(n){ document.querySelectorAll('.topic').forEach(t=>t.clas
 7e. SEARCH INSIDE THIS UNIT — Search box, inside this unit only.
 7f. EXAM PROOF — Per topic: "Appears in MUST papers..." — never invent fake paper number.
 7g. HIDDEN MARKING RUBRIC FOR AI — Every exercise must have hidden HTML comment rubric, NOT visible to student.
-7h. READABILITY — Dark / Light + Font size A- / A+ on every unit page.
+7h. READABILITY — Dark / Light + Font Size button with ONLY + and - on every unit page. NEVER use A- / A+ — it looks like grading. Use: Text Size: [ − ] 100% [ + ]. Show % so student knows it is size, not a mark.
 7i. FEEDBACK — Per topic: "Was this topic clear? [Clear] [Not Clear]"
 7j. PREREQUISITES — Before Topic 1: "Before this unit, you should know: ..." 2-3 lines only.
 7k. ACCESSIBILITY — Buttons must have clear text, not just arrows. Text readable on phone.
