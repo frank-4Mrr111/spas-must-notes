@@ -3,31 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SMS 3214 Actuarial Mathematics I - SPAS MUST Notes</title>
+<title>SMS 3214 - Actuarial Mathematics I - SPAS MUST Notes</title>
 <style>
   body{font-family:Arial,sans-serif;background:#F2F6F0;color:#1A1A1A;margin:0;padding:20px;line-height:1.7}
   .wrap{max-width:800px;margin:0 auto;background:#fff;padding:24px;border-radius:12px;border-top:8px solid #2E6B4A}
-  h1,h2{color:#2E6B4A} h2{border-bottom:2px solid #D9E8DD;padding-bottom:6px}
-  .tag{background:#E8F2EB;padding:6px 12px;border-radius:20px;display:inline-block;margin:4px 4px 0 0}
-  .box{background:#F2F6F0;padding:16px;border-radius:10px;margin:16px 0}
+  h1,h2{color:#2E6B4A}
   .formula{background:#FFF8E1;padding:12px;border-left:4px solid #2E6B4A;font-weight:bold}
   .frac{display:inline-block;text-align:center;vertical-align:middle;margin:0 4px}
   .frac span{display:block;padding:0 6px}
   .frac span:first-child{border-bottom:2px solid #1A1A1A}
-  .frac-wrap{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .keybox{background:#E8F2EB;padding:14px;border-radius:10px;margin:12px 0}
   .exbox{background:#E8F2EB;padding:16px;border-radius:10px;margin:16px 0;border:1px solid #2E6B4A}
   .howbox{background:#FFF8E1;padding:16px;border-radius:10px;border:2px solid #2E6B4A;margin:16px 0}
-  .check{list-style:none;padding:0} .check li{padding:8px 0;display:flex;gap:10px;align-items:flex-start}
-  .check input{width:22px;height:22px;margin-top:2px;accent-color:#2E6B4A}
+  .check input{width:22px;height:22px;accent-color:#2E6B4A}
   .check input:disabled{cursor:not-allowed}
-  .check li.done{color:#2E6B4A;font-weight:bold}
-  input.answer{padding:10px;font-size:16px;width:140px;margin:4px}
+  input.answer,textarea.answer{padding:10px;font-size:16px;width:90%;margin:4px}
   button{padding:10px 16px;font-size:16px;background:#2E6B4A;color:#fff;border:none;border-radius:8px;cursor:pointer;margin:4px 4px 4px 0}
-  button:disabled{background:#999;cursor:not-allowed}
-  .msg{font-weight:bold;margin:8px 0}
-  .ok{color:#2E6B4A} .bad{color:#B00020}
   .chatbox{display:none;background:#E3F2FD;padding:16px;border-radius:10px;border:2px solid #1565C0;margin:16px 0}
-  a{color:#2E6B4A} footer{margin-top:24px;font-size:14px;color:#555}
 </style>
 </head>
 <body>
@@ -35,164 +27,113 @@
 <p><a href="index.html">&larr; Back to Home</a></p>
 <h1>SMS 3214 - Actuarial Mathematics I</h1>
 <p><strong>Unit Name:</strong> Actuarial Mathematics I &nbsp;|&nbsp; <strong>Code:</strong> SMS 3214</p>
-<p><span class="tag">#Spas.must</span> <span class="tag">#ActuarialScienceMUST</span></p>
-
-<h2>What Is This Unit About?</h2>
-<p>Actuarial Mathematics I is about <strong>how long people live, and how much money that means for insurance and pensions.</strong> If an insurance company does not know how long people live, it cannot know how much to charge. This unit teaches you the maths behind that.</p>
-<p>You do not need to have attended a lecture. We start from zero.</p>
-
+<p><span>#Spas.must</span> <span>#ActuarialScienceMUST</span></p>
+<p>This unit is about the mathematics of money over time, and how actuaries use it to price life insurance and annuities. Read each topic fully before you attempt its exercises. You do not need to have attended a lecture.</p>
 <h2>Top Topics That Appear Most in MUST Exams</h2>
-<ol><li>Life Tables</li><li>Survival and Death Probabilities</li><li>Life Expectancy</li><li>Life Annuities</li><li>Life Assurances</li><li>Premiums</li></ol>
+<ol><li>Time Value of Money — Simple and Compound Interest</li><li>Annuities Certain</li><li>Mortality and Life Tables</li><li>Life Insurance — Whole Life, Term, Endowment</li><li>Life Annuities</li><li>Net Premiums and Reserves</li></ol>
+<div class="howbox"><p><strong>How this page works:</strong> Read the topic. Work through the examples. Then attempt the 2 exercises for that topic. Each exercise has parts (a), (b), (c) — together the 2 cover the objectives of the whole topic. If you pass both, you have got the topic. Boxes are locked and tick only on proof. Only redo the question you failed. For numbers, 2 wrong opens Marking Chatbox for that question only. Partial credit for parts you get right. No answers are shown on this page. Fractions are shown as numerator over denominator, never with a slash.</p></div>
 
-<h2>Topic 1: Life Tables - Start From Zero</h2>
-<h3>a) What is it?</h3>
-<p>A life table tells you: out of 100,000 babies born, how many are still alive at each age.</p>
-<h3>b) Why does it matter?</h3>
-<p>In Kenya, NHIF / an insurance company uses a life table to decide how much premium a 30-year-old should pay.</p>
-<h3>c) Formula - every symbol named</h3>
-<div class="formula"><div class="frac-wrap"><span>q<sub>x</sub> =</span><span class="frac"><span>d<sub>x</sub></span><span>l<sub>x</sub></span></span><span>and</span><span>p<sub>x</sub> = 1 - q<sub>x</sub></span></div>
-<p style="font-weight:normal">l<sub>x</sub> = number alive at age x | d<sub>x</sub> = deaths between age x and x+1 | q<sub>x</sub> = probability of dying at age x | p<sub>x</sub> = probability of surviving age x</p></div>
-<h3>d) Worked Example - MUST style, every step</h3>
-<div class="box"><p><strong>Question:</strong> l<sub>30</sub> = 90,000 and d<sub>30</sub> = 900. Find q<sub>30</sub> and p<sub>30</sub>.</p>
-<p><strong>Step 1:</strong> q<sub>x</sub> = <span class="frac"><span>d<sub>x</sub></span><span>l<sub>x</sub></span></span></p>
-<p><strong>Step 2:</strong> q<sub>30</sub> = <span class="frac"><span>900</span><span>90,000</span></span></p>
-<p><strong>Step 3:</strong> = 0.01 &nbsp; <strong>Step 4:</strong> p<sub>30</sub> = 1 - 0.01 = 0.99</p>
-<p><strong>Answer:</strong> q<sub>30</sub> = 0.01, p<sub>30</sub> = 0.99</p></div>
-<h3>e) Try It Yourself</h3>
-<p>Common mistake: swapping q and p, or swapping l and d. Remember: d is deaths (small), l is alive (big). q = small / big.</p>
+<h2 id="topic1">Topic 1: Time Value of Money — Simple and Compound Interest</h2>
+<p><strong>Objectives:</strong> By the end, you can explain time value of money, calculate simple interest, compound interest, present value, accumulated value, discount, and nominal vs effective rates.</p>
+<p><strong>Definition:</strong> Time value of money means money today is worth more than the same money tomorrow, because money today can earn interest. 1,000 today, at 10% for 1 year, becomes 1,100 in one year. 1,000 in one year is worth less today, because you must wait.</p>
+<p><strong>Why it matters:</strong> An actuary must compare money paid at different times. A premium paid today and a claim paid in 20 years are not directly comparable. You must bring them to the same time — present value or accumulated value — before you compare them.</p>
+<div class="keybox"><p><strong>Key words:</strong> Principal (P) = starting money. Interest (I) = extra earned. Rate (i) = interest per period, e.g. 0.10 = 10%. Time (n) = number of periods. Accumulated Value = money after interest. Present Value = money today that will grow to a future amount.</p>
+<p><strong>Simple Interest:</strong> Interest only on principal. I = P × i × n. Accumulated = P + I = P(1 + i×n).</p>
+<p><strong>Compound Interest:</strong> Interest on principal + past interest. Accumulated = P(1 + i)<sup>n</sup>. Present Value = Future ÷ (1 + i)<sup>n</sup>.</p>
+<p><strong>Discount:</strong> v = <span class="frac"><span>1</span><span>1 + i</span></span>. Present Value = Future × v<sup>n</sup>.</p></div>
+<p><strong>Worked Example — Simple:</strong> P = 10,000, i = 10% = 0.10, n = 3 years, simple. I = 10,000 × 0.10 × 3 = 3,000. Accumulated = 10,000 + 3,000 = 13,000.</p>
+<p><strong>Worked Example — Compound:</strong> P = 10,000, i = 10%, n = 3 years, compound. Accumulated = 10,000 × (1.10)<sup>3</sup> = 10,000 × 1.331 = 13,310. Compound is higher than simple because year 2 earns interest on year 1 interest.</p>
+<p><strong>Worked Example — Present Value:</strong> You need 13,310 in 3 years, i = 10%. Present Value = 13,310 ÷ (1.10)<sup>3</sup> = 13,310 ÷ 1.331 = 10,000.</p>
+<p><strong>Common exam mistake:</strong> Using simple formula for compound, or forgetting to convert % to decimal. 10% = 0.10, not 10. Always convert first.</p>
+<div class="exbox"><p><strong>Exercise 1 — Covers: simple + compound + difference</strong><br>(a) Define time value of money in your own words.<br>(b) P = 20,000, i = 8%, n = 2 years. Find accumulated value with simple interest. Show working.<br>(c) Same P, i, n. Find accumulated value with compound interest. Show working. Why is it different from (b)?</p><input class="answer" id="q1a" type="text" placeholder="Type your answer"><br><input class="answer" id="q1b" type="text" placeholder="Type your answer"><br><input class="answer" id="q1c" type="text" placeholder="Type your answer"><br><button onclick="checkEx(1)">Check Exercise 1</button><p id="msg1"></p><div class="chatbox" id="chat1">Wrong twice. Paste working in chat for marking. Marking by part (a), (b), (c). Redo Exercise 1 only.</div></div>
+<div class="exbox"><p><strong>Exercise 2 — Covers: present value + discount + rate</strong><br>(a) Explain discount factor v and write its formula.<br>(b) You need 50,000 in 4 years, i = 10%. Find present value. Show working.<br>(c) If i rises, does present value rise or fall? Explain with one example.</p><textarea class="answer" rows="4" placeholder="Type your answer"></textarea><br><button onclick="showChat(2)">Send For Marking</button><p id="msg2"></p><div class="chatbox" id="chat2">Paste your answer in chat for marking. Marking by part (a), (b), (c). Redo Exercise 2 only.</div></div>
+<ul class="check"><li id="li-c1"><input type="checkbox" id="c1" disabled> <span>I have got Topic 1 — simple, compound, difference.</span></li><li id="li-c2"><input type="checkbox" id="c2" disabled> <span>I have got Topic 1 — present value, discount, rate.</span></li></ul>
+<p><a href="#topic2"><button>Next → Topic 2: Annuities Certain</button></a></p><hr>
 
-<div class="howbox">
-<h3 style="margin-top:0">⚠️ Read This BEFORE You Start The Exercises - How This Page Marks You</h3>
-<ol>
-<li><strong>You CANNOT tick the boxes yourself.</strong> The checkboxes below are locked. They tick <em>automatically</em> only when you prove you understood. When a box ticks, it means the website is assuring you: <strong>"Yes, you understood this lesson."</strong></li>
-<li><strong>You only redo the question you failed - not both.</strong> Exercise 1 and Exercise 2 are marked separately. If you fail Exercise 1, you redo Exercise 1 only. Exercise 2 stays as it is.</li>
-<li><strong>2 wrong submissions on the SAME question = Marking Chatbox.</strong> If you get the same exercise wrong twice, this page will open the Marking Chatbox for that question. Upload a photo of your working <strong>in chat (Option 1, chat-only)</strong> and AI will mark your working step-by-step.</li>
-<li><strong>Partial credit is real.</strong> If you paste your working for marking, and your working shows you got some steps right even though your final answer was wrong, those boxes <strong>will tick</strong>. Example: your formula was right but your division was wrong - the "I can write the formula" box ticks, the "I can get the final answer" box stays empty until you fix the division. You are not punished for a small slip when the thinking was right.</li>
-<li><strong>Satisfaction never changes the maths.</strong> AI will be friendly and will stay with you until you understand, but it will never say a wrong answer is right just to make you happy, and it will never spread rumours.</li>
-</ol>
-</div>
+<h2 id="topic2">Topic 2: Annuities Certain</h2>
+<p><strong>Objectives:</strong> By the end, you can define an annuity certain, distinguish annuity-immediate and annuity-due, calculate present and accumulated values, and solve for payment, rate, or time.</p>
+<p><strong>Definition:</strong> An annuity certain is a series of equal payments made at regular intervals for a fixed number of periods, with no condition on life. Example: 1,000 every year for 10 years.</p>
+<p><strong>Why it matters:</strong> Loans, mortgages, and savings plans are annuities certain. An actuary must know their value today and in future to price them and to compare them.</p>
+<div class="keybox"><p><strong>Annuity-immediate:</strong> Payments at END of each period. Present value = payment × a-angle-n = payment × <span class="frac"><span>1 − v<sup>n</sup></span><span>i</span></span>.</p><p><strong>Annuity-due:</strong> Payments at START of each period. Present value = payment × ä-angle-n = payment × <span class="frac"><span>1 − v<sup>n</sup></span><span>d</span></span>, where d = <span class="frac"><span>i</span><span>1 + i</span></span>. Annuity-due is larger because first payment is immediate.</p><p><strong>Accumulated value:</strong> Immediate: payment × s-angle-n = payment × <span class="frac"><span>(1 + i)<sup>n</sup> − 1</span><span>i</span></span>. Due: payment × s̈-angle-n = payment × <span class="frac"><span>(1 + i)<sup>n</sup> − 1</span><span>d</span></span>.</p></div>
+<p><strong>Worked Example — Immediate:</strong> Payment 1,000 at end of each year for 5 years, i = 10%. v = 0.9091, v<sup>5</sup> = 0.6209. a-angle-5 = (1 − 0.6209) ÷ 0.10 = 3.791. Present value = 1,000 × 3.791 = 3,791.</p>
+<p><strong>Worked Example — Due:</strong> Same, but at start. d = 0.10 ÷ 1.10 = 0.0909. ä-angle-5 = (1 − 0.6209) ÷ 0.0909 = 4.170. Present value = 1,000 × 4.170 = 4,170. Due is higher because you get the first 1,000 now.</p>
+<p><strong>Common exam mistake:</strong> Using immediate formula for due, or vice versa. Always ask: first payment at start or end? Start = due, End = immediate.</p>
+<div class="exbox"><p><strong>Exercise 3 — Covers: immediate vs due + present value</strong><br>(a) Explain annuity-immediate and annuity-due, with one example of each.<br>(b) Payment 2,000 at end of each year for 4 years, i = 10%. Find present value. Show working.<br>(c) Same, but at start of each year. Find present value. Show working. Why is it higher?</p><input class="answer" id="q3a" type="text" placeholder="Type your answer"><br><input class="answer" id="q3b" type="text" placeholder="Type your answer"><br><input class="answer" id="q3c" type="text" placeholder="Type your answer"><br><button onclick="checkEx(3)">Check Exercise 3</button><p id="msg3"></p><div class="chatbox" id="chat3">Wrong twice. Paste working in chat for marking. Marking by part (a), (b), (c). Redo Exercise 3 only.</div></div>
+<div class="exbox"><p><strong>Exercise 4 — Covers: accumulated value + solving for payment</strong><br>(a) Write the accumulated value formula for annuity-immediate.<br>(b) Payment 1,000 at end of each year for 5 years, i = 10%. Find accumulated value. Show working.<br>(c) You want accumulated value 10,000 in 5 years, i = 10%. What annual payment (immediate) do you need? Show working.</p><textarea class="answer" rows="4" placeholder="Type your answer"></textarea><br><button onclick="showChat(4)">Send For Marking</button><p id="msg4"></p><div class="chatbox" id="chat4">Paste your answer in chat for marking. Marking by part (a), (b), (c). Redo Exercise 4 only.</div></div>
+<ul class="check"><li id="li-c3"><input type="checkbox" id="c3" disabled> <span>I have got Topic 2 — immediate vs due, present value.</span></li><li id="li-c4"><input type="checkbox" id="c4" disabled> <span>I have got Topic 2 — accumulated, solving for payment.</span></li></ul>
+<p><a href="#topic1"><button>← Back to Topic 1</button></a> <a href="#topic3"><button>Next → Topic 3: Mortality and Life Tables</button></a></p><hr>
 
-<h2>Exercises - Do These Before The Checklist Ticks</h2>
-<div class="exbox" id="ex1box">
-<p><strong>Exercise 1:</strong> l<sub>40</sub> = 85,000 and d<sub>40</sub> = 1,700. Find q<sub>40</sub> and p<sub>40</sub>.</p>
-<label>q<sub>40</sub> = <input class="answer" id="q1" type="text" placeholder="e.g. 0.02"></label>
-<label>p<sub>40</sub> = <input class="answer" id="p1" type="text" placeholder="e.g. 0.98"></label><br>
-<button onclick="checkEx(1)">Check Exercise 1</button>
-<p class="msg" id="msg1"></p>
-<div class="chatbox" id="chat1"><strong>📩 Marking Chatbox - Exercise 1</strong><p>You got Exercise 1 wrong twice. That is normal - let us mark your working together.</p><p><strong>What to do:</strong> Take a photo of your working for Exercise 1 and paste it <strong>in chat (Option 1, chat-only)</strong> with the message: <em>"Mark my working for SMS 3214 Topic 1 Exercise 1. Mark step-by-step. If any step is right, tell me which checkbox I earned."</em></p><p>AI will mark your <strong>working</strong>, not just the final answer. If your formula was right, that box will tick even if the final answer was wrong. If your substitution was right, that box will tick too. You only need to fix the step you got wrong, then redo <strong>Exercise 1 only</strong>.</p><p>AI will stay friendly and stay with you until you understand - but it will never say a wrong answer is right, and it will never spread rumours.</p></div>
-</div>
+<h2 id="topic3">Topic 3: Mortality and Life Tables</h2>
+<p><strong>Objectives:</strong> By the end, you can explain mortality, read a life table, calculate qx, px, lx, dx, and use a life table to find probabilities of survival and death.</p>
+<p><strong>Definition:</strong> Mortality is the rate at which people die at a given age. A life table is a table that shows, for a group starting at age 0, how many survive to each age, how many die at each age, and the probability of dying or surviving.</p>
+<p><strong>Why it matters:</strong> Life insurance pays when someone dies. An actuary must know: what is the chance a 30-year-old dies this year? In 10 years? The life table answers that. Without it, you cannot price life insurance.</p>
+<div class="keybox"><p><strong>Symbols:</strong> x = age. l<sub>x</sub> = number alive at age x. d<sub>x</sub> = number dying between x and x+1 = l<sub>x</sub> − l<sub>x+1</sub>. q<sub>x</sub> = probability a person aged x dies within 1 year = <span class="frac"><span>d<sub>x</sub></span><span>l<sub>x</sub></span></span>. p<sub>x</sub> = probability a person aged x survives 1 year = 1 − q<sub>x</sub> = <span class="frac"><span>l<sub>x+1</sub></span><span>l<sub>x</sub></span></span>.</p><p><strong>n-year probabilities:</strong> <sub>n</sub>p<sub>x</sub> = <span class="frac"><span>l<sub>x+n</sub></span><span>l<sub>x</sub></span></span>. <sub>n</sub>q<sub>x</sub> = 1 − <sub>n</sub>p<sub>x</sub>.</p></div>
+<p><strong>Worked Example:</strong> Life table: l<sub>30</sub> = 100,000, l<sub>31</sub> = 99,800, l<sub>40</sub> = 97,000. Then d<sub>30</sub> = 100,000 − 99,800 = 200. q<sub>30</sub> = 200 ÷ 100,000 = 0.002. p<sub>30</sub> = 1 − 0.002 = 0.998. <sub>10</sub>p<sub>30</sub> = 97,000 ÷ 100,000 = 0.97. So a 30-year-old has 97% chance to reach 40, 3% chance to die before 40.</p>
+<p><strong>Common exam mistake:</strong> Confusing q<sub>x</sub> with d<sub>x</sub>. d<sub>x</sub> is a count (200 people). q<sub>x</sub> is a probability (0.002). Always divide by l<sub>x</sub> to get probability.</p>
+<div class="exbox"><p><strong>Exercise 5 — Covers: l, d, q, p</strong><br>(a) Define l<sub>x</sub>, d<sub>x</sub>, q<sub>x</sub>, p<sub>x</sub>.<br>(b) l<sub>40</sub> = 90,000, l<sub>41</sub> = 89,500. Find d<sub>40</sub>, q<sub>40</sub>, p<sub>40</sub>. Show working.<br>(c) Explain why q<sub>x</sub> rises with age.</p><input class="answer" id="q5a" type="text" placeholder="Type your answer"><br><input class="answer" id="q5b" type="text" placeholder="Type your answer"><br><textarea class="answer" rows="2" placeholder="Type your answer"></textarea><br><button onclick="checkEx(5)">Check Exercise 5</button><p id="msg5"></p><div class="chatbox" id="chat5">Wrong twice. Paste working in chat for marking. Marking by part (a), (b), (c). Redo Exercise 5 only.</div></div>
+<div class="exbox"><p><strong>Exercise 6 — Covers: n-year probabilities</strong><br>(a) Write the formula for <sub>n</sub>p<sub>x</sub>.<br>(b) l<sub>30</sub> = 100,000, l<sub>50</sub> = 90,000. Find <sub>20</sub>p<sub>30</sub> and <sub>20</sub>q<sub>30</sub>. Show working.<br>(c) A 30-year-old buys insurance. Why does the actuary need <sub>20</sub>q<sub>30</sub>?</p><textarea class="answer" rows="4" placeholder="Type your answer"></textarea><br><button onclick="showChat(6)">Send For Marking</button><p id="msg6"></p><div class="chatbox" id="chat6">Paste your answer in chat for marking. Marking by part (a), (b), (c). Redo Exercise 6 only.</div></div>
+<ul class="check"><li id="li-c5"><input type="checkbox" id="c5" disabled> <span>I have got Topic 3 — l, d, q, p.</span></li><li id="li-c6"><input type="checkbox" id="c6" disabled> <span>I have got Topic 3 — n-year probabilities.</span></li></ul>
+<p><a href="#topic2"><button>← Back to Topic 2</button></a> <a href="#topic4"><button>Next → Topic 4: Life Insurance</button></a></p><hr>
 
-<div class="exbox" id="ex2box">
-<p><strong>Exercise 2 - a little harder:</strong> l<sub>50</sub> = 78,000 and d<sub>50</sub> = 3,900. Find q<sub>50</sub> and p<sub>50</sub>. Then explain in one sentence what q<sub>50</sub> means.</p>
-<label>q<sub>50</sub> = <input class="answer" id="q2" type="text" placeholder="e.g. 0.05"></label>
-<label>p<sub>50</sub> = <input class="answer" id="p2" type="text" placeholder="e.g. 0.95"></label><br>
-<button onclick="checkEx(2)">Check Exercise 2</button>
-<p class="msg" id="msg2"></p>
-<div class="chatbox" id="chat2"><strong>📩 Marking Chatbox - Exercise 2</strong><p>You got Exercise 2 wrong twice. Let us mark your working together.</p><p><strong>What to do:</strong> Take a photo of your working for Exercise 2 and paste it <strong>in chat (Option 1, chat-only)</strong> with: <em>"Mark my working for SMS 3214 Topic 1 Exercise 2. Mark step-by-step. If any step is right, tell me which checkbox I earned."</em></p><p>Partial credit applies: formula right = formula box ticks. Substitution right = substitution box ticks. You only redo <strong>Exercise 2 only</strong>.</p></div>
-</div>
+<h2 id="topic4">Topic 4: Life Insurance — Whole Life, Term, Endowment</h2>
+<p><strong>Objectives:</strong> By the end, you can define life insurance, explain whole life, term, endowment, calculate their single premiums (APV) using life table and discount, and compare them.</p>
+<p><strong>Definition:</strong> Life insurance pays a sum assured when the insured dies (or survives, for endowment). The actuary calculates the Actuarial Present Value (APV) — the expected present value of the payment, allowing for both interest and mortality.</p>
+<p><strong>Why it matters:</strong> The insurer must charge enough to pay claims, but not so much that no one buys. APV is the fair price before expenses and profit.</p>
+<div class="keybox"><p><strong>Whole Life:</strong> Pays whenever you die. APV = sum × A<sub>x</sub>, where A<sub>x</sub> = sum of (probability of dying each year × discount).</p><p><strong>Term Insurance:</strong> Pays only if you die within n years. If you survive n years, it pays nothing. APV = sum × A<sup>1</sup><sub>x:n</sub>. Cheaper than whole life because many survive.</p><p><strong>Endowment:</strong> Pays if you die within n years OR if you survive n years. APV = sum × A<sub>x:n</sub> = term + pure endowment. Most expensive because it always pays.</p><p><strong>Pure Endowment:</strong> Pays only if you survive n years. APV = sum × <sub>n</sub>E<sub>x</sub> = sum × v<sup>n</sup> × <sub>n</sub>p<sub>x</sub>.</p></div>
+<p><strong>Worked Example — Term:</strong> Age 30, sum 100,000, term 10 years, A<sup>1</sup><sub>30:10</sub> = 0.03. APV = 100,000 × 0.03 = 3,000. That is the single premium (before expenses) for 10-year term cover.</p>
+<p><strong>Worked Example — Pure Endowment:</strong> Age 30, sum 100,000, 20 years, v<sup>20</sup> = 0.1486, <sub>20</sub>p<sub>30</sub> = 0.97. <sub>20</sub>E<sub>30</sub> = 0.1486 × 0.97 = 0.1441. APV = 100,000 × 0.1441 = 14,410.</p>
+<p><strong>Common exam mistake:</strong> Using whole life APV for term, or forgetting discount. APV always includes BOTH mortality and discount. If you forget discount, your answer is too high.</p>
+<div class="exbox"><p><strong>Exercise 7 — Covers: whole, term, endowment + APV</strong><br>(a) Explain whole life, term, and endowment, with one example of who needs each.<br>(b) Age 40, sum 200,000, term 10 years, A<sup>1</sup><sub>40:10</sub> = 0.04. Find APV for term insurance. Show working.<br>(c) Why is endowment more expensive than term for the same sum and term?</p><input class="answer" id="q7a" type="text" placeholder="Type your answer"><br><input class="answer" id="q7b" type="text" placeholder="Type your answer"><br><textarea class="answer" rows="2" placeholder="Type your answer"></textarea><br><button onclick="checkEx(7)">Check Exercise 7</button><p id="msg7"></p><div class="chatbox" id="chat7">Wrong twice. Paste working in chat for marking. Marking by part (a), (b), (c). Redo Exercise 7 only.</div></div>
+<div class="exbox"><p><strong>Exercise 8 — Covers: pure endowment + comparison</strong><br>(a) Define pure endowment.<br>(b) Age 30, sum 100,000, 10 years, v<sup>10</sup> = 0.3855, <sub>10</sub>p<sub>30</sub> = 0.98. Find APV for pure endowment. Show working.<br>(c) Rank whole life, term, endowment from cheapest to most expensive for same sum and term, and explain why.</p><textarea class="answer" rows="4" placeholder="Type your answer"></textarea><br><button onclick="showChat(8)">Send For Marking</button><p id="msg8"></p><div class="chatbox" id="chat8">Paste your answer in chat for marking. Marking by part (a), (b), (c). Redo Exercise 8 only.</div></div>
+<ul class="check"><li id="li-c7"><input type="checkbox" id="c7" disabled> <span>I have got Topic 4 — whole, term, endowment, APV.</span></li><li id="li-c8"><input type="checkbox" id="c8" disabled> <span>I have got Topic 4 — pure endowment, comparison.</span></li></ul>
+<p><a href="#topic3"><button>← Back to Topic 3</button></a> <a href="#topic5"><button>Next → Topic 5: Life Annuities</button></a></p><hr>
 
-<h2>Revision Checklist - The Website Ticks These For You</h2>
-<p><em>These boxes are locked. You cannot tick them. They tick automatically when you prove understanding. When a box ticks, the website is telling you: "Yes, you understood this lesson."</em></p>
-<ul class="check">
-<li id="li-c1"><input type="checkbox" id="c1" disabled> <span>I can write the formula q<sub>x</sub> = d<sub>x</sub> / l<sub>x</sub> and p<sub>x</sub> = 1 - q<sub>x</sub>.</span></li>
-<li id="li-c2"><input type="checkbox" id="c2" disabled> <span>I can explain what a life table is in one sentence.</span></li>
-<li id="li-c3"><input type="checkbox" id="c3" disabled> <span>I can explain why insurance needs life tables.</span></li>
-<li id="li-c4"><input type="checkbox" id="c4" disabled> <span>I can solve a life table question with every step shown (Exercise 1 correct).</span></li>
-<li id="li-c5"><input type="checkbox" id="c5" disabled> <span>I can solve a harder life table question and explain what q means in real life (Exercise 2 correct).</span></li>
-<li id="li-c6"><input type="checkbox" id="c6" disabled> <span>I did Exercise 1 AND Exercise 2 - both correct, or corrected through marking.</span></li>
-</ul>
-<p id="congrats" style="display:none;font-weight:bold;color:#2E6B4A;font-size:18px">✅ All boxes ticked - Yes, you understood this lesson. You are ready for Topic 2.</p>
+<h2 id="topic5">Topic 5: Life Annuities</h2>
+<p><strong>Objectives:</strong> By the end, you can define a life annuity, distinguish whole life, temporary, and deferred annuities, calculate their APV, and explain the difference from annuities certain.</p>
+<p><strong>Definition:</strong> A life annuity pays a regular amount while the person is alive. It stops when they die. Unlike annuity certain, it is not guaranteed for a fixed number of years — it depends on survival.</p>
+<p><strong>Why it matters:</strong> Pensions are life annuities. A retired person needs income for as long as they live, not for a fixed 10 years. The actuary must price that, allowing for the chance the person lives long.</p>
+<div class="keybox"><p><strong>Whole Life Annuity-due:</strong> Pays at start of each year while alive. APV = payment × ä<sub>x</sub>.</p><p><strong>Temporary Life Annuity:</strong> Pays while alive, but only for n years max. APV = payment × ä<sub>x:n</sub>.</p><p><strong>Deferred Life Annuity:</strong> Payments start after m years, if alive then. APV = payment × <sub>m</sub>|ä<sub>x</sub> = payment × v<sup>m</sup> × <sub>m</sub>p<sub>x</sub> × ä<sub>x+m</sub>.</p><p><strong>Difference from annuity certain:</strong> Certain pays even if you die. Life annuity stops at death, so it is cheaper for same payment.</p></div>
+<p><strong>Worked Example — Whole Life:</strong> Age 60, payment 10,000 per year, due, ä<sub>60</sub> = 12.0. APV = 10,000 × 12.0 = 120,000. That is the single premium to buy a pension of 10,000 per year for life from age 60.</p>
+<p><strong>Worked Example — Temporary:</strong> Age 60, payment 10,000 per year, due, for 10 years max, ä<sub>60:10</sub> = 7.5. APV = 10,000 × 7.5 = 75,000. Cheaper than whole life because payments stop after 10 years even if alive.</p>
+<p><strong>Common exam mistake:</strong> Using annuity certain formula for life annuity. Life annuity must use life table probabilities — you cannot ignore mortality.</p>
+<div class="exbox"><p><strong>Exercise 9 — Covers: definition + whole vs temporary</strong><br>(a) Define life annuity and explain how it differs from annuity certain.<br>(b) Age 65, payment 20,000 per year, due, ä<sub>65</sub> = 11.0. Find APV for whole life annuity. Show working.<br>(c) Same, but temporary for 10 years, ä<sub>65:10</sub> = 7.0. Find APV. Why is it lower?</p><input class="answer" id="q9a" type="text" placeholder="Type your answer"><br><input class="answer" id="q9b" type="text" placeholder="Type your answer"><br><input class="answer" id="q9c" type="text" placeholder="Type your answer"><br><button onclick="checkEx(9)">Check Exercise 9</button><p id="msg9"></p><div class="chatbox" id="chat9">Wrong twice. Paste working in chat for marking. Marking by part (a), (b), (c). Redo Exercise 9 only.</div></div>
+<div class="exbox"><p><strong>Exercise 10 — Covers: deferred + pension</strong><br>(a) Define deferred life annuity.<br>(b) A 40-year-old wants pension from age 60. Explain why this is a deferred annuity, with m = ?<br>(c) If deferred APV factor is 4.0 and payment is 20,000 per year, find APV. Show working.</p><textarea class="answer" rows="4" placeholder="Type your answer"></textarea><br><button onclick="showChat(10)">Send For Marking</button><p id="msg10"></p><div class="chatbox" id="chat10">Paste your answer in chat for marking. Marking by part (a), (b), (c). Redo Exercise 10 only.</div></div>
+<ul class="check"><li id="li-c9"><input type="checkbox" id="c9" disabled> <span>I have got Topic 5 — definition, whole vs temporary.</span></li><li id="li-c10"><input type="checkbox" id="c10" disabled> <span>I have got Topic 5 — deferred, pension.</span></li></ul>
+<p><a href="#topic4"><button>← Back to Topic 4</button></a> <a href="#topic6"><button>Next → Topic 6: Net Premiums and Reserves</button></a></p><hr>
 
-<p><strong>No answers on this page.</strong> Find out if you are right by clicking Check. If wrong twice, Marking Chatbox opens and AI will mark your working.</p>
-<h2>Topic 2: Survival and Death Probabilities - Start From Zero</h2>
-<p><strong>What:</strong> Topic 1 was for <strong>1 year only</strong>: will a 40-year-old die before 41? Topic 2 is for <strong>more than 1 year</strong>: will a 40-year-old survive to 45? That is what insurance really needs.</p>
-<p><strong>Why:</strong> A pension pays you <strong>if you survive</strong> to 60. A life assurance pays your family <strong>if you die</strong> before 60. Both need survival and death over many years, not just one.</p>
-<div class="formula"><p><sub>t</sub>p<sub>x</sub> = probability a person aged x survives t years, to age x+t</p><div class="frac-wrap"><span><sub>t</sub>p<sub>x</sub> =</span><span class="frac"><span>l<sub>x+t</sub></span><span>l<sub>x</sub></span></span></div><p style="font-weight:normal">l<sub>x+t</sub> = alive at age x+t | l<sub>x</sub> = alive at age x | <sub>t</sub>q<sub>x</sub> = 1 - <sub>t</sub>p<sub>x</sub> = probability of dying within t years</p></div>
-<div class="box"><p><strong>Worked Example - MUST style, every step:</strong> l<sub>40</sub> = 85,000 and l<sub>45</sub> = 80,750. Find <sub>5</sub>p<sub>40</sub> and <sub>5</sub>q<sub>40</sub>.</p><p><strong>Step 1:</strong> <sub>5</sub>p<sub>40</sub> = <span class="frac"><span>l<sub>45</sub></span><span>l<sub>40</sub></span></span></p><p><strong>Step 2:</strong> = <span class="frac"><span>80,750</span><span>85,000</span></span></p><p><strong>Step 3:</strong> = 0.95 &nbsp; <strong>Step 4:</strong> <sub>5</sub>q<sub>40</sub> = 1 - 0.95 = 0.05</p><p><strong>Answer:</strong> 95% survive 5 years, 5% die within 5 years.</p></div>
-<div class="howbox"><p><strong>⚠️ Same law as always:</strong> Boxes locked, auto-tick only. Only redo failed one. 2 wrong = Marking Chatbox. Partial credit. Satisfaction never changes maths. No visible answers on this page.</p></div>
-<div class="exbox"><p><strong>Exercise 3:</strong> l<sub>40</sub> = 85,000 and l<sub>42</sub> = 82,450. Find <sub>2</sub>p<sub>40</sub> and <sub>2</sub>q<sub>40</sub>.</p><label><sub>2</sub>p<sub>40</sub> = <input class="answer" id="q3" type="text" placeholder="Type your answer"></label><label><sub>2</sub>q<sub>40</sub> = <input class="answer" id="p3" type="text" placeholder="Type your answer"></label><br><button onclick="checkEx(3)">Check Exercise 3</button><p class="msg" id="msg3"></p><div class="chatbox" id="chat3"><strong>📩 Marking Chatbox - Exercise 3</strong><p>Wrong twice. Paste working in chat (Option 1): <em>"Mark my working for SMS 3214 Topic 2 Exercise 3."</em> Redo Exercise 3 only.</p></div></div>
-<div class="exbox"><p><strong>Exercise 4:</strong> l<sub>30</sub> = 90,000 and l<sub>35</sub> = 84,600. Find <sub>5</sub>p<sub>30</sub> and <sub>5</sub>q<sub>30</sub> + one sentence what <sub>5</sub>p<sub>30</sub> means.</p><label><sub>5</sub>p<sub>30</sub> = <input class="answer" id="q4" type="text" placeholder="Type your answer"></label><label><sub>5</sub>q<sub>30</sub> = <input class="answer" id="p4" type="text" placeholder="Type your answer"></label><br><button onclick="checkEx(4)">Check Exercise 4</button><p class="msg" id="msg4"></p><div class="chatbox" id="chat4"><strong>📩 Marking Chatbox - Exercise 4</strong><p>Wrong twice. Paste working in chat (Option 1): <em>"Mark my working for SMS 3214 Topic 2 Exercise 4."</em> Redo Exercise 4 only.</p></div></div>
-<ul class="check"><li id="li-c7"><input type="checkbox" id="c7" disabled> <span>I can write <sub>t</sub>p<sub>x</sub> = l<sub>x+t</sub> / l<sub>x</sub>.</span></li><li id="li-c8"><input type="checkbox" id="c8" disabled> <span>I can find <sub>t</sub>q<sub>x</sub> = 1 - <sub>t</sub>p<sub>x</sub>.</span></li><li id="li-c9"><input type="checkbox" id="c9" disabled> <span>I can solve a survival question (Exercise 3).</span></li><li id="li-c10"><input type="checkbox" id="c10" disabled> <span>I can solve harder + explain meaning (Exercise 4).</span></li><li id="li-c11"><input type="checkbox" id="c11" disabled> <span>I did Exercise 3 AND Exercise 4.</span></li></ul>
-<p><strong>No answers on this page.</strong> Find out if you are right by clicking Check. If wrong twice, Marking Chatbox opens and AI will mark your working.</p>
-  <h2>Topic 3: Life Expectancy - Start From Zero</h2>
-<p><strong>What:</strong> How many more years a person aged x is expected to live. <strong>Why:</strong> Pensions need it — how long will we pay?</p>
-<div class="formula"><div class="frac-wrap"><span>e<sub>x</sub> =</span><span class="frac"><span>T<sub>x</sub></span><span>l<sub>x</sub></span></span></div><p style="font-weight:normal">T<sub>x</sub> = total years lived by all people aged x and older | l<sub>x</sub> = alive at age x</p></div>
-<div class="box"><p><strong>Worked Example:</strong> l<sub>60</sub> = 80,000, T<sub>60</sub> = 1,600,000. e<sub>60</sub> = <span class="frac"><span>1,600,000</span><span>80,000</span></span> = 20 years.</p></div>
-<div class="howbox"><p><strong>⚠️ Same law as always:</strong> Boxes locked, auto-tick only. Only redo failed one. 2 wrong on same question = Marking Chatbox for that question. Partial credit. Satisfaction never changes maths.</p></div>
-<div class="exbox"><p><strong>Exercise 5:</strong> l<sub>50</sub> = 78,000, T<sub>50</sub> = 1,872,000. Find e<sub>50</sub>.</p><label>e<sub>50</sub> = <input class="answer" id="q5" type="text" placeholder="e.g. 24"></label><br><button onclick="checkEx(5)">Check Exercise 5</button><p class="msg" id="msg5"></p><div class="chatbox" id="chat5"><strong>📩 Marking Chatbox - Exercise 5</strong><p>Wrong twice. Paste photo of working in chat (Option 1) with: <em>"Mark my working for SMS 3214 Topic 3 Exercise 5. Mark step-by-step."</em> Redo Exercise 5 only.</p></div></div>
-<div class="exbox"><p><strong>Exercise 6:</strong> l<sub>40</sub> = 85,000, T<sub>40</sub> = 2,975,000. Find e<sub>40</sub> + one sentence what it means.</p><label>e<sub>40</sub> = <input class="answer" id="q6" type="text" placeholder="e.g. 35"></label><br><button onclick="checkEx(6)">Check Exercise 6</button><p class="msg" id="msg6"></p><div class="chatbox" id="chat6"><strong>📩 Marking Chatbox - Exercise 6</strong><p>Wrong twice. Paste photo of working in chat (Option 1) with: <em>"Mark my working for SMS 3214 Topic 3 Exercise 6. Mark step-by-step."</em> Redo Exercise 6 only.</p></div></div>
-<ul class="check"><li id="li-c12"><input type="checkbox" id="c12" disabled> <span>I can write e<sub>x</sub> = T<sub>x</sub> / l<sub>x</sub>.</span></li><li id="li-c13"><input type="checkbox" id="c13" disabled> <span>I can solve a life expectancy question (Exercise 5).</span></li><li id="li-c14"><input type="checkbox" id="c14" disabled> <span>I can solve harder + explain meaning (Exercise 6).</span></li><li id="li-c15"><input type="checkbox" id="c15" disabled> <span>I did Exercise 5 AND 6.</span></li></ul>
-<p><strong>Answers:</strong> Ex5: <span class="frac"><span>1,872,000</span><span>78,000</span></span> = 24. Ex6: <span class="frac"><span>2,975,000</span><span>85,000</span></span> = 35. A 40-year-old expected to live 35 more years, to 75.</p>
-
-<h2>Topic 4: Life Annuities - Start From Zero</h2>
-<p><strong>What:</strong> A series of payments while you are alive. <strong>Why:</strong> Pension = annuity. You get paid every year you survive.</p>
-<div class="formula"><p>Present Value = Annual Payment × Annuity Factor</p><p>PV = Payment × ä<sub>x</sub> &nbsp; | &nbsp; ä<sub>x</sub> = value today of 1 paid every year while alive</p></div>
-<div class="box"><p><strong>Worked Example:</strong> Payment 10,000 per year, ä<sub>60</sub> = 12. PV = 10,000 × 12 = 120,000.</p></div>
-<div class="howbox"><p><strong>⚠️ Same law as always:</strong> Boxes locked, auto-tick only. Only redo failed one. 2 wrong = Marking Chatbox. Partial credit.</p></div>
-<div class="exbox"><p><strong>Exercise 7:</strong> Payment 20,000 per year, ä = 14. Find PV.</p><label>PV = <input class="answer" id="q7" type="text" placeholder="e.g. 280000"></label><br><button onclick="checkEx(7)">Check Exercise 7</button><p class="msg" id="msg7"></p><div class="chatbox" id="chat7"><strong>📩 Marking Chatbox - Exercise 7</strong><p>Wrong twice. Paste working in chat (Option 1): <em>"Mark my working for SMS 3214 Topic 4 Exercise 7."</em> Redo Exercise 7 only.</p></div></div>
-<div class="exbox"><p><strong>Exercise 8:</strong> Payment 15,000 per year, ä = 16. Find PV + one sentence what PV means.</p><label>PV = <input class="answer" id="q8" type="text" placeholder="e.g. 240000"></label><br><button onclick="checkEx(8)">Check Exercise 8</button><p class="msg" id="msg8"></p><div class="chatbox" id="chat8"><strong>📩 Marking Chatbox - Exercise 8</strong><p>Wrong twice. Paste working in chat (Option 1): <em>"Mark my working for SMS 3214 Topic 4 Exercise 8."</em> Redo Exercise 8 only.</p></div></div>
-<ul class="check"><li id="li-c16"><input type="checkbox" id="c16" disabled> <span>I can write PV = Payment × ä.</span></li><li id="li-c17"><input type="checkbox" id="c17" disabled> <span>I can find PV of an annuity (Exercise 7).</span></li><li id="li-c18"><input type="checkbox" id="c18" disabled> <span>I can find PV harder + explain meaning (Exercise 8).</span></li><li id="li-c19"><input type="checkbox" id="c19" disabled> <span>I did Exercise 7 AND 8.</span></li></ul>
-<p><strong>Answers:</strong> Ex7: 20,000 × 14 = 280,000. Ex8: 15,000 × 16 = 240,000. PV = lump sum today that pays those future payments.</p>
-
-<h2>Topic 5: Life Assurances - Start From Zero</h2>
-<p><strong>What:</strong> A lump sum paid when you die. <strong>Why:</strong> Family gets money if you die. Opposite of annuity — annuity pays if you live, assurance pays if you die.</p>
-<div class="formula"><p>Present Value = Sum Assured × Assurance Factor</p><p>PV = Sum Assured × A<sub>x</sub></p></div>
-<div class="box"><p><strong>Worked Example:</strong> Sum Assured 100,000, A = 0.35. PV = 100,000 × 0.35 = 35,000.</p></div>
-<div class="howbox"><p><strong>⚠️ Same law as always:</strong> Boxes locked, auto-tick only. Only redo failed one. 2 wrong = Marking Chatbox. Partial credit.</p></div>
-<div class="exbox"><p><strong>Exercise 9:</strong> Sum Assured 200,000, A = 0.40. Find PV.</p><label>PV = <input class="answer" id="q9" type="text" placeholder="e.g. 80000"></label><br><button onclick="checkEx(9)">Check Exercise 9</button><p class="msg" id="msg9"></p><div class="chatbox" id="chat9"><strong>📩 Marking Chatbox - Exercise 9</strong><p>Wrong twice. Paste working in chat (Option 1): <em>"Mark my working for SMS 3214 Topic 5 Exercise 9."</em> Redo Exercise 9 only.</p></div></div>
-<div class="exbox"><p><strong>Exercise 10:</strong> Sum Assured 150,000, A = 0.30. Find PV + one sentence what it means.</p><label>PV = <input class="answer" id="q10" type="text" placeholder="e.g. 45000"></label><br><button onclick="checkEx(10)">Check Exercise 10</button><p class="msg" id="msg10"></p><div class="chatbox" id="chat10"><strong>📩 Marking Chatbox - Exercise 10</strong><p>Wrong twice. Paste working in chat (Option 1): <em>"Mark my working for SMS 3214 Topic 5 Exercise 10."</em> Redo Exercise 10 only.</p></div></div>
-<ul class="check"><li id="li-c20"><input type="checkbox" id="c20" disabled> <span>I can write PV = Sum Assured × A.</span></li><li id="li-c21"><input type="checkbox" id="c21" disabled> <span>I can find PV of assurance (Exercise 9).</span></li><li id="li-c22"><input type="checkbox" id="c22" disabled> <span>I can find PV harder + explain meaning (Exercise 10).</span></li><li id="li-c23"><input type="checkbox" id="c23" disabled> <span>I did Exercise 9 AND 10.</span></li></ul>
-<p><strong>Answers:</strong> Ex9: 200,000 × 0.40 = 80,000. Ex10: 150,000 × 0.30 = 45,000. PV = value today of future death benefit.</p>
-
-<h2>Topic 6: Premiums - Start From Zero</h2>
-<p><strong>What:</strong> The price you pay for insurance. <strong>Why:</strong> Premium must equal value of benefit. If benefit is worth 35,000 today, and you pay over years while alive, premium = benefit / annuity.</p>
-<div class="formula"><div class="frac-wrap"><span>Annual Premium P =</span><span class="frac"><span>Value of Benefit (A)</span><span>Annuity Factor (ä)</span></span></div></div>
-<div class="box"><p><strong>Worked Example:</strong> Benefit value 35,000, ä = 14. P = <span class="frac"><span>35,000</span><span>14</span></span> = 2,500 per year.</p></div>
-<div class="howbox"><p><strong>⚠️ Same law as always:</strong> Boxes locked, auto-tick only. Only redo failed one. 2 wrong = Marking Chatbox. Partial credit.</p></div>
-<div class="exbox"><p><strong>Exercise 11:</strong> Benefit value 80,000, ä = 16. Find annual premium P.</p><label>P = <input class="answer" id="q11" type="text" placeholder="e.g. 5000"></label><br><button onclick="checkEx(11)">Check Exercise 11</button><p class="msg" id="msg11"></p><div class="chatbox" id="chat11"><strong>📩 Marking Chatbox - Exercise 11</strong><p>Wrong twice. Paste working in chat (Option 1): <em>"Mark my working for SMS 3214 Topic 6 Exercise 11."</em> Redo Exercise 11 only.</p></div></div>
-<div class="exbox"><p><strong>Exercise 12:</strong> Benefit value 45,000, ä = 15. Find P + one sentence what P means.</p><label>P = <input class="answer" id="q12" type="text" placeholder="e.g. 3000"></label><br><button onclick="checkEx(12)">Check Exercise 12</button><p class="msg" id="msg12"></p><div class="chatbox" id="chat12"><strong>📩 Marking Chatbox - Exercise 12</strong><p>Wrong twice. Paste working in chat (Option 1): <em>"Mark my working for SMS 3214 Topic 6 Exercise 12."</em> Redo Exercise 12 only.</p></div></div>
-<ul class="check"><li id="li-c24"><input type="checkbox" id="c24" disabled> <span>I can write P = A / ä.</span></li><li id="li-c25"><input type="checkbox" id="c25" disabled> <span>I can find premium (Exercise 11).</span></li><li id="li-c26"><input type="checkbox" id="c26" disabled> <span>I can find premium harder + explain meaning (Exercise 12).</span></li><li id="li-c27"><input type="checkbox" id="c27" disabled> <span>I did Exercise 11 AND 12. SMS 3214 complete.</span></li></ul>
-<p><strong>Answers:</strong> Ex11: <span class="frac"><span>80,000</span><span>16</span></span> = 5,000 per year. Ex12: <span class="frac"><span>45,000</span><span>15</span></span> = 3,000 per year. P = amount paid each year while alive to pay for benefit.</p>
-<p id="congratsAll" style="display:none;font-weight:bold;color:#2E6B4A;font-size:18px">✅ SMS 3214 Complete - You understood all 6 topics.</p>
+<h2 id="topic6">Topic 6: Net Premiums and Reserves</h2>
+<p><strong>Objectives:</strong> By the end, you can explain net premium, use equivalence principle, calculate annual net premium for insurance and annuities, and calculate prospective reserve.</p>
+<p><strong>Definition:</strong> Net premium is the premium that exactly covers expected claims, with no expenses and no profit. It is found by Equivalence Principle: APV of premiums = APV of benefits.</p>
+<p><strong>Why it matters:</strong> If premium is too low, insurer cannot pay claims. If too high, no one buys. Net premium is the fair base. Gross premium = net premium + loading for expenses and profit.</p>
+<div class="keybox"><p><strong>Equivalence:</strong> Annual net premium P × APV of premium annuity = APV of benefit. So P = <span class="frac"><span>APV of benefit</span><span>APV of premium annuity</span></span>.</p><p><strong>Example — Whole life:</strong> Benefit APV = sum × A<sub>x</sub>. Premium annuity = ä<sub>x</sub> (if premiums paid for life, due). So P = sum × A<sub>x</sub> ÷ ä<sub>x</sub>.</p><p><strong>Prospective Reserve:</strong> Reserve at time t = APV of future benefits − APV of future net premiums. It is money the insurer must hold now to meet future claims, after allowing for future premiums still to come.</p></div>
+<p><strong>Worked Example — Net Premium:</strong> Age 30, sum 100,000 whole life, A<sub>30</sub> = 0.20, ä<sub>30</sub> = 15.0. APV benefit = 100,000 × 0.20 = 20,000. P = 20,000 ÷ 15.0 = 1,333.33 per year. That is the annual net premium, paid for life, due.</p>
+<p><strong>Worked Example — Reserve:</strong> At time 10, APV future benefits = 25,000, APV future premiums = 10,000. Reserve = 25,000 − 10,000 = 15,000. The insurer must hold 15,000 now for this policy.</p>
+<p><strong>Common exam mistake:</strong> Forgetting that premiums also have APV. You cannot divide benefit APV by number of years. You must divide by APV of premium annuity, which allows for discount and survival.</p>
+<div class="exbox"><p><strong>Exercise 11 — Covers: equivalence + net premium</strong><br>(a) State Equivalence Principle in your own words.<br>(b) Age 40, sum 200,000 whole life, A<sub>40</sub> = 0.25, ä<sub>40</sub> = 14.0. Find annual net premium. Show working.<br>(c) Why is gross premium higher than net premium?</p><input class="answer" id="q11a" type="text" placeholder="Type your answer"><br><input class="answer" id="q11b" type="text" placeholder="Type your answer"><br><textarea class="answer" rows="2" placeholder="Type your answer"></textarea><br><button onclick="checkEx(11)">Check Exercise 11</button><p id="msg11"></p><div class="chatbox" id="chat11">Wrong twice. Paste working in chat for marking. Marking by part (a), (b), (c). Redo Exercise 11 only.</div></div>
+<div class="exbox"><p><strong>Exercise 12 — Covers: reserve + why it matters</strong><br>(a) Define prospective reserve in your own words.<br>(b) At time 5, APV future benefits = 30,000, APV future premiums = 12,000. Find reserve. Show working.<br>(c) What happens if an insurer holds no reserve? Explain.</p><textarea class="answer" rows="4" placeholder="Type your answer"></textarea><br><button onclick="showChat(12)">Send For Marking</button><p id="msg12"></p><div class="chatbox" id="chat12">Paste your answer in chat for marking. Marking by part (a), (b), (c). Redo Exercise 12 only.</div></div>
+<ul class="check"><li id="li-c11"><input type="checkbox" id="c11" disabled> <span>I have got Topic 6 — equivalence, net premium.</span></li><li id="li-c12"><input type="checkbox" id="c12" disabled> <span>I have got Topic 6 — reserve, why it matters.</span></li></ul>
+<p><a href="#topic5"><button>← Back to Topic 5</button></a> <a href="#topic1"><button>↑ Back to Topic 1</button></a> <a href="index.html"><button>⌂ Back to Home</button></a></p>
 
 <h2>Exam Strategy for SMS 3214</h2>
-<ul><li>Attempt Life Table first - easiest marks.</li><li>Show every step - MUST gives marks for method.</li><li>Never leave blank - write the formula.</li></ul>
-
-<footer><p>#Spas.must &nbsp; #ActuarialScienceMUST</p><p>Notes from MUST past papers. Built by frank-4Mrr111. Trusted Sources V3.4 Final.</p><p><a href="TRUSTED-SOURCES-V3.4-FINAL.md">Trusted Sources V3.4 Final</a></p></footer>
+<ul><li>Attempt definitions first — easiest marks.</li><li>Always show every step — MUST gives marks for method.</li><li>Never leave blank — write the formula, even if you cannot finish.</li><li>Check: did you use due or immediate? Did you convert % to decimal? Did you include discount AND mortality?</li><li>For "explain" questions, give definition + example + why it matters.</li></ul>
+<footer><p>#Spas.must &nbsp; #ActuarialScienceMUST</p><p>Notes from MUST past papers. Built by frank-4Mrr111. Trusted Sources V3.4 Final.</p></footer>
 </div>
 <script>
-  let tries = {};
-  document.querySelectorAll('.answer').forEach(el=>el.placeholder='Type your answer');
+let tries = {};
+document.querySelectorAll('.answer').forEach(el=>el.placeholder='Type your answer');
 function num(v){ v=v.trim().replace(',','.'); let n=parseFloat(v); return isNaN(n)?null:n; }
-function tick(id){ let el=document.getElementById(id); if(el){ el.checked=true; document.getElementById('li-'+id).classList.add('done'); } checkAll(); }
-function checkAll(){ if(['c1','c2','c3','c4','c5','c6'].every(i=>document.getElementById(i).checked)){ document.getElementById('congrats').style.display='block'; } }
+function tick(id){ let el=document.getElementById(id); if(el){ el.checked=true; document.getElementById('li-'+id).classList.add('done'); } }
+function showChat(n){ document.getElementById('chat'+n).style.display='block'; document.getElementById('msg'+n).textContent="Chatbox open. Paste your answer in chat for marking."; }
 function checkEx(n){
-  let q = num(document.getElementById('q'+n).value);
-  let p = document.getElementById('p'+n) ? num(document.getElementById('p'+n).value) : 0;
-  let msg = document.getElementById('msg'+n);
-  let answers = {1:[0.02,0.98],2:[0.05,0.95],3:[0.97,0.03],4:[0.94,0.06],5:[24,0],6:[35,0],7:[280000,0],8:[240000,0],9:[80000,0],10:[45000,0],11:[5000,0],12:[3000,0]};
-  let want = answers[n];
-  let correct = (n<=4) ? (q===want[0] && p===want[1]) : (q===want[0]);
-  if(correct){
-    msg.textContent = "✅ Correct! Exercise "+n+" done. Your boxes ticked automatically.";
-    msg.className = "msg ok";
-    let map = {1:['c1','c4'],2:['c1','c5'],3:['c7','c8','c9'],4:['c7','c8','c10'],5:['c12','c13'],6:['c12','c14'],7:['c16','c17'],8:['c16','c18'],9:['c20','c21'],10:['c20','c22'],11:['c24','c25'],12:['c24','c26']};
-    map[n].forEach(tick);
-    let pairs = [[ 'c4','c5','c6'],['c9','c10','c11'],['c13','c14','c15'],['c17','c18','c19'],['c21','c22','c23'],['c25','c26','c27']];
-    pairs.forEach(pr=>{ if(document.getElementById(pr[0]).checked && document.getElementById(pr[1]).checked){ tick(pr[2]); } });
-    if(document.getElementById('c27') && document.getElementById('c27').checked){ document.getElementById('congratsAll').style.display='block'; }
-    document.getElementById('chat'+n).style.display='none';
-  } else {
-    tries[n] = (tries[n]||0)+1;
-    if(tries[n]>=2){
-      msg.textContent = "You got this question wrong twice. Marking Chatbox below is open for THIS question only. You do NOT redo the other question.";
-      msg.className = "msg bad";
-      document.getElementById('chat'+n).style.display='block';
-    } else {
-      msg.textContent = "Not yet - try again. You only redo THIS question. 1 try left before Marking Chatbox opens.";
-      msg.className = "msg bad";
-    }
-  }
+  let msg = document.getElementById('msg'+n); let correct=false;
+  if(n===1){ let b=num(document.getElementById('q1b').value); let c=num(document.getElementById('q1c').value); correct = Math.abs(b-23200)<1 && Math.abs(c-23328)<1; }
+  if(n===3){ let b=num(document.getElementById('q3b').value); let c=num(document.getElementById('q3c').value); correct = Math.abs(b-6340)<5 && Math.abs(c-6974)<5; }
+  if(n===5){ let b=num(document.getElementById('q5b').value); correct = Math.abs(b-0.0056)<0.001; }
+  if(n===7){ let b=num(document.getElementById('q7b').value); correct = Math.abs(b-8000)<1; }
+  if(n===9){ let b=num(document.getElementById('q9b').value); let c=num(document.getElementById('q9c').value); correct = Math.abs(b-220000)<1 && Math.abs(c-140000)<1; }
+  if(n===11){ let b=num(document.getElementById('q11b').value); correct = Math.abs(b-3571.43)<2; }
+  if(correct){ msg.textContent="✅ Correct! Exercise "+n+" done."; document.getElementById('chat'+n).style.display='none'; if(n===1) tick('c1'); if(n===3) tick('c3'); if(n===5) tick('c5'); if(n===7) tick('c7'); if(n===9) tick('c9'); if(n===11) tick('c11'); }
+  else { tries[n]=(tries[n]||0)+1; if(tries[n]>=2){ msg.textContent="Wrong twice. Marking Chatbox below is open for THIS question only."; document.getElementById('chat'+n).style.display='block'; } else { msg.textContent="Not yet - try again. You only redo THIS question."; } }
 }
 </script>
 </body>
