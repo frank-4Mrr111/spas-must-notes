@@ -214,3 +214,9 @@ Photo upload Option 1 chat-only, not website feature yet.
 ## 9. PORTFOLIO / OWNERSHIP
 Built by frank-4Mrr111. Repo spas-must-notes. Live site https://frank-4Mrr111.github.io/spas-must-notes/
 User builds himself, assistant is coach, not builder. User types code and commits.
+16. TOPIC NAVIGATION — NO FREE FLOW. Topics must NOT flow freely from Topic 1 to Topic 2.
+Every topic ends with clickable buttons.
+Topic 1 ends → 1 button: Next to Topic 2.
+Topic 2, 3, 4, 5... ends → 2 buttons: Back to previous topic + Next to next topic.
+Last topic ends → Back to previous topic + Back to Top / Home.
+Each topic heading must have an id: id="topic1", id="topic2", etc. Buttons link to that id.
