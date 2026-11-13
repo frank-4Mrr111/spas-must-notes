@@ -15,7 +15,7 @@ Student uploads unit NAME exactly as on exam paper + unit CODE from same paper.
 If code fails but name passes, NAME WINS.
 Never say "Not found" first. Ask for exact name or photo in chat.
 If name is non-SPAS, do NOT teach. Say not SPAS undergrad, offer up to 3 closest SPAS units.
-Photo upload: Option 1, chat-only. Not a website feature yet. Future changes require editing V4.
+Photo upload: Option 1 + Our Own Chatbox. Student does question manually on paper, takes photo of his/her working, uploads it in Our Own Chatbox on the page (sees preview) + in Meta AI chat for real marking. This is now a website feature via Our Own Chatbox.
 
 ## 3. TOPICS ONLY FROM MUST EXAM PAPERS
 Topics only from MUST exam papers. Omit untested topics.
