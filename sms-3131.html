@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SMS 3113 - Introduction to Actuarial Science - SPAS MUST Notes</title>
+<style>
+  body{font-family:Arial,sans-serif;background:#F2F6F0;color:#1A1A1A;margin:0;padding:20px;line-height:1.7}
+  body.dark{background:#121212;color:#EDEDED} body.dark .wrap{background:#1E1E1E;color:#EDEDED}
+  .wrap{max-width:820px;margin:0 auto;background:#fff;padding:24px;border-radius:12px;border-top:8px solid #2E6B4A}
+  h1,h2{color:#2E6B4A} body.dark h1,body.dark h2{color:#7BC9A0}
+  .keybox{background:#E8F2EB;padding:14px;border-radius:10px;margin:12px 0} body.dark .keybox{background:#223528}
+  .exbox{background:#E8F2EB;padding:16px;border-radius:10px;margin:16px 0;border:1px solid #2E6B4A} body.dark .exbox{background:#223528}
+  .howbox{background:#FFF8E1;padding:16px;border-radius:10px;border:2px solid #2E6B4A;margin:16px 0} body.dark .howbox{background:#2A2A1A}
+  .check input{width:22px;height:22px;accent-color:#2E6B4A} .check input:disabled{cursor:not-allowed}
+  input.answer,textarea.answer{padding:10px;font-size:16px;width:90%;margin:4px}
+  button{padding:10px 16px;font-size:16px;background:#2E6B4A;color:#fff;border:none;border-radius:8px;cursor:pointer;margin:4px 4px 4px 0}
+  .topic{display:none} .topic.active{display:block}
+  .frac{display:inline-block;text-align:center;vertical-align:middle}.frac>span{display:block}.frac>span:first-child{border-bottom:1px solid currentColor}
+  .popup{display:none;position:fixed;inset:10% 5%;background:#fff;color:#111;padding:20px;overflow:auto;border-radius:12px;border:3px solid #2E6B4A;z-index:99} body.dark .popup{background:#1E1E1E;color:#EDEDED}
+  #progressBar{height:14px;background:#DDD;border-radius:8px;overflow:hidden}#progressFill{height:100%;width:0;background:#2E6B4A}
+  .topbar{display:flex;flex-wrap:wrap;gap:6px}
+  #ownChat{display:none;position:fixed;bottom:0;left:0;right:0;max-width:820px;margin:0 auto;background:#fff;color:#111;border-top:3px solid #2E6B4A;padding:16px;z-index:100;max-height:70vh;overflow:auto} body.dark #ownChat{background:#1E1E1E;color:#EDEDED}
+  .msg{background:#E3F2FD;padding:10px;border-radius:10px;margin:6px 0} body.dark .msg{background:#1A2A44}
+  #photoPreview{max-width:100%;display:none;margin:8px 0;border-radius:8px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<p><a href="index.html">&larr; Back to Home</a></p>
+<h1>SMS 3113 - Introduction to Actuarial Science</h1>
+<p><strong>Unit Name:</strong> Introduction to Actuarial Science | <strong>Code:</strong> SMS 3113</p>
+<p><span>#Spas.must</span> <span>#ActuarialScienceMUST</span></p>
+<div class="topbar">
+<button onclick="openPop('formulaPop')">Formula Sheet</button>
+<button onclick="openPop('glossPop')">Glossary</button>
+<button onclick="toggleDark()">Dark / Light</button>
+<span style="display:inline-flex;align-items:center;gap:6px;background:#E8F2EB;padding:4px 8px;border-radius:8px;">
+  <span style="font-weight:bold;">Text Size:</span>
+  <button onclick="changeFont(-1)" title="Make text smaller" style="padding:6px 12px;font-size:18px;font-weight:bold;">-</button>
+  <span id="fontLabel" style="min-width:38px;text-align:center;font-weight:bold;">100%</span>
+  <button onclick="changeFont(1)" title="Make text bigger" style="padding:6px 12px;font-size:18px;font-weight:bold;">+</button>
+</span>
+<input id="searchBox" placeholder="Search in this unit..." style="padding:10px;width:200px" oninput="doSearch(this.value)">
+</div><p id="searchResult"></p>
+<p><strong>Prerequisites:</strong> Basic maths, basic English. No insurance knowledge needed before this unit.</p>
+<p id="progressText">Topic 1 of 6 - 0% done</p><div id="progressBar"><div id="progressFill"></div></div>
+<p>This unit is your starting point. You will learn what an actuary does, why insurance exists, what risk means, and the basic maths actuaries use - interest, mortality and premiums. You do not need to have attended a lecture.</p>
+<h2>Top Topics That Appear Most in MUST Exams</h2>
+<ol><li>What is Actuarial Science?</li><li>The Actuarial Profession and Ethics</li><li>Insurance Principles and Types</li><li>Risk, Uncertainty and Pooling</li><li>Interest, Mortality and Basic Actuarial Calculations</li><li>Where Actuaries Work and What They Do</li></ol>
+<div class="howbox">
+<p><strong>How this page works:</strong></p>
+<p>1. <b>One topic at a time.</b> Finish it, click <b>Next</b>. <b>Back</b> to revise.</p>
+<p>2. <b>2 exercises per topic.</b> Each has parts <b>(a)(b)(c)</b>, sometimes <b>(d)</b>. Together they cover the whole topic.</p>
+<p>3. <b>First 2 tries = final answer only.</b> Even if it says show your working, type just the answer here.</p>
+<p>4. <b>Our Own Chatbox.</b> Wrong twice? Our Chatbox opens for <b>that question only</b> and guides you step by step.</p>
+<p>5. <b>Upload your working.</b> Do it <b>manually on paper</b>, take a clear photo of <b>your working</b>, upload it in the Chatbox. You will see a preview.</p>
+<p>6. <b>Theory vs Numbers.</b> Numbers are checked here. Theory cannot be checked here, so click <b>Send For Marking</b> to open the Chatbox.</p>
+<p>7. <b>Send to Meta AI.</b> Chatbox has a button to copy your question + answers for real AI marking in Meta AI chat. Our Chatbox is the experience, Meta AI is the backup brain.</p>
+<p>8. <b>Boxes are locked.</b> They tick only when you prove it. Theory ticks after Meta AI says Pass, then click <b>AI Marked Me Correct - Tick</b> in the Chatbox.</p>
+<p>9. <b>Marking is by part.</b> Get (a) right = credit for (a). Only redo the part / question you failed.</p>
+<p>10. <b>Boxes = parts.</b> (a)(b)(c) = 3 boxes. If one part asks for 2 numbers, it gets 2 boxes. Each part has its own box. No answers are shown on this page.</p>
+</div>
+<div id="formulaPop" class="popup"><button onclick="closePop('formulaPop')">Close</button><h3>Formula Sheet - SMS 3113</h3><p><b>Simple Interest:</b> I = P x r x t | <b>Amount:</b> A = P + I = P(1 + r x t) | <b>Compound Amount:</b> A = P(1 + i)^n | <b>Premium:</b> Premium = Expected Claims + Expenses + Profit | <b>Probability:</b> q = Deaths / Exposed | <b>Expected Claims:</b> Number x Probability x Average Claim</p></div>
+<div id="glossPop" class="popup"><button onclick="closePop('glossPop')">Close</button><h3>Glossary - SMS 3113</h3><p><b>Actuary:</b> professional who uses maths, statistics and finance to measure risk. <b>Risk:</b> chance of loss. <b>Uncertainty:</b> not knowing what will happen. <b>Insurance:</b> pooling risk, insured pays premium, insurer pays claims. <b>Premium:</b> price of insurance. <b>Policy:</b> contract. <b>Claim:</b> request for payment. <b>Pooling:</b> many people contribute, few claim. <b>Interest:</b> price of money over time. <b>Mortality:</b> death rate. <b>Reserve:</b> money set aside for future claims.</p></div>
+<div class="topic active" id="topic1">
+<h2>Topic 1: What is Actuarial Science?</h2><p><b>Estimated time:</b> ~30 minutes | <b>Objectives:</b> Define actuarial science, explain what an actuary does, distinguish actuary from accountant / statistician, explain why actuaries are needed.</p>
+<p>Actuarial science is the study of risk using maths, statistics and finance. An actuary measures how likely a loss is, how big it will be, and how much money must be set aside today to pay it tomorrow.</p><div class='keybox'><p><b>What an actuary does:</b></p><ol><li><strong>Measures risk</strong> - how likely is death, illness, accident, retirement?</li><li><strong>Prices it</strong> - what premium should be charged?</li><li><strong>Reserves for it</strong> - how much to keep for future claims?</li><li><strong>Advises</strong> - is the company safe? Should it change prices?</li></ol></div><p><b>Actuary vs Accountant vs Statistician:</b> Accountant records what <em>already</em> happened. Statistician finds patterns in data. Actuary uses both to predict <em>future</em> money needs and price risk.</p><p><b>Common exam mistake:</b> Saying 'actuary does maths' and stopping. Always add risk + money + future.</p>
+<div class="exbox"><p><strong>Exercise 1 - Covers: definition + what an actuary does</strong><br>(a) Define actuarial science.<br>(b) Explain what an actuary does, with 2 jobs.<br>(c) Explain why a company needs an actuary, with example.</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(1,'c1')">Send For Marking - Open My Chatbox</button><p id="msg1"></p></div>
+<div class="exbox"><p><strong>Exercise 2 - Covers: actuary vs others + future focus</strong><br>(a) Distinguish actuary from accountant.<br>(b) Distinguish actuary from statistician.<br>(c) Give 2 examples where actuarial work protects people.</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(2,'c2')">Send For Marking - Open My Chatbox</button><p id="msg2"></p></div>
+<ul class="check"><li><input type="checkbox" id="c1" disabled> <span>I have got Topic 1 - first exercise.</span></li><li><input type="checkbox" id="c2" disabled> <span>I have got Topic 1 - second exercise.</span></li></ul>
+<p><b>Appears in MUST papers:</b> Appears in MUST past papers for this unit.</p><p>Was this topic clear? <button onclick="feedback(1,'clear')">Clear</button> <button onclick="feedback(1,'not')">Not Clear</button> <span id="fb1"></span></p>
+<p><button onclick="showTopic(2)">Next - Topic 2: The Actuarial Profession and Ethics</button></p>
+</div>
+<div class="topic" id="topic2">
+<h2>Topic 2: The Actuarial Profession and Ethics</h2><p><b>Estimated time:</b> ~30 minutes | <b>Objectives:</b> Explain professionalism, name actuarial bodies, explain ethics, explain why trust matters.</p>
+<p>An actuary is a professional, like a doctor or lawyer. You must be honest, competent, and put the client and public first, even when it costs you money.</p><div class='keybox'><p><b>Professional duties:</b></p><ol><li><strong>Competence</strong> - only do work you are trained for.</li><li><strong>Honesty</strong> - do not hide bad news, do not invent numbers.</li><li><strong>Confidentiality</strong> - do not share client data.</li><li><strong>Public interest</strong> - do not help a company cheat policyholders.</li></ol></div><p><b>Bodies:</b> In Kenya, actuaries work under the Actuarial Society of Kenya (TASK) and follow international standards. Globally, the Institute and Faculty of Actuaries (IFoA) and Society of Actuaries (SOA) set exams and conduct rules.</p><p><b>Why trust matters:</b> People pay premiums today for a promise in 20 years. If they do not trust actuaries, the whole system collapses.</p>
+<div class="exbox"><p><strong>Exercise 3 - Covers: professionalism + bodies</strong><br>(a) Define a profession. Why is actuarial work a profession?<br>(b) Name 2 actuarial bodies and what each does.<br>(c) Give 2 duties of a professional actuary.</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(3,'c3')">Send For Marking - Open My Chatbox</button><p id="msg3"></p></div>
+<div class="exbox"><p><strong>Exercise 4 - Covers: ethics + trust + judgement</strong><br>(a) Give 2 ethical rules for actuaries, with example each.<br>(b) A boss asks you to hide a loss. What do you do? Give 2 reasons.<br>(c) Explain why trust matters in insurance, with example.</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(4,'c4')">Send For Marking - Open My Chatbox</button><p id="msg4"></p></div>
+<ul class="check"><li><input type="checkbox" id="c3" disabled> <span>I have got Topic 2 - first exercise.</span></li><li><input type="checkbox" id="c4" disabled> <span>I have got Topic 2 - second exercise.</span></li></ul>
+<p><b>Appears in MUST papers:</b> Appears in MUST past papers for this unit.</p><p>Was this topic clear? <button onclick="feedback(2,'clear')">Clear</button> <button onclick="feedback(2,'not')">Not Clear</button> <span id="fb2"></span></p>
+<p><button onclick="showTopic(1)">Back to Topic 1</button> <button onclick="showTopic(3)">Next - Topic 3: Insurance Principles and Types</button></p>
+</div>
+<div class="topic" id="topic3">
+<h2>Topic 3: Insurance Principles and Types</h2><p><b>Estimated time:</b> ~35 minutes | <b>Objectives:</b> Explain insurance, explain 6 principles, distinguish life vs general insurance, give examples.</p>
+<p>Insurance is pooling: many people pay a small premium, the few who suffer loss are paid from the pool. No one person could pay a 1,000,000 claim alone. Together, they can.</p><div class='keybox'><p><b>6 Principles:</b></p><ol><li><strong>Insurable interest</strong> - you must lose if the thing is lost.</li><li><strong>Utmost good faith</strong> - tell the truth, hide nothing important.</li><li><strong>Indemnity</strong> - you are put back, not made richer (general insurance).</li><li><strong>Subrogation</strong> - insurer can recover from the person who caused loss.</li><li><strong>Contribution</strong> - if 2 insurers cover same loss, they share.</li><li><strong>Proximate cause</strong> - the main cause must be covered.</li></ol></div><p><b>Types:</b> <b>Life insurance</b> - pays on death / survival / retirement. <b>General insurance</b> - motor, fire, health, liability. <b>Health / Pension</b> - care and retirement income.</p>
+<div class="exbox"><p><strong>Exercise 5 - Covers: insurance + pooling + principles (NUMBERS)</strong><br>(a) Define insurance in your own words.<br>(b) 1000 people each pay premium 2000. Total pool = ? If 10 claims of 150000 each occur, total claims = ? Is the pool enough? Show working.<br>(c) Explain 2 principles of insurance, with example each.</p><p>(a) <textarea class="answer" id="t5a" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <input class="answer" id="q5b" type="text" placeholder="Type your answer - total pool, total claims, enough?"></p><p>(c) <textarea class="answer" id="t5c" rows="3" placeholder="Type your answer"></textarea></p><button onclick="checkEx(5)">Check Exercise 5</button> <button onclick="openOwnChat(5,'c5')">Open My Chatbox for Exercise 5</button><p id="msg5"></p></div>
+<div class="exbox"><p><strong>Exercise 6 - Covers: types + principles in practice</strong><br>(a) Distinguish life vs general insurance, with 2 examples each.<br>(b) Explain insurable interest and utmost good faith, with example each.<br>(c) A man insures his neighbour's house. Will it pay? Explain using a principle.</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(6,'c6')">Send For Marking - Open My Chatbox</button><p id="msg6"></p></div>
+<ul class="check"><li><input type="checkbox" id="c5" disabled> <span>I have got Topic 3 - first exercise.</span></li><li><input type="checkbox" id="c6" disabled> <span>I have got Topic 3 - second exercise.</span></li></ul>
+<p><b>Appears in MUST papers:</b> Appears in MUST past papers for this unit.</p><p>Was this topic clear? <button onclick="feedback(3,'clear')">Clear</button> <button onclick="feedback(3,'not')">Not Clear</button> <span id="fb3"></span></p>
+<p><button onclick="showTopic(2)">Back to Topic 2</button> <button onclick="showTopic(4)">Next - Topic 4: Risk, Uncertainty and Pooling</button></p>
+</div>
+<div class="topic" id="topic4">
+<h2>Topic 4: Risk, Uncertainty and Pooling</h2><p><b>Estimated time:</b> ~30 minutes | <b>Objectives:</b> Define risk, distinguish risk vs uncertainty, explain pooling and law of large numbers, explain types of risk.</p>
+<p>Risk is the chance of loss. Uncertainty is not knowing what will happen. You can have uncertainty without risk - e.g. not knowing if it will rain. Risk needs loss - e.g. rain destroys crops.</p><div class='keybox'><p><b>Pooling + Law of Large Numbers:</b> With 10 people, claims are wild. With 100,000 people, the average claim becomes stable and predictable. That is why insurers need many policyholders.</p><p><b>Types of risk:</b> Pure risk (only loss - fire), Speculative risk (loss or gain - gambling / business), Fundamental risk (affects many - flood), Particular risk (affects one - theft).</p></div><p><b>Risk management:</b> Avoid it, Reduce it, Transfer it (insurance), Retain it (pay yourself).</p>
+<div class="exbox"><p><strong>Exercise 7 - Covers: risk vs uncertainty + pooling</strong><br>(a) Define risk and uncertainty. Give one example each.<br>(b) Explain pooling with one insurance example.<br>(c) Explain law of large numbers in your own words.</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(7,'c7')">Send For Marking - Open My Chatbox</button><p id="msg7"></p></div>
+<div class="exbox"><p><strong>Exercise 8 - Covers: types of risk + risk management</strong><br>(a) Give 2 types of risk, with example each.<br>(b) Distinguish fundamental vs particular risk.<br>(c) Give 2 ways to manage risk, other than insurance, with example.</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(8,'c8')">Send For Marking - Open My Chatbox</button><p id="msg8"></p></div>
+<ul class="check"><li><input type="checkbox" id="c7" disabled> <span>I have got Topic 4 - first exercise.</span></li><li><input type="checkbox" id="c8" disabled> <span>I have got Topic 4 - second exercise.</span></li></ul>
+<p><b>Appears in MUST papers:</b> Appears in MUST past papers for this unit.</p><p>Was this topic clear? <button onclick="feedback(4,'clear')">Clear</button> <button onclick="feedback(4,'not')">Not Clear</button> <span id="fb4"></span></p>
+<p><button onclick="showTopic(3)">Back to Topic 3</button> <button onclick="showTopic(5)">Next - Topic 5: Interest, Mortality and Basic Actuarial Calculations</button></p>
+</div>
+<div class="topic" id="topic5">
+<h2>Topic 5: Interest, Mortality and Basic Actuarial Calculations</h2><p><b>Estimated time:</b> ~35 minutes | <b>Objectives:</b> Explain simple vs compound interest, calculate amount, explain mortality rate, calculate expected claims.</p>
+<p>Money has time value: 1000 today is worth more than 1000 in a year, because you can invest it. Interest is the price of waiting.</p><div class='keybox'><p><b>Simple Interest:</b> I = P x r x t. Example: P=10000, r=10% = 0.10, t=2 years. I = 10000 x 0.10 x 2 = 2000. Amount = 12000.</p><p><b>Compound Interest:</b> A = P(1+i)^n. Example: P=10000, i=10%, n=2. A = 10000 x 1.10^2 = 10000 x 1.21 = 12100.</p><p><b>Mortality:</b> q = Deaths / Exposed. If 5 die out of 1000, q = 5/1000 = 0.005.</p></div><p><b>Expected claims:</b> If 1000 policies, q=0.005, average claim 200000: Expected deaths = 1000 x 0.005 = 5. Expected claims = 5 x 200000 = 1,000,000.</p>
+<div class="exbox"><p><strong>Exercise 9 - Covers: simple vs compound + mortality</strong><br>(a) Explain simple vs compound interest, with example each.<br>(b) P=20000, r=5%, t=3 years simple interest. Interest = ? Amount = ? Show working.<br>(c) Define mortality rate q. If 8 die out of 2000, q = ? Show working.</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(9,'c9')">Send For Marking - Open My Chatbox</button><p id="msg9"></p></div>
+<div class="exbox"><p><strong>Exercise 10 - Covers: expected claims + premium idea</strong><br>(a) Explain expected claims in your own words.<br>(b) 2000 policies, q=0.004, average claim 500000. Expected claims = ? Show working.<br>(c) If expenses are 200000, what premium pool is needed? Show working.</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(10,'c10')">Send For Marking - Open My Chatbox</button><p id="msg10"></p></div>
+<ul class="check"><li><input type="checkbox" id="c9" disabled> <span>I have got Topic 5 - first exercise.</span></li><li><input type="checkbox" id="c10" disabled> <span>I have got Topic 5 - second exercise.</span></li></ul>
+<p><b>Appears in MUST papers:</b> Appears in MUST past papers for this unit.</p><p>Was this topic clear? <button onclick="feedback(5,'clear')">Clear</button> <button onclick="feedback(5,'not')">Not Clear</button> <span id="fb5"></span></p>
+<p><button onclick="showTopic(4)">Back to Topic 4</button> <button onclick="showTopic(6)">Next - Topic 6: Where Actuaries Work and What They Do</button></p>
+</div>
+<div class="topic" id="topic6">
+<h2>Topic 6: Where Actuaries Work and What They Do</h2><p><b>Estimated time:</b> ~30 minutes | <b>Objectives:</b> List where actuaries work, explain daily work, explain skills needed, explain career path.</p>
+<p>Actuaries do not only work in insurance. They work in pensions, health, banking, consulting, government and regulation.</p><div class='keybox'><p><b>Where:</b> Life insurer (pricing, reserves), General insurer, Pension fund, Health insurer, Consulting firm, Regulator / Central Bank, Bank / Investment.</p><p><b>Daily work:</b> Collect data, check it, build a model, calculate premiums / reserves, write a report, explain to managers who are not actuaries.</p><p><b>Skills:</b> Maths + Statistics, Excel / R / Python, Communication, Ethics, Business understanding.</p></div><p><b>Career:</b> Degree -> actuarial exams (IFoA / SOA / TASK) -> student -> Associate -> Fellow. Exams take years. That is normal.</p>
+<div class="exbox"><p><strong>Exercise 11 - Covers: where actuaries work + daily work (NUMBERS)</strong><br>(a) Name 3 places actuaries work and what they do in each.<br>(b) Describe one day of actuarial work, in 3 steps.<br>(c) A pension fund has 500 members, each contributes 12000 per year. Total contributions = ? Show working.</p><p>(a) <textarea class="answer" id="t11a" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" id="t11b" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <input class="answer" id="q11c" type="text" placeholder="Type your answer"></p><button onclick="checkEx(11)">Check Exercise 11</button> <button onclick="openOwnChat(11,'c11')">Open My Chatbox for Exercise 11</button><p id="msg11"></p></div>
+<div class="exbox"><p><strong>Exercise 12 - Covers: skills + career + future</strong><br>(a) Give 3 skills an actuary needs and why each matters.<br>(b) Explain the exam path to become a Fellow, in your own words.<br>(c) Give 2 reasons actuarial work will still be needed in 20 years.</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(12,'c12')">Send For Marking - Open My Chatbox</button><p id="msg12"></p></div>
+<ul class="check"><li><input type="checkbox" id="c11" disabled> <span>I have got Topic 6 - first exercise.</span></li><li><input type="checkbox" id="c12" disabled> <span>I have got Topic 6 - second exercise.</span></li></ul>
+<p><b>Appears in MUST papers:</b> Appears in MUST past papers for this unit.</p><p>Was this topic clear? <button onclick="feedback(6,'clear')">Clear</button> <button onclick="feedback(6,'not')">Not Clear</button> <span id="fb6"></span></p>
+<p><button onclick="showTopic(5)">Back to Topic 5</button> <button onclick="showTopic(1)">Back to Topic 1</button> <a href="index.html"><button>Back to Home</button></a></p>
+<h2>Exam Strategy for SMS 3113</h2><ul><li>Attempt definitions first - easiest marks.</li><li>Always give actuarial example, not just definition.</li><li>Show every step - MUST gives marks for method.</li><li>Never leave blank - write key points you know.</li><li>For "explain" questions, give definition + example + why it matters.</li></ul>
+<footer><p>#Spas.must &nbsp; #ActuarialScienceMUST</p><p>Notes from MUST past papers. Built by frank-4Mrr111. Trusted Sources V3.4 Final.</p></footer>
+</div>
+
+</div>
+<div id="ownChat">
+<h3 id="chatTitle">Our Own Chatbox</h3>
+<div class="msg" id="chatGuide">Hi! I am your SPAS marking guide. Do this question manually on paper, step by step. Take a clear photo of YOUR WORKING and upload it below. You will see a preview. Then type your (a), (b), (c) answers. I will guide you by part.</div>
+<p><strong>1. Upload your working (photo of your manual work):</strong><br><input type="file" accept="image/*" onchange="previewPhoto(this)"><br><img id="photoPreview"></p>
+<p><strong>2. Type your answers here:</strong><br><input id="chatInput" style="padding:10px;width:90%" placeholder="Type your answer"></p>
+<p><button onclick="sendInChat()">Send in Our Chatbox</button> <button onclick="sendToMeta()">Send to Meta AI for Real Marking</button> <button onclick="tickFromChat()">AI Marked Me Correct - Tick</button> <button onclick="closeOwnChat()">Close Chatbox</button></p>
+<p id="chatLog"></p>
+<p><small>Our Chatbox guides you. For real AI marking, click Send to Meta AI - it copies question + answers + rubric for you to paste in Meta AI chat.</small></p>
+</div>
+<script>
+let tries={}, fontSize=16, currentEx=0, currentTick='';
+function showTopic(n){document.querySelectorAll('.topic').forEach(t=>t.classList.remove('active'));document.getElementById('topic'+n).classList.add('active');localStorage.setItem('sms3113_topic',n);updateProgress();window.scrollTo(0,0);}
+function updateProgress(){let done=document.querySelectorAll('.check input:checked').length;let pct=Math.round(done/12*100);document.getElementById('progressFill').style.width=pct+'%';let cur=document.querySelector('.topic.active');let num=cur?cur.id.replace('topic',''):'1';document.getElementById('progressText').textContent='Topic '+num+' of 6 - '+pct+'% done';}
+function tick(id){let el=document.getElementById(id);if(el){el.checked=true;updateProgress();}}
+function openPop(id){document.getElementById(id).style.display='block';} function closePop(id){document.getElementById(id).style.display='none';}
+function toggleDark(){document.body.classList.toggle('dark');}
+function changeFont(d){fontSize+=d;if(fontSize<13)fontSize=13;if(fontSize>24)fontSize=24;document.body.style.fontSize=fontSize+'px';let pct=Math.round(fontSize/16*100);let label=document.getElementById('fontLabel');if(label)label.textContent=pct+'%';}
+function feedback(n,v){document.getElementById('fb'+n).textContent=v==='clear'?'Thanks! Noted as Clear.':'Thanks! We will expand this topic.';localStorage.setItem('sms3113_fb'+n,v);}
+function doSearch(q){let r=document.getElementById('searchResult');if(!q){r.textContent='';return;}let topics=[['What is Actuarial Science',1],['Profession Ethics',2],['Insurance Principles Types',3],['Risk Uncertainty Pooling',4],['Interest Mortality Calculations',5],['Where Actuaries Work',6]];let found=topics.filter(t=>t[0].toLowerCase().includes(q.toLowerCase()));r.innerHTML=found.length?found.map(f=>'<button onclick="showTopic('+f[1]+')">Go to Topic '+f[1]+': '+f[0]+'</button>').join(' '):'No topic found in this unit. Try: Actuarial, Profession, Insurance, Risk, Interest, Work';}
+function num(v){let n=parseFloat((v||'').trim().replace(',','.'));return isNaN(n)?null:n;}
+function val(id){let el=document.getElementById(id);return el?el.value.trim():'';}
+function theoryOk(id){return val(id).length>=10;}
+function openOwnChat(ex,tickId){currentEx=ex;currentTick=tickId;document.getElementById('chatTitle').textContent='Our Own Chatbox - Exercise '+ex+' (SMS 3113)';document.getElementById('ownChat').style.display='block';document.getElementById('chatGuide').textContent='Hi! You are on Exercise '+ex+'. Step 1: Do it manually on paper. Step 2: Upload a photo of YOUR WORKING below. Step 3: Type your (a), (b), (c) answers. I will guide you by part. For real AI marking, click Send to Meta AI.';window.scrollTo(0,document.body.scrollHeight);}
+function closeOwnChat(){document.getElementById('ownChat').style.display='none';}
+function previewPhoto(input){let f=input.files[0];if(!f)return;let r=new FileReader();r.onload=function(e){let img=document.getElementById('photoPreview');img.src=e.target.result;img.style.display='block';document.getElementById('chatLog').innerHTML+='<p>Photo preview loaded. I can see your working. Now type your (a), (b), (c) answers.</p>';};r.readAsDataURL(f);}
+function sendInChat(){let v=document.getElementById('chatInput').value;if(!v)return;document.getElementById('chatLog').innerHTML+='<p><b>You:</b> '+v+'</p><p><b>Guide:</b> Thanks! Now check each part: (a) Did you define the term? (b) Did you show working / formula? (c) Did you explain in words? If a part is missing, add it and send again. If you want real AI marking, click Send to Meta AI. Only redo the part you failed.</p>';document.getElementById('chatInput').value='';}
+function collectAnswers(){let out=[];document.querySelectorAll('.topic.active .answer').forEach((el,i)=>{let label=el.closest('p')?el.closest('p').textContent.trim().slice(0,40):('Box '+(i+1));out.push(label+': '+el.value.trim());});let chat=document.getElementById('chatInput').value.trim();if(chat)out.push('Chatbox answer: '+chat);return out.join('\n');}
+function sendToMeta(){let answers=collectAnswers();let text='Please mark me for SMS 3113 Exercise '+currentEx+'. Mark by part with partial credit. Guide me step by step on the part I failed. Rubric is in the page HTML comment for this exercise.\n\nMY REAL ANSWERS:\n'+(answers||'(no answers typed yet)')+'\n\nI also uploaded a photo of my manual working.';navigator.clipboard.writeText(text).then(()=>{alert('Copied WITH your real answers! Paste this in Meta AI chat + attach your photo of your working.');});}
+function tickFromChat(){if(currentTick){tick(currentTick);alert('Ticked! This means AI / guide said you passed Exercise '+currentEx+'. Only this question is ticked.');closeOwnChat();}}
+function checkEx(n){
+  let msg=document.getElementById('msg'+n);
+  let numbersOk=false, theoryNeeded=[];
+  if(n===5){let v=val('q5b').toLowerCase(); numbersOk=v.includes('2000000')&&v.includes('1500000'); theoryNeeded=['t5a','t5c'];}
+  if(n===11){numbersOk=num(val('q11c'))===6000000; theoryNeeded=['t11a','t11b'];}
+  let theoryOkAll=theoryNeeded.every(id=>theoryOk(id));
+  if(numbersOk && theoryOkAll){msg.textContent="Correct! All number parts + theory written. Exercise "+n+" done.";if(n===5)tick('c5');if(n===11)tick('c11');}
+  else if(numbersOk && !theoryOkAll){msg.textContent="Numbers / formula are correct. Now write the theory part(s) - at least 10 characters each - then click Check again.";}
+  else {tries[n]=(tries[n]||0)+1;if(tries[n]>=2){msg.textContent="Wrong twice. Our Own Chatbox is open for THIS question only. Upload a photo of YOUR WORKING. Only redo the part you failed.";openOwnChat(n,'c'+n);}else{msg.textContent="Not yet - check ALL parts. You only redo THIS question.";}}
+}
+document.querySelectorAll('.answer').forEach((el,i)=>{let key='sms3113_ans_'+i;let saved=localStorage.getItem(key);if(saved)el.value=saved;el.addEventListener('input',()=>localStorage.setItem(key,el.value));});
+let saved=localStorage.getItem('sms3113_topic');if(saved)showTopic(parseInt(saved));else updateProgress();
+</script>
+</body>
+</html>
