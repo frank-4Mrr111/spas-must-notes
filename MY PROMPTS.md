@@ -58,7 +58,7 @@ Trusted Sources: TRUSTED-SOURCES-V3.4-FINAL.md
 5b. Checkboxes — locked / disabled. Auto-tick only on proof. Student cannot tick by hand.
 5c. 2 exercises before checklist. Only redo failed question. Never redo the whole topic.
 5d. 2 wrong on same question opens Marking Chatbox for that question only.
-5e. Partial credit. Marking is by part (a), (b), (c). If one part is right, give that part.
+5e. Partial credit. Marking is by part (a), (b), (c), (d). If one part is right, give that part.
 5f. Satisfaction never changes maths / truth. If student says "I am satisfied" it does not make a wrong answer right.
 5g. Explain rules before exercises. Student must know how marking works before they attempt.
 5h. No visible answers on page. No answers in HTML visible text. Answers only in JS check logic or in hidden marking rubric for AI.
@@ -74,6 +74,28 @@ Trusted Sources: TRUSTED-SOURCES-V3.4-FINAL.md
      They are selected with deep consideration so that if a student can successfully pass those 2, they have successfully got the objectives of the whole topic.
      Each exercise must therefore have parts (a), (b), (c) so together the 2 cover the whole topic.
      Marking is by part, with partial credit. If the 2 do not cover the topic, they are wrong exercises — reselect them.
+5m. NUMBER OF TEXTAREAS RULE — THIS IS LAW.
+     Number of answer boxes = number of parts in the question.
+     (a)(b)(c) = 3 boxes. (a)(b)(c)(d) = 4 boxes.
+     Each part (a), (b), (c), (d) gets its OWN labelled box.
+     Never put a whole exercise into one big textarea / one input.
+     Theory questions = textarea per part. Numbers questions = input per part.
+     Example for (a)(b)(c) theory:
+     <p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p>
+     <p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p>
+     <p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p>
+     Example for (a)(b)(c)(d) numbers:
+     <p>(a) <input class="answer" type="text" placeholder="Type your answer"></p>
+     <p>(b) <input class="answer" type="text" placeholder="Type your answer"></p>
+     <p>(c) <input class="answer" type="text" placeholder="Type your answer"></p>
+     <p>(d) <input class="answer" type="text" placeholder="Type your answer"></p>
+5n. WORKING RULE.
+     Even if a question says "show your working", this website only asks for JUST THE FINAL ANSWER for the first two attempts. Type the answer only. Do not type full working here.
+     The Marking Chatbox is to guide the user step by step on how to conquer the question. Full working is done in the Chatbox, where AI guides step by step.
+5o. HOW THIS PAGE WORKS BOX — Use simple campus English, not cheap, not complex. Must explain:
+     Only one topic at a time. 2 exercises per topic. Marking by part. Boxes locked. Only redo failed question.
+     First two attempts = just final answer, even if question says show working.
+     Chatbox = guides step by step to conquer the question, not just marking.
 
 ## 6. TOPIC NAVIGATION — NO FREE FLOW
 Topics must NOT flow freely from Topic 1 to Topic 2.
@@ -89,56 +111,17 @@ Student must click to move. No scrolling past. No free flow.
 
 ## 7. PROFESSIONAL DISPLAY — WHAT A PROFESSIONAL PROMPT ENGINEER ADDS
 These are NOT decoration. They are part of the system. Every unit page must have them.
-
-7a. PROGRESS — Student must know where he is.
-     Top of every unit page: "Topic X of N — Y% done" + a progress bar that fills as topics are completed.
-     Progress is based on checkboxes ticked / topics completed, not on scrolling.
-     Example: "Topic 2 of 6 — 33% done" + bar.
-
-7b. ESTIMATED TIME — Per topic.
-     At the start of each topic, show: "Estimated time: ~25 minutes" (or correct time for that topic).
-     Student can plan. No surprise.
-
-7c. RESUME — Remember where I stopped.
-     Save last topic in browser (localStorage) so if student closes and comes back tomorrow, page opens on last topic, not Topic 1.
-     No login needed. Just remember.
-
-7d. FORMULA SHEET + GLOSSARY — Quick tools while studying.
-     Every unit page must have 2 popup buttons, always visible:
-     - "Formula Sheet" — all formulas from all topics in that unit, in one place.
-     - "Glossary" — all key words from all topics in that unit, each with one-line definition.
-     Student must not need to click Back to find a formula from Topic 1 while on Topic 3.
-
-7e. SEARCH INSIDE THIS UNIT.
-     Search box on unit page: type "annuity" and jump to the topic / section where it appears.
-     Search is inside this unit only, not the whole website.
-
-7f. EXAM PROOF — Per topic.
-     At the end of each topic, show: "Appears in MUST papers: 2022 Q2, 2023 Q1, 2024 Q3" — using real paper years / questions where known.
-     If exact paper is not verified, write "Appears in MUST past papers for this unit" — never invent a fake paper number.
-     This proves it is not rumours. Student trusts it.
-
-7g. HIDDEN MARKING RUBRIC FOR AI — Prompt engineering for marking.
-     Every exercise must have a hidden HTML comment rubric, NOT visible to the student, for the AI in chat to use.
-     Format: <!-- MARKING: SMS 3214 Topic 1 Exercise 1 — (a) 1 mark for definition, (b) 2 marks for simple calc + working, (c) 2 marks for compound calc + explanation of difference. Total 5. Partial credit per part. -->
-     When student pastes "Mark my answer for SMS 3214 Topic 1 Exercise 1", the AI already knows the rubric. Marking must be fair every time.
-     Never show rubric as visible text on the page.
-
-7h. READABILITY CONTROLS.
-     Every unit page must have: Dark / Light button + Font size A- / A+ buttons.
-     Student studying at night on a small phone must be able to read comfortably and stay longer.
-
-7i. FEEDBACK — Was this clear?
-     At the end of each topic, after the buttons, add one line: "Was this topic clear? [Clear] [Not Clear]"
-     Clicking saves the choice. If many say Not Clear, that topic needs expanding. This is how we improve without guessing.
-     Do not ask for long comments. Just Clear / Not Clear.
-
-7j. PREREQUISITES — At the start of each unit.
-     Before Topic 1, list: "Before this unit, you should know: ..." — 2-3 lines only.
-     Example for SMS 3214: "Basic algebra, percentages, powers." If student lacks it, they know what to revise first.
-
-7k. ACCESSIBILITY — Basic.
-     Buttons must have clear text, not just arrows. Text must be readable on phone. No colour-only meaning — always use words + colour.
+7a. PROGRESS — Top of every unit page: "Topic X of N — Y% done" + progress bar that fills as topics are completed. Based on checkboxes ticked, not scrolling.
+7b. ESTIMATED TIME — At start of each topic: "Estimated time: ~25 minutes" (correct time for that topic).
+7c. RESUME — Save last topic in browser (localStorage) so if student closes and comes back, page opens on last topic, not Topic 1. No login needed.
+7d. FORMULA SHEET + GLOSSARY — 2 popup buttons, always visible. Formula Sheet = all formulas from all topics. Glossary = all key words, one-line definition each.
+7e. SEARCH INSIDE THIS UNIT — Search box: type "annuity" and jump to topic where it appears. Inside this unit only.
+7f. EXAM PROOF — At end of each topic: "Appears in MUST papers: ..." using real years where known. If not verified, write "Appears in MUST past papers for this unit" — never invent fake paper number.
+7g. HIDDEN MARKING RUBRIC FOR AI — Every exercise must have hidden HTML comment rubric, NOT visible to student, for AI in chat. Format: <!-- MARKING: SMS 3214 Topic 1 Exercise 1 — (a) 1 mark..., (b) 2 marks..., (c) 2 marks... Total 5. Partial credit per part. -->
+7h. READABILITY CONTROLS — Dark / Light button + Font size A- / A+ buttons on every unit page.
+7i. FEEDBACK — At end of each topic: "Was this topic clear? [Clear] [Not Clear]" Clicking saves choice.
+7j. PREREQUISITES — Before Topic 1, list: "Before this unit, you should know: ..." — 2-3 lines only.
+7k. ACCESSIBILITY — Buttons must have clear text, not just arrows. Text readable on phone. No colour-only meaning.
 
 ## 8. WORKFLOW — WHO BUILDS?
 User builds himself on 【entity-GitHub¦canonical_name=GitHub】. Assistant is coach, not builder.
@@ -147,7 +130,6 @@ Create = new file. Edit = file already exists, use pencil icon.
 Code must be given with a Copy button / code block.
 No commit until user says satisfied.
 When user says "add it" and is satisfied, AI adds it EVERYWHERE it should be added, not one by one.
-     Example: if a rule changes, add to MY-PROMPTS.md + all existing unit files + all future units.
 When user is still prompting, AI must NOT say "Edit" or "Commit". AI holds the rule until user says "add it".
 User is still the student. AI is coach. Be friendly, not bossy.
 
@@ -157,7 +139,7 @@ Every new unit must get a homepage link to its .html file after it is committed 
 
 ## 10. FINAL CHECK — BEFORE ANY UNIT IS GIVEN
 - Could a student with no PDF, no lecture, study ONLY from these notes and sit the exam?
-- Are all 5a-5l Universal Laws followed?
+- Are all 5a-5o Universal Laws followed? Especially 5m Number of Textareas Rule?
 - Is Section 6 navigation (one topic at a time) working?
 - Are all 7a-7k professional display features present?
 - Is there any rumour, any shallow part, any shouting, any visible answer?
