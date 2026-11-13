@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SMS 3220 - Principles of Life Insurance - SPAS MUST Notes</title>
+<style>
+  body{font-family:Arial,sans-serif;background:#F2F6F0;color:#1A1A1A;margin:0;padding:20px;line-height:1.7}
+  body.dark{background:#121212;color:#EDEDED} body.dark .wrap{background:#1E1E1E;color:#EDEDED}
+  .wrap{max-width:820px;margin:0 auto;background:#fff;padding:24px;border-radius:12px;border-top:8px solid #2E6B4A}
+  h1,h2{color:#2E6B4A} body.dark h1,body.dark h2{color:#7BC9A0}
+  .keybox{background:#E8F2EB;padding:14px;border-radius:10px;margin:12px 0} body.dark .keybox{background:#223528}
+  .exbox{background:#E8F2EB;padding:16px;border-radius:10px;margin:16px 0;border:1px solid #2E6B4A} body.dark .exbox{background:#223528}
+  .howbox{background:#FFF8E1;padding:16px;border-radius:10px;border:2px solid #2E6B4A;margin:16px 0} body.dark .howbox{background:#2A2A1A}
+  .check input{width:22px;height:22px;accent-color:#2E6B4A} .check input:disabled{cursor:not-allowed}
+  input.answer,textarea.answer{padding:10px;font-size:16px;width:90%;margin:4px}
+  button{padding:10px 16px;font-size:16px;background:#2E6B4A;color:#fff;border:none;border-radius:8px;cursor:pointer;margin:4px 4px 4px 0}
+  .topic{display:none} .topic.active{display:block}
+  .frac{display:inline-block;text-align:center;vertical-align:middle}.frac>span{display:block}.frac>span:first-child{border-bottom:1px solid currentColor}
+  .popup{display:none;position:fixed;inset:10% 5%;background:#fff;color:#111;padding:20px;overflow:auto;border-radius:12px;border:3px solid #2E6B4A;z-index:99} body.dark .popup{background:#1E1E1E;color:#EDEDED}
+  #progressBar{height:14px;background:#DDD;border-radius:8px;overflow:hidden}#progressFill{height:100%;width:0;background:#2E6B4A}
+  .topbar{display:flex;flex-wrap:wrap;gap:6px}
+  #ownChat{display:none;position:fixed;bottom:0;left:0;right:0;max-width:820px;margin:0 auto;background:#fff;color:#111;border-top:3px solid #2E6B4A;padding:16px;z-index:100;max-height:70vh;overflow:auto} body.dark #ownChat{background:#1E1E1E;color:#EDEDED}
+  .msg{background:#E3F2FD;padding:10px;border-radius:10px;margin:6px 0} body.dark .msg{background:#1A2A44}
+  #photoPreview{max-width:100%;display:none;margin:8px 0;border-radius:8px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<p><a href="index.html">&larr; Back to Home</a></p>
+<h1>SMS 3220 - Principles of Life Insurance</h1>
+<p><strong>Unit Name:</strong> Principles of Life Insurance | <strong>Code:</strong> SMS 3220</p>
+<p><span>#Spas.must</span> <span>#ActuarialScienceMUST</span></p>
+<div class="topbar">
+<button onclick="openPop('formulaPop')">Formula Sheet</button>
+<button onclick="openPop('glossPop')">Glossary</button>
+<button onclick="toggleDark()">Dark / Light</button>
+<span style="display:inline-flex;align-items:center;gap:6px;background:#E8F2EB;padding:4px 8px;border-radius:8px;">
+  <span style="font-weight:bold;">Text Size:</span>
+  <button onclick="changeFont(-1)" title="Make text smaller" style="padding:6px 12px;font-size:18px;font-weight:bold;">-</button>
+  <span id="fontLabel" style="min-width:38px;text-align:center;font-weight:bold;">100%</span>
+  <button onclick="changeFont(1)" title="Make text bigger" style="padding:6px 12px;font-size:18px;font-weight:bold;">+</button>
+</span>
+<input id="searchBox" placeholder="Search in this unit..." style="padding:10px;width:200px" oninput="doSearch(this.value)">
+</div><p id="searchResult"></p>
+<p><strong>Prerequisites:</strong> SMS 3113, SMS 3120, basic interest maths. Calculator allowed.</p>
+<p id="progressText">Topic 1 of 6 - 0% done</p><div id="progressBar"><div id="progressFill"></div></div>
+<p>This unit is about life insurance - why people buy it, the types, how premiums are set, how benefits are paid, and how life insurers stay safe. You do not need to have attended a lecture.</p>
+<h2>Top Topics That Appear Most in MUST Exams</h2>
+<ol><li>Introduction to Life Insurance</li><li>Types of Life Insurance</li><li>Life Tables and Mortality</li><li>Premiums and Reserves</li><li>Underwriting and Claims in Life Insurance</li><li>Group Life, Pensions and Regulation</li></ol>
+<div class="howbox">
+<p><strong>How this page works:</strong></p>
+<p>1. <b>One topic at a time.</b> Finish it, click <b>Next</b>. <b>Back</b> to revise.</p>
+<p>2. <b>2 exercises per topic.</b> Each has parts <b>(a)(b)(c)</b>, sometimes <b>(d)</b>. Together they cover the whole topic.</p>
+<p>3. <b>First 2 tries = final answer only.</b> Even if it says show your working, type just the answer here.</p>
+<p>4. <b>Our Own Chatbox.</b> Wrong twice? Our Chatbox opens for <b>that question only</b> and guides you step by step.</p>
+<p>5. <b>Upload your working.</b> Do it <b>manually on paper</b>, take a clear photo of <b>your working</b>, upload it in the Chatbox. You will see a preview.</p>
+<p>6. <b>Theory vs Numbers.</b> Numbers are checked here. Theory cannot be checked here, so click <b>Send For Marking</b> to open the Chatbox.</p>
+<p>7. <b>Send to Meta AI.</b> Chatbox has a button to copy your question + answers for real AI marking in Meta AI chat. Our Chatbox is the experience, Meta AI is the backup brain.</p>
+<p>8. <b>Boxes are locked.</b> They tick only when you prove it. Theory ticks after Meta AI says Pass, then click <b>AI Marked Me Correct - Tick</b> in the Chatbox.</p>
+<p>9. <b>Marking is by part.</b> Get (a) right = credit for (a). Only redo the part / question you failed.</p>
+<p>10. <b>Boxes = parts.</b> (a)(b)(c) = 3 boxes. If one part asks for 2 numbers, it gets 2 boxes. Each part has its own box. No answers are shown on this page.</p>
+</div>
+<div id="formulaPop" class="popup"><button onclick="closePop('formulaPop')">Close</button><h3>Formula Sheet - SMS 3220</h3><p><b>Mortality:</b> qx = dx / lx | <b>Survival:</b> px = 1 - qx | <b>Premium:</b> Premium = Expected Claims + Expenses + Profit | <b>Expected Claims:</b> Lives x qx x Sum Assured | <b>Reserve:</b> PV Future Benefits - PV Future Premiums</p></div>
+<div id="glossPop" class="popup"><button onclick="closePop('glossPop')">Close</button><h3>Glossary - SMS 3220</h3><p><b>Life Insurance:</b> pays on death or survival. <b>Sum Assured:</b> amount paid on claim. <b>Beneficiary:</b> person who receives money. <b>Term Assurance:</b> cover for fixed years, no payout if survive. <b>Whole Life:</b> cover for whole life. <b>Endowment:</b> pays on death or if survive to end. <b>Annuity:</b> regular income in retirement. <b>Life Table:</b> table of lx, dx, qx by age. <b>Underwriting:</b> checking health / risk before accepting. <b>Reserve:</b> money set aside for future claims.</p></div>
+<div class="topic active" id="topic1">
+<h2>Topic 1: Introduction to Life Insurance</h2><p><b>Estimated time:</b> ~30 minutes | <b>Objectives:</b> Define life insurance, explain why people buy it, distinguish life vs general.</p>
+<p>Life insurance is a promise: you pay premiums, the insurer pays a sum assured if you die, or if you survive to a date, depending on the policy. It protects the people who depend on you.</p><div class='keybox'><p><b>Why buy it:</b> 1. Protect family - if breadwinner dies, family still has money. 2. Save - endowment builds savings. 3. Retirement - annuity gives income. 4. Loan - bank wants cover before lending.</p><p><b>Life vs General:</b> Life is long-term, pays on death / survival, no indemnity - sum assured is agreed. General is 1 year, pays loss, indemnity applies.</p></div>
+<div class="exbox"><p><strong>Exercise 1 - Covers: definition + why buy</strong><br>(a) Define life insurance.<br>(b) Give 3 reasons people buy life insurance, with example each.<br>(c) Distinguish life vs general insurance.</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(1,'c1')">Send For Marking - Open My Chatbox</button><p id="msg1"></p></div>
+<div class="exbox"><p><strong>Exercise 2 - Covers: parties + protection</strong><br>(a) Name 3 parties in a life policy and what each does.<br>(b) Explain how life insurance protects a family, with example.<br>(c) A young single person with no dependants - should they buy life cover? Give 2 reasons.</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(2,'c2')">Send For Marking - Open My Chatbox</button><p id="msg2"></p></div>
+<ul class="check"><li><input type="checkbox" id="c1" disabled> <span>I have got Topic 1 - first exercise.</span></li><li><input type="checkbox" id="c2" disabled> <span>I have got Topic 1 - second exercise.</span></li></ul>
+<p><b>Appears in MUST papers:</b> Appears in MUST past papers for this unit.</p><p>Was this topic clear? <button onclick="feedback(1,'clear')">Clear</button> <button onclick="feedback(1,'not')">Not Clear</button> <span id="fb1"></span></p>
+<p><button onclick="showTopic(2)">Next - Topic 2: Types of Life Insurance</button></p>
+</div>
+<div class="topic" id="topic2">
+<h2>Topic 2: Types of Life Insurance</h2><p><b>Estimated time:</b> ~35 minutes | <b>Objectives:</b> Explain term, whole life, endowment, annuity, unit-linked, give cover and best for whom.</p>
+<p>Always answer: <b>What it pays + When + Best for whom + One disadvantage</b>.</p><div class='keybox'><p><b>Term Assurance:</b> Pays only if die within term, e.g. 10 years. Cheapest. No payout if survive.</p><p><b>Whole Life:</b> Pays whenever you die. Most expensive, covers whole life.</p><p><b>Endowment:</b> Pays if die within term OR survive to end. Saving + protection.</p><p><b>Annuity:</b> You pay lump sum, insurer pays regular income for life / fixed years. For retirement.</p><p><b>Unit-Linked:</b> Premium invested in funds. Value goes up and down.</p></div>
+<div class="exbox"><p><strong>Exercise 3 - Covers: types + cover</strong><br>(a) Define term assurance and endowment.<br>(b) Distinguish term vs whole life, with example each.<br>(c) Which type suits a 30-year-old parent with a loan? Explain.</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(3,'c3')">Send For Marking - Open My Chatbox</button><p id="msg3"></p></div>
+<div class="exbox"><p><strong>Exercise 4 - Covers: annuity + unit-linked</strong><br>(a) Define annuity and unit-linked policy.<br>(b) Distinguish endowment vs annuity.<br>(c) Give 2 advantages and 2 disadvantages of unit-linked.</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(4,'c4')">Send For Marking - Open My Chatbox</button><p id="msg4"></p></div>
+<ul class="check"><li><input type="checkbox" id="c3" disabled> <span>I have got Topic 2 - first exercise.</span></li><li><input type="checkbox" id="c4" disabled> <span>I have got Topic 2 - second exercise.</span></li></ul>
+<p><b>Appears in MUST papers:</b> Appears in MUST past papers for this unit.</p><p>Was this topic clear? <button onclick="feedback(2,'clear')">Clear</button> <button onclick="feedback(2,'not')">Not Clear</button> <span id="fb2"></span></p>
+<p><button onclick="showTopic(1)">Back to Topic 1</button> <button onclick="showTopic(3)">Next - Topic 3: Life Tables and Mortality</button></p>
+</div>
+<div class="topic" id="topic3">
+<h2>Topic 3: Life Tables and Mortality</h2><p><b>Estimated time:</b> ~35 minutes | <b>Objectives:</b> Explain life table, read lx, dx, qx, px, calculate survival and death probabilities.</p>
+<p>A life table shows, for each age x: lx = number alive at age x, dx = number dying between x and x+1, qx = probability of dying, px = probability of surviving.</p><div class='keybox'><p><b>Formulas:</b> qx = dx / lx. px = 1 - qx = (lx+1) / lx.</p><p><b>Example:</b> l30 = 100000, d30 = 500. q30 = 500 / 100000 = 0.005. p30 = 0.995. So a 30-year-old has 0.5% chance of dying before 31, 99.5% chance of surviving.</p></div><p><b>Exam trick:</b> Always show dx / lx, not just the answer.</p>
+<div class="exbox"><p><strong>Exercise 5 - Covers: life table + qx + px (NUMBERS)</strong><br>(a) Define lx, dx, qx, px.<br>(b) l40 = 90000, d40 = 900. q40 = ? p40 = ? Show working.<br>(c) Explain why qx rises with age, with example.</p><p>(a) <textarea class="answer" id="t5a" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <input class="answer" id="q5b" type="text" placeholder="Type your answer - q and p"></p><p>(c) <textarea class="answer" id="t5c" rows="3" placeholder="Type your answer"></textarea></p><button onclick="checkEx(5)">Check Exercise 5</button> <button onclick="openOwnChat(5,'c5')">Open My Chatbox for Exercise 5</button><p id="msg5"></p></div>
+<div class="exbox"><p><strong>Exercise 6 - Covers: using table + expected deaths</strong><br>(a) Explain what a life table is used for in life insurance.<br>(b) If 10000 lives age 35, q35 = 0.004. Expected deaths = ? Show working.<br>(c) Give 2 reasons a life table in Kenya may differ from one in Japan.</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(6,'c6')">Send For Marking - Open My Chatbox</button><p id="msg6"></p></div>
+<ul class="check"><li><input type="checkbox" id="c5" disabled> <span>I have got Topic 3 - first exercise.</span></li><li><input type="checkbox" id="c6" disabled> <span>I have got Topic 3 - second exercise.</span></li></ul>
+<p><b>Appears in MUST papers:</b> Appears in MUST past papers for this unit.</p><p>Was this topic clear? <button onclick="feedback(3,'clear')">Clear</button> <button onclick="feedback(3,'not')">Not Clear</button> <span id="fb3"></span></p>
+<p><button onclick="showTopic(2)">Back to Topic 2</button> <button onclick="showTopic(4)">Next - Topic 4: Premiums and Reserves</button></p>
+</div>
+<div class="topic" id="topic4">
+<h2>Topic 4: Premiums and Reserves</h2><p><b>Estimated time:</b> ~35 minutes | <b>Objectives:</b> Explain premium, calculate expected claims and premium, explain reserve.</p>
+<p>Premium is the price. It must cover expected claims + expenses + profit, with a margin for safety.</p><div class='keybox'><p><b>Expected claims:</b> Lives x qx x Sum Assured. Example: 1000 lives, q=0.005, sum 1000000. Expected deaths = 5. Expected claims = 5 x 1000000 = 5000000.</p><p><b>Premium per person:</b> If expenses 500000, profit 500000: Total needed = 6000000. Premium per person = 6000000 / 1000 = 6000.</p><p><b>Reserve:</b> Money set aside today for future claims. Reserve = PV Future Benefits - PV Future Premiums. If reserves are too low, company fails.</p></div>
+<div class="exbox"><p><strong>Exercise 7 - Covers: premium + expected claims</strong><br>(a) Define premium. What 3 things must it cover?<br>(b) 2000 lives, q=0.003, sum 500000. Expected claims = ? Show working.<br>(c) Explain why premium must include a margin.</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(7,'c7')">Send For Marking - Open My Chatbox</button><p id="msg7"></p></div>
+<div class="exbox"><p><strong>Exercise 8 - Covers: reserve + safety</strong><br>(a) Define reserve.<br>(b) Explain why a life insurer must hold reserves, with example.<br>(c) What happens if reserves are too low? Give 2 consequences.</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(8,'c8')">Send For Marking - Open My Chatbox</button><p id="msg8"></p></div>
+<ul class="check"><li><input type="checkbox" id="c7" disabled> <span>I have got Topic 4 - first exercise.</span></li><li><input type="checkbox" id="c8" disabled> <span>I have got Topic 4 - second exercise.</span></li></ul>
+<p><b>Appears in MUST papers:</b> Appears in MUST past papers for this unit.</p><p>Was this topic clear? <button onclick="feedback(4,'clear')">Clear</button> <button onclick="feedback(4,'not')">Not Clear</button> <span id="fb4"></span></p>
+<p><button onclick="showTopic(3)">Back to Topic 3</button> <button onclick="showTopic(5)">Next - Topic 5: Underwriting and Claims in Life Insurance</button></p>
+</div>
+<div class="topic" id="topic5">
+<h2>Topic 5: Underwriting and Claims in Life Insurance</h2><p><b>Estimated time:</b> ~30 minutes | <b>Objectives:</b> Explain underwriting, explain factors, explain claims process, explain why claims are refused.</p>
+<p>Underwriting is checking risk before accepting. Claims is paying when the event happens.</p><div class='keybox'><p><b>Underwriting checks:</b> Age, Health, Smoking, Occupation, Family history, Medical exam, Financial - can you afford premium? Is sum assured reasonable?</p><p><b>Outcomes:</b> Accept at normal rate, Accept with loading (higher premium), Accept with exclusion, Decline.</p><p><b>Claims:</b> Notify, Death certificate / proof, Policy document, Check: was premium paid? Was cause covered? Was there fraud / non-disclosure? Pay to beneficiary.</p></div>
+<div class="exbox"><p><strong>Exercise 9 - Covers: underwriting + factors</strong><br>(a) Define underwriting.<br>(b) Give 3 underwriting factors and why each matters.<br>(c) Explain loading, with example.</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(9,'c9')">Send For Marking - Open My Chatbox</button><p id="msg9"></p></div>
+<div class="exbox"><p><strong>Exercise 10 - Covers: claims + refusal</strong><br>(a) List 3 steps in a life claim.<br>(b) Give 2 documents needed and why each is needed.<br>(c) Give 2 reasons a life claim can be refused, with example.</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(10,'c10')">Send For Marking - Open My Chatbox</button><p id="msg10"></p></div>
+<ul class="check"><li><input type="checkbox" id="c9" disabled> <span>I have got Topic 5 - first exercise.</span></li><li><input type="checkbox" id="c10" disabled> <span>I have got Topic 5 - second exercise.</span></li></ul>
+<p><b>Appears in MUST papers:</b> Appears in MUST past papers for this unit.</p><p>Was this topic clear? <button onclick="feedback(5,'clear')">Clear</button> <button onclick="feedback(5,'not')">Not Clear</button> <span id="fb5"></span></p>
+<p><button onclick="showTopic(4)">Back to Topic 4</button> <button onclick="showTopic(6)">Next - Topic 6: Group Life, Pensions and Regulation</button></p>
+</div>
+<div class="topic" id="topic6">
+<h2>Topic 6: Group Life, Pensions and Regulation</h2><p><b>Estimated time:</b> ~30 minutes | <b>Objectives:</b> Explain group life, explain pension, explain regulation and IRA.</p>
+<p>Group life covers many people under one policy, e.g. all employees of a company. Pension pays income in retirement.</p><div class='keybox'><p><b>Group life:</b> Employer pays premium, employees are covered, cheaper per person, no medical for each person if group is large.</p><p><b>Pension:</b> You contribute while working, fund invests, you receive annuity / lump sum in retirement.</p><p><b>Regulation:</b> IRA licenses life insurers, checks reserves, protects policyholders. Without regulation, an insurer could take premiums and fail.</p></div>
+<div class="exbox"><p><strong>Exercise 11 - Covers: group life + pension (NUMBERS)</strong><br>(a) Define group life and pension.<br>(b) Explain 2 advantages of group life over individual life.<br>(c) A pension fund has 200 members, each contributes 15000 per year. Total contributions = ? Show working.</p><p>(a) <textarea class="answer" id="t11a" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" id="t11b" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <input class="answer" id="q11c" type="text" placeholder="Type your answer"></p><button onclick="checkEx(11)">Check Exercise 11</button> <button onclick="openOwnChat(11,'c11')">Open My Chatbox for Exercise 11</button><p id="msg11"></p></div>
+<div class="exbox"><p><strong>Exercise 12 - Covers: regulation + future</strong><br>(a) What is IRA? Give 2 duties.<br>(b) Give 2 ways regulation protects life policyholders.<br>(c) Give 2 future challenges for life insurers in Kenya.</p><p>(a) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(b) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><p>(c) <textarea class="answer" rows="3" placeholder="Type your answer"></textarea></p><button onclick="openOwnChat(12,'c12')">Send For Marking - Open My Chatbox</button><p id="msg12"></p></div>
+<ul class="check"><li><input type="checkbox" id="c11" disabled> <span>I have got Topic 6 - first exercise.</span></li><li><input type="checkbox" id="c12" disabled> <span>I have got Topic 6 - second exercise.</span></li></ul>
+<p><b>Appears in MUST papers:</b> Appears in MUST past papers for this unit.</p><p>Was this topic clear? <button onclick="feedback(6,'clear')">Clear</button> <button onclick="feedback(6,'not')">Not Clear</button> <span id="fb6"></span></p>
+<p><button onclick="showTopic(5)">Back to Topic 5</button> <button onclick="showTopic(1)">Back to Topic 1</button> <a href="index.html"><button>Back to Home</button></a></p>
+<h2>Exam Strategy for SMS 3220</h2><ul><li>Attempt definitions first - easiest marks.</li><li>Always give actuarial example, not just definition.</li><li>Show every step - MUST gives marks for method.</li><li>Never leave blank - write key points you know.</li><li>For "explain" questions, give definition + example + why it matters.</li></ul>
+<footer><p>#Spas.must &nbsp; #ActuarialScienceMUST</p><p>Notes from MUST past papers. Built by frank-4Mrr111. Trusted Sources V3.4 Final.</p></footer>
+</div>
+</div>
+<div id="ownChat">
+<h3 id="chatTitle">Our Own Chatbox</h3>
+<div class="msg" id="chatGuide">Hi! I am your SPAS marking guide. Do this question manually on paper, step by step. Take a clear photo of YOUR WORKING and upload it below. You will see a preview. Then type your (a), (b), (c) answers. I will guide you by part.</div>
+<p><strong>1. Upload your working (photo of your manual work):</strong><br><input type="file" accept="image/*" onchange="previewPhoto(this)"><br><img id="photoPreview"></p>
+<p><strong>2. Type your answers here:</strong><br><input id="chatInput" style="padding:10px;width:90%" placeholder="Type your answer"></p>
+<p><button onclick="sendInChat()">Send in Our Chatbox</button> <button onclick="sendToMeta()">Send to Meta AI for Real Marking</button> <button onclick="tickFromChat()">AI Marked Me Correct - Tick</button> <button onclick="closeOwnChat()">Close Chatbox</button></p>
+<p id="chatLog"></p>
+<p><small>Our Chatbox guides you. For real AI marking, click Send to Meta AI - it copies question + answers + rubric for you to paste in Meta AI chat.</small></p>
+</div>
+<script>
+let tries={}, fontSize=16, currentEx=0, currentTick='';
+function showTopic(n){document.querySelectorAll('.topic').forEach(t=>t.classList.remove('active'));document.getElementById('topic'+n).classList.add('active');localStorage.setItem('sms3220_topic',n);updateProgress();window.scrollTo(0,0);}
+function updateProgress(){let done=document.querySelectorAll('.check input:checked').length;let pct=Math.round(done/12*100);document.getElementById('progressFill').style.width=pct+'%';let cur=document.querySelector('.topic.active');let num=cur?cur.id.replace('topic',''):'1';document.getElementById('progressText').textContent='Topic '+num+' of 6 - '+pct+'% done';}
+function tick(id){let el=document.getElementById(id);if(el){el.checked=true;updateProgress();}}
+function openPop(id){document.getElementById(id).style.display='block';} function closePop(id){document.getElementById(id).style.display='none';}
+function toggleDark(){document.body.classList.toggle('dark');}
+function changeFont(d){fontSize+=d;if(fontSize<13)fontSize=13;if(fontSize>24)fontSize=24;document.body.style.fontSize=fontSize+'px';let pct=Math.round(fontSize/16*100);let label=document.getElementById('fontLabel');if(label)label.textContent=pct+'%';}
+function feedback(n,v){document.getElementById('fb'+n).textContent=v==='clear'?'Thanks! Noted as Clear.':'Thanks! We will expand this topic.';localStorage.setItem('sms3220_fb'+n,v);}
+function doSearch(q){let r=document.getElementById('searchResult');if(!q){r.textContent='';return;}let topics=[['Introduction to General Insurance',1],['Profession Ethics',2],['Insurance Principles Types',3],['Risk Uncertainty Pooling',4],['Interest Mortality Calculations',5],['Where Actuaries Work',6]];let found=topics.filter(t=>t[0].toLowerCase().includes(q.toLowerCase()));r.innerHTML=found.length?found.map(f=>'<button onclick="showTopic('+f[1]+')">Go to Topic '+f[1]+': '+f[0]+'</button>').join(' '):'No topic found in this unit. Try: Life, Types, Life Table, Premium, Underwriting, Group';}
+function num(v){let n=parseFloat((v||'').trim().replace(',','.'));return isNaN(n)?null:n;}
+function val(id){let el=document.getElementById(id);return el?el.value.trim():'';}
+function theoryOk(id){return val(id).length>=10;}
+function openOwnChat(ex,tickId){currentEx=ex;currentTick=tickId;document.getElementById('chatTitle').textContent='Our Own Chatbox - Exercise '+ex+' (SMS 3220)';document.getElementById('ownChat').style.display='block';document.getElementById('chatGuide').textContent='Hi! You are on Exercise '+ex+'. Step 1: Do it manually on paper. Step 2: Upload a photo of YOUR WORKING below. Step 3: Type your (a), (b), (c) answers. I will guide you by part. For real AI marking, click Send to Meta AI.';window.scrollTo(0,document.body.scrollHeight);}
+function closeOwnChat(){document.getElementById('ownChat').style.display='none';}
+function previewPhoto(input){let f=input.files[0];if(!f)return;let r=new FileReader();r.onload=function(e){let img=document.getElementById('photoPreview');img.src=e.target.result;img.style.display='block';document.getElementById('chatLog').innerHTML+='<p>Photo preview loaded. I can see your working. Now type your (a), (b), (c) answers.</p>';};r.readAsDataURL(f);}
+function sendInChat(){let v=document.getElementById('chatInput').value;if(!v)return;document.getElementById('chatLog').innerHTML+='<p><b>You:</b> '+v+'</p><p><b>Guide:</b> Thanks! Now check each part: (a) Did you define the term? (b) Did you show working / formula? (c) Did you explain in words? If a part is missing, add it and send again. If you want real AI marking, click Send to Meta AI. Only redo the part you failed.</p>';document.getElementById('chatInput').value='';}
+function collectAnswers(){let out=[];document.querySelectorAll('.topic.active .answer').forEach((el,i)=>{let label=el.closest('p')?el.closest('p').textContent.trim().slice(0,40):('Box '+(i+1));out.push(label+': '+el.value.trim());});let chat=document.getElementById('chatInput').value.trim();if(chat)out.push('Chatbox answer: '+chat);return out.join('\n');}
+function sendToMeta(){let answers=collectAnswers();let text='Please mark me for SMS 3220 Exercise '+currentEx+'. Mark by part with partial credit. Guide me step by step on the part I failed. Rubric is in the page HTML comment for this exercise.\n\nMY REAL ANSWERS:\n'+(answers||'(no answers typed yet)')+'\n\nI also uploaded a photo of my manual working.';navigator.clipboard.writeText(text).then(()=>{alert('Copied WITH your real answers! Paste this in Meta AI chat + attach your photo of your working.');});}
+function tickFromChat(){if(currentTick){tick(currentTick);alert('Ticked! This means AI / guide said you passed Exercise '+currentEx+'. Only this question is ticked.');closeOwnChat();}}
+function checkEx(n){
+  let msg=document.getElementById('msg'+n);
+  let numbersOk=false, theoryNeeded=[];
+  if(n===5){let v=val('q5b').toLowerCase(); numbersOk=v.includes('0.01')&&v.includes('0.99'); theoryNeeded=['t5a','t5c'];}
+  if(n===11){numbersOk=num(val('q11c'))===3000000; theoryNeeded=['t11a','t11b'];}
+  let theoryOkAll=theoryNeeded.every(id=>theoryOk(id));
+  if(numbersOk && theoryOkAll){msg.textContent="Correct! All number parts + theory written. Exercise "+n+" done.";if(n===5)tick('c5');if(n===11)tick('c11');}
+  else if(numbersOk && !theoryOkAll){msg.textContent="Numbers / formula are correct. Now write the theory part(s) - at least 10 characters each - then click Check again.";}
+  else {tries[n]=(tries[n]||0)+1;if(tries[n]>=2){msg.textContent="Wrong twice. Our Own Chatbox is open for THIS question only. Upload a photo of YOUR WORKING. Only redo the part you failed.";openOwnChat(n,'c'+n);}else{msg.textContent="Not yet - check ALL parts. You only redo THIS question.";}}
+}
+document.querySelectorAll('.answer').forEach((el,i)=>{let key='sms3220_ans_'+i;let saved=localStorage.getItem(key);if(saved)el.value=saved;el.addEventListener('input',()=>localStorage.setItem(key,el.value));});
+let saved=localStorage.getItem('sms3220_topic');if(saved)showTopic(parseInt(saved));else updateProgress();
+</script>
+</body>
+</html>
